@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Woobizz Header 
 * Plugin URI: https://woobizz.com
-* Description: Woocommerce Storefront Header Customiser
+* Description: Woobizz Header Customiser
 * Author: Woobizz
 * Author URI: https://woobizz.com
 * Version: 1.0.0
