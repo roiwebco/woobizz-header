@@ -3,7 +3,7 @@
 * Plugin Name: Woobizz Header 
 * Plugin URI: https://woobizz.com
 * Description: Woocommerce Storefront Header Customiser
-* Author: Roiweb.co
+* Author: Woobizz
 * Author URI: https://woobizz.com
 * Version: 1.0.0
 * Text Domain: woobizz-header
