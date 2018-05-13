@@ -4,7 +4,7 @@
 * Plugin URI: https://woobizz.com
 * Description: WooCommerce Storefront Header Customiser
 * Author: ROIWEB.CO
-* Author URI: https://woobizz.com
+* Author URI: https://roiweb.co
 * Version: 1.0.2
 * Text Domain: woobizz-header
 * Domain Path: /languages/
