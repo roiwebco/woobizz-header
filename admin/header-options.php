@@ -757,25 +757,7 @@
 					3 => "none",
 					));
 
-	//HEADER POSITION	
-	$options[] = array("type" => "divider");
-	$options[] = array( "name" => "1.6 HEADER SCROLL POSITION",
-				"type" => "html",
-				"std" => "");
-	$options[] = array("type" => "divider");
-	$options[] = array( "name" => __("Header Position","woobizz-header"),
-				"desc" => __("", "woobizz-header"),
-				"id" => WOOBIZZHEADER."_woobizz_header_scrolltype",
-				"class" => "short lastt",
-				"std" => 0,
-				"type" => "radio",
-				"options" => array(
-					0 => "Static",
-					1 => "Fixed everywhere",
-					2 => "Fixed only pc",
-					
-					));
-	$options[] = array("type" => "divider");
+	
 	
 	//HEADER BRANDING OPTIONS------------------------------------------------------------------
 	//START HEADER SECTION -------------------------------------------

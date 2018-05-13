@@ -35,49 +35,6 @@ function woobizz_menu_fixed_onresize(){
 }
  //ALL CSS OPTIONS--------------------------------------------------------------------------
   function woobizz_header_allcssoptions(){
-	//HEADER SCROLL TYPE
-	$woobizz_header_scrolltype= get_option(WOOBIZZHEADER.'_woobizz_header_scrolltype');
-	if ($woobizz_header_scrolltype==0){
-			$woobizz_header_scrolltype="static";
-			//nothing			
-		} elseif($woobizz_header_scrolltype==1) {
-			$woobizz_header_scrolltype="fixed";
-			woobizz_menu_fixed_onresize();
-			echo "
-			<style>
-			@media (min-width: 768px){
-				header#masthead {
-					position:".$woobizz_header_scrolltype.";
-				}
-			}
-			@media screen and (max-width: 767px){
-				header#masthead {
-					position:".$woobizz_header_scrolltype.";
-				}
-			}
-			</style>
-			";
-		} elseif($woobizz_header_scrolltype==2) {
-			$woobizz_header_scrolltype="fixed";
-			woobizz_menu_fixed_onresize();
-			echo "
-			<style>
-			@media (min-width: 768px){
-				header#masthead {
-					position:".$woobizz_header_scrolltype.";
-				}
-			}
-			@media screen and (max-width: 767px){
-				header#masthead {
-					position:static;
-				}
-			}
-			</style>
-			";
-		}else {
-			$woobizz_header_scrolltype="static";
-			//nothing	
-	}
 	//BRANDING LOGO FLOAT
 	$woobizz_header_brandinglogofloat= get_option(WOOBIZZHEADER.'_woobizz_header_brandinglogofloat');
 	if ($woobizz_header_brandinglogofloat==0){

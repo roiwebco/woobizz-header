@@ -5,7 +5,7 @@
 * Description: Woobizz Header Customiser
 * Author: ROIWEB.CO
 * Author URI: https://woobizz.com
-* Version: 1.0.1
+* Version: 1.0.2
 * Text Domain: woobizz-header
 * Domain Path: /languages/
 */
