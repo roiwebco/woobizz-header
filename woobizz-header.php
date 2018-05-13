@@ -3,9 +3,9 @@
 * Plugin Name: Woobizz Header 
 * Plugin URI: https://woobizz.com
 * Description: Woobizz Header Customiser
-* Author: Woobizz
+* Author: ROIWEB.CO
 * Author URI: https://woobizz.com
-* Version: 1.0.0
+* Version: 1.0.1
 * Text Domain: woobizz-header
 * Domain Path: /languages/
 */
