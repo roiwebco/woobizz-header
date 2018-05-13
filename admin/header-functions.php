@@ -1268,7 +1268,7 @@ function woobizz_menu_fixed_onresize(){
 		header#masthead{
 				background:linear-gradient(rgba(".$woobizz_header_backgroundfullgradient1."),
 										   rgba(".$woobizz_header_backgroundfullgradient2.")),
-										   url(".$woobizz_header_backgroundimage.")!important;
+										   url(".$woobizz_header_backgroundimage.");
 				background-color:".$woobizz_header_backgroundcolor."!important;
 				background-size:".$woobizz_header_backgroundsize."!important;
 				background-repeat:".$woobizz_header_backgroundrepeat."!important;
