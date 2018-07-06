@@ -1449,7 +1449,10 @@ function woobizz_menu_fixed_onresize(){
 			padding-left: ".$woobizz_header_pmenupaddingleft."px!important;
 			background:".$woobizz_header_pmenubackgroundcolor."!important;
 		}
-		
+		.mega-sub-menu h3.widget-title {
+			text-align: left!important;
+			margin-left: 10px!important;
+		}		
 		.main-navigation ul.menu > li > a, .main-navigation ul.nav-menu > li > a {
 			color:".$woobizz_header_pmenualltextcolor."!important;
 			background-color:".$woobizz_header_pmenuallbackgroundcolor."!important;
