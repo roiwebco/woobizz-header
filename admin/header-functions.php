@@ -1430,7 +1430,7 @@ function woobizz_menu_fixed_onresize(){
 		   color: ".$woobizz_header_searchtextcolor."!important;
 		}
 		
-		".$woobizz_header_woocommerce_css." .site-header .main-navigation {
+		.woocommerce-active .site-header #mega-menu-wrap-primary {
 			width: ".$woobizz_header_pmenuwidthsize.$woobizz_header_pmenuwidthtype."!important;
 			max-width:".$woobizz_header_pmenumaxwidthfull."!important;
 			min-width:".$woobizz_header_pmenuminwidthfull."!important;
@@ -1438,6 +1438,7 @@ function woobizz_menu_fixed_onresize(){
 			display:".$woobizz_header_pmenudisplay."!important;
 			clear:".$woobizz_header_pmenuclear."!important;
 		}
+		
 		.primary-navigation {
 			margin-top: ".$woobizz_header_pmenumargintop."px!important;
 			margin-bottom:".$woobizz_header_pmenumarginbottom."px!important;
@@ -1449,6 +1450,18 @@ function woobizz_menu_fixed_onresize(){
 			padding-left: ".$woobizz_header_pmenupaddingleft."px!important;
 			background:".$woobizz_header_pmenubackgroundcolor."!important;
 		}
+		.woocommerce-active .site-header #mega-menu-wrap-primary {
+			margin-top: ".$woobizz_header_pmenumargintop."px!important;
+			margin-bottom:".$woobizz_header_pmenumarginbottom."px!important;
+			margin-right:".$woobizz_header_pmenumarginright."px!important;
+			margin-left:".$woobizz_header_pmenumarginleft."px!important;
+			padding-top:".$woobizz_header_pmenupaddingtop."px!important;
+			padding-bottom:".$woobizz_header_pmenupaddingbottom."px!important;
+			padding-right: ".$woobizz_header_pmenupaddingright."px!important;
+			padding-left: ".$woobizz_header_pmenupaddingleft."px!important;
+			background:".$woobizz_header_pmenubackgroundcolor."!important;
+		}	
+		
 		.mega-sub-menu h3.widget-title {
 			text-align: left!important;
 			margin-left: 10px!important;
