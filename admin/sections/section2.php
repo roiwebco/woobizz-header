@@ -1,4 +1,5 @@
 <?php
+ /** 
  // WOOBIZZ HEADER PLUGIN (functions.php) 
   //RESIZE MENU FIXED
 function woobizz_menu_fixed_onresize(){
@@ -1257,7 +1258,7 @@ function woobizz_menu_fixed_onresize(){
 	}
 	//END CART WIDGET COLOR----------------------------------------------------------------------------------------------
 	//START SHOWING CSS OPTIONS----------------------------------------------------------------------------------------------------------------------
-	/**Check if Woocommerce is active */
+	
 	if ( class_exists( 'WooCommerce' ) ) {
 	  $woobizz_header_woocommerce_css=".woocommerce-active";
 	  }else {
@@ -1420,10 +1421,10 @@ function woobizz_menu_fixed_onresize(){
 		.site-search .widget_product_search ::-webkit-input-placeholder {
 		   color: ".$woobizz_header_searchtextcolor."!important;
 		}
-		.site-search .widget_product_search :-moz-placeholder { /* Firefox 18- */
+		.site-search .widget_product_search :-moz-placeholder { 
 		   color: ".$woobizz_header_searchtextcolor."!important;
 		}
-		.site-search .widget_product_search ::-moz-placeholder {  /* Firefox 19+ */
+		.site-search .widget_product_search ::-moz-placeholder {  
 		   color: ".$woobizz_header_searchtextcolor."!important;
 		}
 		.site-search .widget_product_search :-ms-input-placeholder {  
@@ -1826,3 +1827,4 @@ function woobizz_menu_fixed_onresize(){
 		<?php
     }
 	add_action('wp_head', 'add_custom_favicon');
+	*/

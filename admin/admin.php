@@ -1,47 +1,4 @@
 <?php
-
-/** 
-* Whitelabel Theme & Plugin Options
-* Version 1.3
-* Author: Curly Themes
-*
-*
-* @package Whitelabel Theme & Plugin Options
-* @version 1.2
-* @author Curly Themes
-* 
-*/
-
-/**
-* Whitelabel Options
-* Set-up a new options page based o the class ini parameters.
-* 
-* @since Whitelabel Theme & Plugin Options 1.2
-*
-* @param string $name Options page name. Default: 'Options Page'.
-* @param string $slug Options page slug. Use only alpha-numeric characters and separate words by dash or underscore. Default: 'options-page'. 
-* @param string $prefix Options unique prefix. Default: 'wl'. 
-* @param string $parent Options page parent. Default: null. 
-* @param string $icon Options page icon. Default: null.
-* @param string $role Options page user roles. Default: 'read'. 
-* @param string $order Options page position. Default: null
-* @param boolean $style Set to FALSE to keep the standard WordPress style of the options page. Default: TRUE
-* @param boolean $title Set to TRUE to place a title on your options page. Default: FALSE
-* @param boolean $sidebar Set to TRUE to activate the sidebar generator. Default: FALSE
-* @param array $options Options array. Default: null. 
-* @param string $url Base folder URI of the options page. This paramenter needs 
-* to be set for plugins, according with the plugins name. This parameter is optional for themes.
-* @param string $folder Folder name, relative to the theme or plugin root folder.
-*
-* For more information about parents, icons and user roles:
-* @link http://codex.wordpress.org/Function_Reference/add_submenu_page
-* @link http://melchoyce.github.io/dashicons/ 
-* @link http://codex.wordpress.org/Roles_and_Capabilities
-*
-* @return void
-*
-*/
-
 if ( ! class_exists('WoobizzHeaderOptions') ) {
 	class WoobizzHeaderOptions{
 	
@@ -84,12 +41,6 @@ if ( ! class_exists('WoobizzHeaderOptions') ) {
 			$this->_prefix	= $prefix;
 			$this->_url		= ( $url ) ? $url : plugins_url().'/woobizz-header';
 			$this->_folder	= $folder;
-			
-			/**
-			if ( $sidebar === true && WhitelabelSidebars::$_count < 1) {
-				$sidebar = new WhitelabelSidebars( $this->_url, $this->_folder );
-			}
-			*/
 			
 			/** Only do in Admin */
 			if ( is_admin() ) {
@@ -215,15 +166,10 @@ if ( ! class_exists('WoobizzHeaderOptions') ) {
 				global $_wp_admin_css_colors; 
 				$admin_colors = $_wp_admin_css_colors;
 				$color_scheme = $admin_colors[get_user_option('admin_color')]->colors;
-				
-				if ( $this->_style !== false ) {
-					wp_enqueue_style( 'curly-google-font-roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,300,700,900', true );
-				}
-				
-				wp_enqueue_style('curly-whitelabel-select', $this->_url . '/'.$this->_folder.'/css/selectric.css', true);
-				wp_enqueue_style('curly-whitelabel-chosen', $this->_url.'/'.$this->_folder.'/css/chosen.css', true);
-				wp_enqueue_style('curly-whitelabel-fontawesome','//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', true);
-				wp_enqueue_style('curly-whitelabel-main', $this->_url.'/'.$this->_folder.'/css/main.css', true);
+								
+				wp_enqueue_style('woobizzheader-select', $this->_url . '/'.$this->_folder.'/css/selectric.css', true);
+				wp_enqueue_style('woobizzheader-chosen', $this->_url.'/'.$this->_folder.'/css/chosen.css', true);
+				wp_enqueue_style('woobizzheader-main', $this->_url.'/'.$this->_folder.'/css/main.css', true);
 				wp_enqueue_style( 'wp-color-picker' );	
 				wp_enqueue_script('wp-color-picker');	
 				wp_enqueue_script('jquery-ui-core');
@@ -234,11 +180,11 @@ if ( ! class_exists('WoobizzHeaderOptions') ) {
 				wp_enqueue_script('jquery-ui-mouse');
 				wp_enqueue_script('jquery-ui-button');
 				wp_enqueue_media();
-				wp_enqueue_script('curly-whitelabel-selectric', $this->_url.'/'.$this->_folder.'/js/jquery.selectric.min.js' , 'jquery', null, true);
-				wp_enqueue_script('curly-whitelabel-chosen', $this->_url.'/'.$this->_folder.'/js/jquery.chosen.min.js' , 'jquery', null, true);
-				wp_enqueue_script('curly-whitelabel-main', $this->_url.'/'.$this->_folder.'/js/main.js' , 'jquery', null, true);
+				wp_enqueue_script('woobizzheader-selectric', $this->_url.'/'.$this->_folder.'/js/jquery.selectric.min.js' , 'jquery', null, true);
+				wp_enqueue_script('woobizzheader-chosen', $this->_url.'/'.$this->_folder.'/js/jquery.chosen.min.js' , 'jquery', null, true);
+				wp_enqueue_script('woobizzheader-main', $this->_url.'/'.$this->_folder.'/js/main.js' , 'jquery', null, true);
 				
-				wp_localize_script('curly-whitelabel-main', 'js_options_data', array(
+				wp_localize_script('woobizzheader-main', 'js_options_data', array(
 					1 => $this->_url,
 					2 => __('Saving', 'whitelabel'),
 					3 => __('You are about to leave this page without saving. All changes will be lost.', 'whitelabel'),
@@ -319,7 +265,7 @@ if ( ! class_exists('WoobizzHeaderOptions') ) {
 					
 					$css = $typography.$color_scheme;
 					
-				wp_add_inline_style('curly-whitelabel-main', $css);
+				wp_add_inline_style('woobizzheader-main', $css);
 			} 
 		}
 		
@@ -333,16 +279,7 @@ if ( ! class_exists('WoobizzHeaderOptions') ) {
 			} else {
 				$link_base = admin_url().'admin.php?page='.$this->_slug;
 			}
-			/**DISABLE TOP MENU
-			$wp_admin_bar->add_menu( array(
-				'parent'	=> false,
-				'id'		=> $this->_slug,
-				'title'		=> $this->_name,
-				'href'		=> $link_base,
-				'meta' 		=> array( 'title' => $this->_name )
-			) );
-			*/
-			
+						
 			foreach ( $this->_options as $key => $value) {
 				if ($value['type'] == 'section') {
 					$wp_admin_bar->add_menu( array(
@@ -1094,310 +1031,4 @@ if ( ! class_exists( 'WoobizzHeaderOptionsGenerator' ) ) {
 	
 	}
 }
-
-/**
-* Whitelabel Sidebar Generator
-* Used to create dynamic sidebars for your theme or plugin.
-* 
-* @since Whitelabel Theme & Plugin Options 1.1
-*
-* @param string $url Base folder URI of the options page. This paramenter needs 
-* to be set for plugins, according with the plugins name. This parameter is 
-* optional for themes.
-*
-* @return void
-*
-*/
-/**
-if ( ! class_exists( 'WhitelabelSidebars' ) ) {
-	class WhitelabelSidebars {
-
-	static $_count = 0;
-	public static $_prefix = WOOBIZZHEADER;
-	public $_url;
-	public $_folder;
-	
-	public function __construct( $url = null, $folder = 'admin' ) {
-		
-		$this->_url = ( $url ) ? $url : get_template_directory_uri();
-		$this->_folder = $folder;
-		
-		WhitelabelSidebars::$_count++;
-		
-		if ( WhitelabelSidebars::$_count == 1 ) {
-			
-			if ( is_admin() ) {
-				add_action('admin_enqueue_scripts', array($this, 'load_scripts'));
-				add_action('admin_menu', array($this, 'add_submenu_page'));
-				add_action('wp_ajax_update_sidebars', array($this, 'update_sidebars'));
-				add_action('add_meta_boxes', array($this, 'meta_box'));
-				add_action('save_post', array($this, 'save_meta_box_data'));
-			}
-			add_action('widgets_init', array($this, 'create_sidebars'));
-			
-			add_shortcode('dynamic-sidebar', array($this, 'sidebar_shortcode'));
-		}
-
-	}
-	
-	function load_scripts() {
-		
-		global $_wp_admin_css_colors; 
-		$admin_colors = $_wp_admin_css_colors;
-		$color_scheme = $admin_colors[get_user_option('admin_color')]->colors;
-		
-		if ( get_current_screen()->id == 'appearance_page_sidebars' ) {
-			
-			wp_register_style('curly-google-font-roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,300,700,900', true);
-			wp_register_style('curly-sidebars', $this->_url.'/'.$this->_folder.'/css/sidebars.css', null,  null, null);
-			wp_register_script('curly-sidebars', $this->_url.'/'.$this->_folder.'/js/sidebars.js', array('jquery'), null, true);
-			
-			if ( ! wp_script_is( 'curly-google-font-roboto', 'enqueued' ) ) {
-				wp_enqueue_style( 'curly-google-font-roboto' );
-			}
-			
-			if ( ! wp_script_is( 'curly-google-font-roboto', 'enqueued' ) ) {
-				wp_enqueue_style( 'curly-sidebars' );
-			}
-			
-			if ( ! wp_script_is( 'curly-google-font-roboto', 'enqueued' ) ) {
-				wp_enqueue_script( 'curly-sidebars' );
-			}
-			
-			$js_data = array(
-				__('Remove','whitelabel'),
-				__('Are you sure you want to delete this sidebar?','whitelabel'),
-				__('Sidebar name cannot be empty. Please provide a valid name for your sidebar.','whitelabel'),
-				__('You already have a sidebar with that name. Please provide a valid name for your sidebar.','whitelabel'),
-				__('Your sidebar has been succesfully created.','whitelabel'),
-				__('You currently have no sidebars created. <br>Use the form above to create your first sidebar.','whitelabel')
-			);
-			
-			wp_localize_script('curly-sidebars', 'js_data', $js_data);
-			
-			$color_scheme = '
-				#sidebars-wrapper input[type=submit],
-				#sidebar-list li a:hover{
-					background-color: '.$color_scheme[3].';
-					color: #fff;
-				}';
-			
-			wp_add_inline_style('curly-sidebars', $color_scheme);
-		} 
-	}
-	
-	function update_sidebars() {
-		
-		$name 	= sanitize_text_field( $_POST['name'] );
-		$id 	= sanitize_text_field( $_POST['id'] );
-		$method = sanitize_text_field( $_POST['method'] );
-		
-		$sidebars 	= $this->get_sidebars();
-		$count 		= $this->get_sidebars_count() + 1;
-		
-		if ( $method == 'update' ) {
-			
-			if ( !empty($name) ) {
-			
-				if ( !$sidebars ) {
-				
-					$sidebars = array( $count => $name );
-					$sidebars = json_encode($sidebars);
-					update_option( self::$_prefix . '_sidebars_list' , $sidebars );
-					update_option( self::$_prefix . '_sidebars_list_count' , $count );
-					
-					echo json_encode( array( $count, $name ) );
-					
-				} else {
-				
-					if ( !in_array( $name , $sidebars ) ) {
-					
-						$sidebars[$count] = $name ;
-						$sidebars = json_encode($sidebars);
-						update_option( self::$_prefix . '_sidebars_list' , $sidebars );
-						update_option( self::$_prefix . '_sidebars_list_count' , $count );
-						
-						echo json_encode( array( $count, $name ) );
-						
-					} else {
-						echo 'duplicate';
-					}
-				}
-				
-			} else {
-				echo 'empty';
-			}
-			
-		}
-		
-		if ( $method == 'delete' ) {
-			unset( $sidebars[$id] );
-			$sidebars = json_encode($sidebars);
-			update_option( self::$_prefix . '_sidebars_list' , $sidebars );
-			echo 'success';
-		}
-		
-		die();
-	}
-	
-	function add_submenu_page(){
-	     add_submenu_page( 'themes.php', __('Sidebars', 'whitelabel'), __('Sidebars', 'whitelabel'), 'manage_options', 'sidebars', array($this, 'add_submenu_page_cb')); 
-	}
-	
-	function add_submenu_page_cb( $html = null ) {
-		
-		$sidebars = $this->get_sidebars();
-		
-		$html .= '<div id="sidebars-wrapper">';
-			$html .= '<h1>'.__('Sidebars', 'whitelabel').'</h1>';
-			$html .= '<form method="post" id="add-sidebar" action="">';
-				$html .= '<input type="text" id="add-sidebar-field" placeholder="'.__('Enter new sidebar name','whitelabel').'">';
-				$html .= '<input type="submit" id="add-sidebar-button" value="'.__('Add Sidebar','whitelabel').'">';
-			$html .= '</form>';
-			$html .= '<div id="messages"></div>';
-			$html .= '<h3>'.__('Sidebar List','whitelabel').'</h3>';
-			$html .= '<ul id="sidebar-list">';
-			
-			if ( $sidebars ) {
-			
-				foreach ($sidebars as $id => $name) {
-					$html .= '<li>'.$name.' <code>[dynamic-sidebar id="'.$id.'"]</code><a href="#" data-sidebar-id="'.$id.'">'.__('Remove','whitelabel').'</a></li>';
-				}
-				
-			} else {
-				$html .= '<li id="no-sidebar">'.__('You currently have no sidebars created. <br>Use the form above to create your first sidebar.','whitelabel').'</li>';
-			}
-			
-			$html .= '</ul>';
-		$html .= '</div>';
-		
-		echo $html;
-	}
-	
-	function get_sidebars() {
-		$sidebars = get_option( self::$_prefix . '_sidebars_list' );
-		$sidebars = json_decode( $sidebars , true); 
-		
-		return $sidebars;
-	}
-	
-	function get_sidebars_count() {
-		$count = get_option( self::$_prefix . '_sidebars_list_count', 0 );
-		
-		return $count;
-	}
-	
-	function create_sidebars() {
-		$sidebars = $this->get_sidebars();
-		if ( $sidebars ) {
-			foreach ($sidebars as $id => $name) {
-				register_sidebar( array(
-				    'name'         => $name,
-				    'id'           => 'dynamic-sidebar-'.$id,
-				    'before_widget'=> '<aside id="%1$s" class="dynamic-sidebar-widget widget %2$s">',
-				    'after_widget' => '</aside>'
-				) );
-			}
-		}
-			
-	}
-	
-	public static function sidebar( $default = null, $logic = false ) {
-	
-		global $post;
-		
-		$sidebar = get_post_meta( $post->ID, self::$_prefix . '_dynamic_sidebar', true);
-		
-		if ( $logic === true ) {
-			if ( $sidebar && is_active_sidebar( $sidebar ) ) {
-				dynamic_sidebar( $sidebar );
-			} elseif( is_active_sidebar( $default ) ) {
-				dynamic_sidebar( $default );
-			} else {
-				return;
-			}
-		} else {
-			if ( $sidebar ) {
-				dynamic_sidebar( $sidebar );
-			} else {
-				dynamic_sidebar( $default );
-			}
-		}
-	}
-	
-	function sidebar_shortcode( $atts ) {
-	
-		ob_start();
-		dynamic_sidebar( 'sidebar_'.$atts['id'] );
-		$sidebar = ob_get_contents();
-		ob_end_clean();
-		
-		return $sidebar;
-	}
-	
-	public function meta_box() {
-		$screens = array( 'post', 'page' );
-		
-			foreach ( $screens as $screen ) {
-				add_meta_box('sidebar_metabox', __( 'Sidebar', 'whitelabel' ), array($this, 'meta_box_callback'), $screen, 'side');
-			}
-		
-	}
-	
-	public function meta_box_callback( $post ) {
-	
-		wp_nonce_field( 'sidebar_meta_box', 'sidebar_meta_box_nonce' );
-		
-		$default_sidebar = get_post_meta( $post->ID, self::$_prefix . '_dynamic_sidebar', true );
-		
-		global $wp_registered_sidebars; 
-		
-		echo '<p><strong><label>'.__('Choose Sidebar:','whitelabel').'</label></strong></p>';
-		echo '<select name="sidebar" id="sidebar">';
-		echo '<option>'.__('Choose Sidebar','whitelabel').'</option>';
-		foreach ( $wp_registered_sidebars as $value ) {
-			echo '<option value="'.$value['id'].'" '.selected($default_sidebar, $value['id']).'>'.$value['name'].'</option>';
-		}
-		echo '</select>';
-		echo '<p>'.__('Choose a custom sidebar for this page','whitelabel').'</p>';
-	}
-	
-	public function save_meta_box_data( $post_id ) {
-	
-		if ( ! isset( $_POST['sidebar_meta_box_nonce'] ) ) {
-			return;
-		}
-	
-		if ( ! wp_verify_nonce( $_POST['sidebar_meta_box_nonce'], 'sidebar_meta_box' ) ) {
-			return;
-		}
-
-		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
-			return;
-		}
-
-		if ( isset( $_POST['post_type'] ) && 'page' == $_POST['post_type'] ) {
-	
-			if ( ! current_user_can( 'edit_page', $post_id ) ) {
-				return;
-			}
-	
-		} else {
-	
-			if ( ! current_user_can( 'edit_post', $post_id ) ) {
-				return;
-			}
-		}
-		
-		if ( ! isset( $_POST['sidebar'] ) ) {
-			return;
-		}
-	
-		$data = sanitize_text_field( $_POST['sidebar'] );
-		update_post_meta( $post_id, self::$_prefix . '_dynamic_sidebar', $data );
-	}
-	
-}
-}
-*/
 ?>
