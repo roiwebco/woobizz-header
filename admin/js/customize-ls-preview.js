@@ -88,12 +88,19 @@ wp.customize( 'woobizzheader_large_branddescriptioncolor', function( value ) {
 	} );
 } );
 
+//brand text line height
+wp.customize( 'woobizzheader_large_brandtxtlineheight', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-branditem2').css( 'line-height', newval+'px');
+	});
+});	
+
 //brand text margin top
 wp.customize( 'woobizzheader_large_brandtxtmargintop', function( value ) {
 	value.bind( function( newval ) {
 		jQuery( '.woobizzheader-large-branditem2').css( 'margin-top', newval+'px');
 	});
-});	
+});
 
 //brand text margin bottom
 wp.customize( 'woobizzheader_large_brandtxtmarginbottom', function( value ) {
@@ -211,3 +218,53 @@ wp.customize( 'woobizzheader_large_bgimage', function( value ) {
 		jQuery( '.woobizzheader-large-wrapper' ).css( 'background-image', 'url(' +newval+ ')' );
 	});
 });	
+
+//-------------------------------------------------------------	
+//MENU1
+//-------------------------------------------------------------	
+//menu1 position
+wp.customize( 'woobizzheader_large_menu1position', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-menu1').css( 'display', 'flex');
+		jQuery( '.woobizzheader-large-menu1').css( 'order', +newval);
+	});
+});
+//Brand width
+wp.customize( 'woobizzheader_large_menu1width', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-menu1').css( 'width', newval+'%');
+	});
+});
+
+//-------------------------------------------------------------	
+//MENU2
+//-------------------------------------------------------------	
+//menu2 position
+wp.customize( 'woobizzheader_large_menu2position', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-menu2').css( 'display', 'flex');
+		jQuery( '.woobizzheader-large-menu2').css( 'order', +newval);
+	});
+});
+//Brand width
+wp.customize( 'woobizzheader_large_menu2width', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-menu2').css( 'width', newval+'%');
+	});
+});
+//-------------------------------------------------------------	
+//MENU3
+//-------------------------------------------------------------	
+//menu3 position
+wp.customize( 'woobizzheader_large_menu3position', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-menu3').css( 'display', 'flex');
+		jQuery( '.woobizzheader-large-menu3').css( 'order', +newval);
+	});
+});
+//Brand width
+wp.customize( 'woobizzheader_large_menu3width', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-menu3').css( 'width', newval+'%');
+	});
+});
