@@ -16,20 +16,17 @@ add_action( 'plugins_loaded', 'woobizz_header_load_textdomain' );
 function woobizz_header_load_textdomain() {
   load_plugin_textdomain( 'woobizz-header', false, basename( dirname( __FILE__ ) ) . '/lang' ); 
 }
-// The prefix Name
-define('WOOBIZZHEADER', 'woobizzheader');
+require_once( dirname(__FILE__) . '/admin/includes/kirki.php');
+require_once( dirname(__FILE__) . '/admin/sections/ls-section.php');
+require_once( dirname(__FILE__) . '/admin/sections/ms-section.php');
+require_once( dirname(__FILE__) . '/admin/sections/ss-section.php');
+require_once( dirname(__FILE__) . '/admin/sections/gs-section.php');
+
 // Include all sections php files
 foreach ( glob( plugin_dir_path( __FILE__ ) . "/admin/*.php" ) as $file ) {
     include_once $file;
 }
-// Include all sections php files
-foreach ( glob( plugin_dir_path( __FILE__ ) . "/admin/sections/*.php" ) as $file ) {
-    include_once $file;
-}
-// Include all sections php files
-foreach ( glob( plugin_dir_path( __FILE__ ) . "/admin/sidebars/*.php" ) as $file ) {
-    include_once $file;
-}
+
 //Include all functions php files
 foreach ( glob( plugin_dir_path( __FILE__ ) . "/admin/functions/*.php" ) as $file ) {
     include_once $file;
@@ -38,5 +35,8 @@ foreach ( glob( plugin_dir_path( __FILE__ ) . "/admin/functions/*.php" ) as $fil
 foreach ( glob( plugin_dir_path( __FILE__ ) . "/admin/options/*.php" ) as $file ) {
     include_once $file;
 }
-// ADD OPTIONS AND SUBMENU
-$options_page = new WoobizzHeaderOptions( 'WooBizz Header', 'woobizz-header', WOOBIZZHEADER, 'woobizz', null, 'read', null, true, false, true, $options );
+
+function my_customize_preview_js() {
+		wp_enqueue_script( 'customizer-preview', plugin_dir_url( __FILE__ ) . 'admin/js/customize-ls-preview.js', array( 'customize-preview' ), '20170422', true );
+	}
+add_action( 'customize_preview_init', 'my_customize_preview_js' );
