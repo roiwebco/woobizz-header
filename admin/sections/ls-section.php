@@ -76,6 +76,7 @@ $woobizzheader_large_brandalign= get_theme_mod("woobizzheader_large_brandalign")
 if($woobizzheader_large_brandalign=="option-1"){$woobizzheader_large_brandalignitems="center";$woobizzheader_large_brandjustifycontent="flex-start";}
  elseif($woobizzheader_large_brandalign=="option-2"){$woobizzheader_large_brandalignitems="center";$woobizzheader_large_brandjustifycontent="center";}
  elseif($woobizzheader_large_brandalign=="option-3"){$woobizzheader_large_brandalignitems="center";$woobizzheader_large_brandjustifycontent="flex-end";}
+
 $woobizzheader_large_branddisplay= get_theme_mod("woobizzheader_large_branddisplay");
 if($woobizzheader_large_branddisplay==0){$woobizzheader_large_branddisplay="none";}
 elseif($woobizzheader_large_branddisplay==1){$woobizzheader_large_branddisplay="flex";}
@@ -393,7 +394,7 @@ echo"
 		align-items:".$woobizzheader_large_brandalignitems."!important;
 		justify-content:".$woobizzheader_large_brandjustifycontent."!important;
 		text-align: ".$woobizzheader_large_brandtxtalign."!important;
-		flex-direction:".$woobizzheader_large_brandimagealign."!important;
+		
 
 	}	
 	.woobizzheader-large-brandhelp:after {
