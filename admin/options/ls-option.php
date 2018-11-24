@@ -777,7 +777,7 @@ Kirki::add_field( $woobizzheader, array(
 	'settings'    => 'woobizzheader_large_menu1position',
 	'label'       => esc_attr__( 'Menu1 position', 'textdomain' ),
 	'section'     => $woobizzheader_large_menu1,
-	'default'     => 10,
+	'default'     => 20,
 	'transport'   => 'postMessage',
 	'choices'     => array(
 		'min'  => '1',
@@ -985,9 +985,10 @@ Kirki::add_field( $woobizzheader, array(
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'slider',
 	'settings'    => 'woobizzheader_large_cartposition',
-	'label'       => esc_attr__( 'Cart position (number)', 'textdomain' ),
+	'label'       => esc_attr__( 'Cart position', 'textdomain' ),
 	'section'     => $woobizzheader_large_cart,
 	'default'     => 50,
+	'transport'   => 'postMessage',
 	'choices'     => array(
 		'min'  => '1',
 		'max'  => '110',
@@ -997,9 +998,10 @@ Kirki::add_field( $woobizzheader, array(
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'slider',
 	'settings'    => 'woobizzheader_large_cartwidth',
-	'label'       => esc_attr__( 'Cart width (%)', 'textdomain' ),
+	'label'       => esc_attr__( 'Cart width', 'textdomain' ),
 	'section'     => $woobizzheader_large_cart,
 	'default'     => 50,
+	'transport'   => 'postMessage',
 	'choices'     => array(
 		'min'  => '0',
 		'max'  => '100',
@@ -1026,6 +1028,7 @@ Kirki::add_field( $woobizzheader, array(
 	'label'       => esc_attr__( 'Cart Title Size', 'textdomain' ),
 	'section'     => $woobizzheader_large_cart,
 	'default'     => 25,
+	'transport'   => 'postMessage',
 	'choices'     => array(
 		'min'  => '0',
 		'max'  => '100',
@@ -1047,6 +1050,7 @@ Kirki::add_field( $woobizzheader, array(
 	'label'    => __( 'Cart description', 'textdomain' ),
 	'section'  => $woobizzheader_large_cart,
 	'default'  => esc_attr__( 'This is a defualt value', 'textdomain' ),
+	'transport'   => 'postMessage',
 	'priority' => 10,
 ) );
 Kirki::add_field( $woobizzheader, array(
@@ -1054,7 +1058,8 @@ Kirki::add_field( $woobizzheader, array(
 	'settings'    => 'woobizzheader_large_cartdescriptionsize',
 	'label'       => esc_attr__( 'Cart description size', 'textdomain' ),
 	'section'     => $woobizzheader_large_cart,
-	'default'     => 1,
+	'default'     => 17,
+	'transport'   => 'postMessage',
 	'choices'     => array(
 		'min'  => '0',
 		'max'  => '100',
@@ -1276,9 +1281,10 @@ Kirki::add_field( $woobizzheader, array(
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'slider',
 	'settings'    => 'woobizzheader_large_searchposition',
-	'label'       => esc_attr__( 'Search position (number)', 'textdomain' ),
+	'label'       => esc_attr__( 'Search position', 'textdomain' ),
 	'section'     => $woobizzheader_large_search,
 	'default'     => 60,
+	'transport'   => 'postMessage',
 	'choices'     => array(
 		'min'  => '1',
 		'max'  => '110',
@@ -1288,9 +1294,10 @@ Kirki::add_field( $woobizzheader, array(
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'slider',
 	'settings'    => 'woobizzheader_large_searchwidth',
-	'label'       => esc_attr__( 'Search width (%)', 'textdomain' ),
+	'label'       => esc_attr__( 'Search width', 'textdomain' ),
 	'section'     => $woobizzheader_large_search,
 	'default'     => 50,
+	'transport'   => 'postMessage',
 	'choices'     => array(
 		'min'  => '0',
 		'max'  => '100',
@@ -1340,9 +1347,10 @@ Kirki::add_field( $woobizzheader, array(
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'slider',
 	'settings'    => 'woobizzheader_large_box1position',
-	'label'       => esc_attr__( 'Box1 position (number)', 'textdomain' ),
+	'label'       => esc_attr__( 'Box1 position', 'textdomain' ),
 	'section'     => $woobizzheader_large_box1,
 	'default'     => 70,
+	'transport'   => 'postMessage',
 	'choices'     => array(
 		'min'  => '1',
 		'max'  => '110',
@@ -1352,9 +1360,10 @@ Kirki::add_field( $woobizzheader, array(
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'slider',
 	'settings'    => 'woobizzheader_large_box1width',
-	'label'       => esc_attr__( 'Box1 width (%)', 'textdomain' ),
+	'label'       => esc_attr__( 'Box1 width', 'textdomain' ),
 	'section'     => $woobizzheader_large_box1,
 	'default'     => 50,
+	'transport'   => 'postMessage',
 	'choices'     => array(
 		'min'  => '0',
 		'max'  => '100',
@@ -1380,7 +1389,7 @@ Kirki::add_field( $woobizzheader, array(
 	'settings' => 'woobizzheader_large_box1title',
 	'label'    => __( 'Box1 Title', 'textdomain' ),
 	'section'  => $woobizzheader_large_box1,
-	'default'  => esc_attr__( 'This is a defualt value', 'textdomain' ),
+	'default'  => esc_attr__( 'Box1 Title', 'textdomain' ),
 	'priority' => 10,
 ) );
 Kirki::add_field( $woobizzheader, array(
@@ -1409,7 +1418,7 @@ Kirki::add_field( $woobizzheader, array(
 	'settings' => 'woobizzheader_large_box1description',
 	'label'    => __( 'Box1 description', 'textdomain' ),
 	'section'  => $woobizzheader_large_box1,
-	'default'  => esc_attr__( 'This is a defualt value', 'textdomain' ),
+	'default'  => esc_attr__( 'Box1 Description', 'textdomain' ),
 	'priority' => 10,
 ) );
 Kirki::add_field( $woobizzheader, array(
@@ -1417,7 +1426,7 @@ Kirki::add_field( $woobizzheader, array(
 	'settings'    => 'woobizzheader_large_box1descriptionsize',
 	'label'       => esc_attr__( 'Box1 description size', 'textdomain' ),
 	'section'     => $woobizzheader_large_box1,
-	'default'     => 1,
+	'default'     => 17,
 	'choices'     => array(
 		'min'  => '0',
 		'max'  => '100',
@@ -1617,9 +1626,10 @@ Kirki::add_field( $woobizzheader, array(
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'slider',
 	'settings'    => 'woobizzheader_large_box2position',
-	'label'       => esc_attr__( 'Box2 position (number)', 'textdomain' ),
+	'label'       => esc_attr__( 'Box2 position', 'textdomain' ),
 	'section'     => $woobizzheader_large_box2,
 	'default'     => 80,
+	'transport'   => 'postMessage',
 	'choices'     => array(
 		'min'  => '1',
 		'max'  => '110',
@@ -1629,9 +1639,10 @@ Kirki::add_field( $woobizzheader, array(
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'slider',
 	'settings'    => 'woobizzheader_large_box2width',
-	'label'       => esc_attr__( 'Box2 width (%)', 'textdomain' ),
+	'label'       => esc_attr__( 'Box2 width', 'textdomain' ),
 	'section'     => $woobizzheader_large_box2,
 	'default'     => 50,
+	'transport'   => 'postMessage',
 	'choices'     => array(
 		'min'  => '0',
 		'max'  => '100',
@@ -1657,7 +1668,7 @@ Kirki::add_field( $woobizzheader, array(
 	'settings' => 'woobizzheader_large_box2title',
 	'label'    => __( 'Box2 Title', 'textdomain' ),
 	'section'  => $woobizzheader_large_box2,
-	'default'  => esc_attr__( 'This is a defualt value', 'textdomain' ),
+	'default'  => esc_attr__( 'Box2 Title', 'textdomain' ),
 	'priority' => 10,
 ) );
 Kirki::add_field( $woobizzheader, array(
@@ -1686,7 +1697,7 @@ Kirki::add_field( $woobizzheader, array(
 	'settings' => 'woobizzheader_large_box2description',
 	'label'    => __( 'Box2 description', 'textdomain' ),
 	'section'  => $woobizzheader_large_box2,
-	'default'  => esc_attr__( 'This is a defualt value', 'textdomain' ),
+	'default'  => esc_attr__( 'Box2 Description', 'textdomain' ),
 	'priority' => 10,
 ) );
 Kirki::add_field( $woobizzheader, array(
@@ -1694,7 +1705,7 @@ Kirki::add_field( $woobizzheader, array(
 	'settings'    => 'woobizzheader_large_box2descriptionsize',
 	'label'       => esc_attr__( 'Box2 description size', 'textdomain' ),
 	'section'     => $woobizzheader_large_box2,
-	'default'     => 1,
+	'default'     => 17,
 	'choices'     => array(
 		'min'  => '0',
 		'max'  => '100',
@@ -1893,9 +1904,10 @@ Kirki::add_field( $woobizzheader, array(
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'slider',
 	'settings'    => 'woobizzheader_large_widget1position',
-	'label'       => esc_attr__( 'Widget1 position (number)', 'textdomain' ),
+	'label'       => esc_attr__( 'Widget1 position', 'textdomain' ),
 	'section'     => $woobizzheader_large_widget1,
 	'default'     => 90,
+	'transport'   => 'postMessage',
 	'choices'     => array(
 		'min'  => '1',
 		'max'  => '110',
@@ -1905,9 +1917,10 @@ Kirki::add_field( $woobizzheader, array(
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'slider',
 	'settings'    => 'woobizzheader_large_widget1width',
-	'label'       => esc_attr__( 'Widget1 width (%)', 'textdomain' ),
+	'label'       => esc_attr__( 'Widget1 width', 'textdomain' ),
 	'section'     => $woobizzheader_large_widget1,
 	'default'     => 50,
+	'transport'   => 'postMessage',
 	'choices'     => array(
 		'min'  => '0',
 		'max'  => '100',
@@ -1958,9 +1971,10 @@ Kirki::add_field( $woobizzheader, array(
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'slider',
 	'settings'    => 'woobizzheader_large_widget2position',
-	'label'       => esc_attr__( 'Widget2 position (number)', 'textdomain' ),
+	'label'       => esc_attr__( 'Widget2 position', 'textdomain' ),
 	'section'     => $woobizzheader_large_widget2,
 	'default'     => 100,
+	'transport'   => 'postMessage',
 	'choices'     => array(
 		'min'  => '1',
 		'max'  => '110',
@@ -1970,9 +1984,10 @@ Kirki::add_field( $woobizzheader, array(
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'slider',
 	'settings'    => 'woobizzheader_large_widget2width',
-	'label'       => esc_attr__( 'Widget2 width (%)', 'textdomain' ),
+	'label'       => esc_attr__( 'Widget2 width', 'textdomain' ),
 	'section'     => $woobizzheader_large_widget2,
 	'default'     => 50,
+	'transport'   => 'postMessage',
 	'choices'     => array(
 		'min'  => '0',
 		'max'  => '100',

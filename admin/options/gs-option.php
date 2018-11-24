@@ -46,6 +46,22 @@ Kirki::add_section( $woobizzheader_general_screen, array(
 //--------------------------------------------------------------
 //SUB-SECTIONS 
 //--------------------------------------------------------------
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'custom',
+	'settings'    => 'woobizzheader-general-settings2222',
+	'label'       => __( '', 'textdomain' ),
+	'section'     => $woobizzheader_general_screen,
+	'default'     => '',
+	'priority'    => 10,
+	//'transport'   => 'postMessage',
+	'partial_refresh' => array(
+            	'woobizzheader-general-settings' => array(
+                'selector' => '.woobizzheader-general-settings',
+                'render_callback' => '__return_false',
+            ),
+        ),
+) );
+
 Kirki::add_section( $woobizzheader_general_background, array(
     'title' => 'GS Responsive sizes',
     'section' => $woobizzheader_general_screen,    
@@ -62,6 +78,7 @@ Kirki::add_field( $woobizzheader, array(
 	'default'     => '',
 	'priority'    => 10,
 ) );
+
 //--------------------------------------------------------
 // RESPONSIVE SIZES FIELDS
 //--------------------------------------------------------

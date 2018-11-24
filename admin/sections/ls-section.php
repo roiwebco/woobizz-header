@@ -67,31 +67,21 @@ $woobizzheader_large_bginvert= get_theme_mod("woobizzheader_large_bginvert");
 $woobizzheader_large_brandposition= get_theme_mod("woobizzheader_large_brandposition");
 $woobizzheader_large_brandwidth= get_theme_mod("woobizzheader_large_brandwidth");
 $woobizzheader_large_brandcontentheight= get_theme_mod("woobizzheader_large_brandcontentheight");
-
 $woobizzheader_large_brandhelp=$woobizzheader_large_brandposition." | ".
 $woobizzheader_large_brandwidth."%"." | LS | BRAND";
-
-
 $woobizzheader_large_brandalign= get_theme_mod("woobizzheader_large_brandalign");
 if($woobizzheader_large_brandalign=="option-1"){$woobizzheader_large_brandalignitems="center";$woobizzheader_large_brandjustifycontent="flex-start";}
  elseif($woobizzheader_large_brandalign=="option-2"){$woobizzheader_large_brandalignitems="center";$woobizzheader_large_brandjustifycontent="center";}
  elseif($woobizzheader_large_brandalign=="option-3"){$woobizzheader_large_brandalignitems="center";$woobizzheader_large_brandjustifycontent="flex-end";}
-
 $woobizzheader_large_branddisplay= get_theme_mod("woobizzheader_large_branddisplay");
 if($woobizzheader_large_branddisplay==0){$woobizzheader_large_branddisplay="none";}
 elseif($woobizzheader_large_branddisplay==1){$woobizzheader_large_branddisplay="flex";}
-
 $woobizzheader_large_brandtitledisplay= get_theme_mod("woobizzheader_large_brandtitledisplay");
 if($woobizzheader_large_brandtitledisplay==0){$woobizzheader_large_brandtitledisplay="none";}
 elseif($woobizzheader_large_brandtitledisplay==1){$woobizzheader_large_brandtitledisplay="flex";}
-
 $woobizzheader_large_branddescriptiondisplay= get_theme_mod("woobizzheader_large_branddescriptiondisplay");
 if($woobizzheader_large_branddescriptiondisplay==0){$woobizzheader_large_branddescriptiondisplay="none";}
 elseif($woobizzheader_large_branddescriptiondisplay==1){$woobizzheader_large_branddescriptiondisplay="flex";}
-
-
-
-
 $woobizzheader_large_brandtitle= get_theme_mod("woobizzheader_large_brandtitle");
 $woobizzheader_large_brandtitlesize= get_theme_mod("woobizzheader_large_brandtitlesize");
 $woobizzheader_large_brandtitlecolor= get_theme_mod("woobizzheader_large_brandtitlecolor");
@@ -103,20 +93,15 @@ if ($woobizzheader_large_brandimagealign=="option-1"){$woobizzheader_large_brand
  elseif($woobizzheader_large_brandimagealign=="option-2"){$woobizzheader_large_brandimagealign="column";}
  elseif($woobizzheader_large_brandimagealign=="option-3"){$woobizzheader_large_brandimagealign="row-reverse";}
  elseif($woobizzheader_large_brandimagealign=="option-4"){$woobizzheader_large_brandimagealign="column-reverse";}
-
-
 $woobizzheader_large_brandtxtalign= get_theme_mod("woobizzheader_large_brandtxtalign");
 if ($woobizzheader_large_brandtxtalign=="option-1"){$woobizzheader_large_brandtxtalign="flex-start";}
  elseif($woobizzheader_large_brandtxtalign=="option-2"){$woobizzheader_large_brandtxtalign="center";}
  elseif($woobizzheader_large_brandtxtalign=="option-3"){$woobizzheader_large_brandtxtalign="flex-end";}
- 
-
 $woobizzheader_large_brandtxtlineheight= get_theme_mod("woobizzheader_large_brandtxtlineheight");
 $woobizzheader_large_brandtxtmargintop= get_theme_mod("woobizzheader_large_brandtxtmargintop");
 $woobizzheader_large_brandtxtmarginbottom= get_theme_mod("woobizzheader_large_brandtxtmarginbottom");
 $woobizzheader_large_brandtxtmarginright= get_theme_mod("woobizzheader_large_brandtxtmarginright");
 $woobizzheader_large_brandtxtmarginleft= get_theme_mod("woobizzheader_large_brandtxtmarginleft");
-
 $woobizzheader_large_brandgrayscale= get_theme_mod("woobizzheader_large_brandgrayscale");
 $woobizzheader_large_brandsepia= get_theme_mod("woobizzheader_large_brandsepia");
 $woobizzheader_large_brandblur= get_theme_mod("woobizzheader_large_brandblur");
@@ -511,8 +496,8 @@ echo"
 	}
 	.woobizzheader-large-cart {
 		display:".$woobizzheader_large_cartdisplay."!important;
-		order:".$woobizzheader_large_cartposition."!important;
-		width:".$woobizzheader_large_cartwidth."%!important;
+		order:".$woobizzheader_large_cartposition.";
+		width:".$woobizzheader_large_cartwidth."%;
 		align-items:".$woobizzheader_large_cartalignitems."!important;
 		justify-content:".$woobizzheader_large_cartjustifycontent."!important;		
 	}
@@ -522,14 +507,17 @@ echo"
 	
 	h3#woobizzheader-large-carttitle {
 		color: ".$woobizzheader_large_carttitlecolor."!important;
-		font-size:".$woobizzheader_large_carttitlesize."px!important;
 		text-align: ".$woobizzheader_large_carttxtalign."!important;
 		font-weight: 400;
 		font-family: inherit;		
 	}
+	span.woocommerce-Price-amount.amount{
+	font-size:".$woobizzheader_large_carttitlesize."px;	
+	}
+
 	a.woobizzheader-large-cartlink {
 		color: ".$woobizzheader_large_cartdescriptioncolor."!important;
-		font-size:".$woobizzheader_large_cartdescriptionsize."px!important;
+		font-size:".$woobizzheader_large_cartdescriptionsize."px;
 		text-align: ".$woobizzheader_large_carttxtalign."!important;
 		display: ".$woobizzheader_large_carttxtdisplay."!important;
 
@@ -551,7 +539,7 @@ echo"
 	}
 	.site-header-cart .cart-contents .amount {
 		color: ".$woobizzheader_large_carttitlecolor."!important;
-		font-size:".$woobizzheader_large_carttitlesize."px!important;
+		font-size:".$woobizzheader_large_carttitlesize."px;
 		text-align: ".$woobizzheader_large_carttxtalign."!important;
 		display: ".$woobizzheader_large_cartpricedisplay."!important;
 		margin-right:0;
@@ -572,69 +560,13 @@ echo"
 		margin-top: -66px;
 		position: absolute;
 	}
-	.site-header-cart .cart-contents .count {
-		display: none;
-	}
-	.woobizzheader-large-cartitem2{
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-		margin: 10px 10px;
-		
-	}	
-	.woobizzheader-large-cartitem2 p {
-		margin:0;
-	}
-	.site-header-cart .cart-contents::before {
-		display: none!important;
-	}
-	.site-header-cart .cart-contents {
-		padding: 0;
-	}
-	a.cart-contents {
-		display: grid!important;
-		text-align: left;
-	}
-	.woocommerce-active .site-header .site-header-cart {
-		width: auto;
-	}
-	.widget.woocommerce.widget_shopping_cart {
-		display: none;
-	}
-	a.cart-contents {
-		display: grid!important;
-		text-align: left;
-	}
-	.woocommerce-active .site-header .site-header-cart {
-		width: auto;
-	}
-	.woobizzheader-item-cart p, h3 {
-		margin:0!important;
-	}
-	.woobizzheader-large-cartitems p {
-		margin: 0;
-	}
-	.woobizzheader-large-cartitems {
-		display: flex;
-		align-items: center;
-		height: auto;
-	}	
-	.noselect {
-	-webkit-touch-callout: none; /* iOS Safari */
-		-webkit-user-select: none; /* Safari */
-		-khtml-user-select: none; /* Konqueror HTML */
-		-moz-user-select: none; /* Firefox */
-			-ms-user-select: none; /* Internet Explorer/Edge */
-				user-select: none; /* Non-prefixed version, currently
-									supported by Chrome and Opera */
-	}
 	/*---------------------------------------------------------------*/
 	/* SEARCH LS */
 	/*---------------------------------------------------------------*/
 	.woobizzheader-large-search {
 		display:".$woobizzheader_large_searchdisplay."!important;
-		order:".$woobizzheader_large_searchposition."!important;
-		width:".$woobizzheader_large_searchwidth."%!important;
+		order:".$woobizzheader_large_searchposition.";
+		width:".$woobizzheader_large_searchwidth."%;
 		align-items:".$woobizzheader_large_searchalignitems."!important;
 		justify-content:".$woobizzheader_large_searchjustifycontent."!important;
 		text-align: center;
@@ -661,15 +593,15 @@ echo"
 	}
 	
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ BOX2 LS */
+	/* WOOBIZZ BOX1 LS */
 	/*---------------------------------------------------------------*/
 	.woobizzheader-large-box1items{
 		display: ".$woobizzheader_large_box1display."!important;
 	}
 	.woobizzheader-large-box1 {
 		display:".$woobizzheader_large_box1display."!important;
-		order:".$woobizzheader_large_box1position."!important;
-		width:".$woobizzheader_large_box1width."%!important;
+		order:".$woobizzheader_large_box1position.";
+		width:".$woobizzheader_large_box1width."%;
 		align-items:".$woobizzheader_large_box1alignitems."!important;
 		justify-content:".$woobizzheader_large_box1justifycontent."!important;
 		
@@ -714,8 +646,8 @@ echo"
 	}
 	.woobizzheader-large-box2 {
 		display:".$woobizzheader_large_box2display."!important;
-		order:".$woobizzheader_large_box2position."!important;
-		width:".$woobizzheader_large_box2width."%!important;
+		order:".$woobizzheader_large_box2position.";
+		width:".$woobizzheader_large_box2width."%;
 		align-items:".$woobizzheader_large_box2alignitems."!important;
 		justify-content:".$woobizzheader_large_box2justifycontent."!important;
 		
@@ -757,8 +689,8 @@ echo"
 	/*---------------------------------------------------------------*/
 	.woobizzheader-large-widget1{
 		display:".$woobizzheader_large_widget1display."!important;
-		order:".$woobizzheader_large_widget1position."!important;
-		width:".$woobizzheader_large_widget1width."%!important;
+		order:".$woobizzheader_large_widget1position.";
+		width:".$woobizzheader_large_widget1width."%;
 		align-items:".$woobizzheader_large_widget1alignitems."!important;
 		justify-content:".$woobizzheader_large_widget1justifycontent."!important;
 
@@ -772,8 +704,8 @@ echo"
 	/*---------------------------------------------------------------*/
 	.woobizzheader-large-widget2{
 		display:".$woobizzheader_large_widget2display."!important;
-		order:".$woobizzheader_large_widget2position."!important;
-		width:".$woobizzheader_large_widget2width."%!important;
+		order:".$woobizzheader_large_widget2position.";
+		width:".$woobizzheader_large_widget2width."%;
 		align-items:".$woobizzheader_large_widget2alignitems."!important;
 		justify-content:".$woobizzheader_large_widget2justifycontent."!important;
 
@@ -822,6 +754,8 @@ $woobizzheader_large_box2description= get_theme_mod("woobizzheader_large_box2des
 $woobizzheader_large_box2descriptionsize= get_theme_mod("woobizzheader_large_box2descriptionsize");
 $woobizzheader_large_box2descriptioncolor= get_theme_mod("woobizzheader_large_box2descriptioncolor");
 ?>
+<div class= "woobizzheader-general-settings"></div>
+<div class= "woobizzheader-general-grid"></div>
 <div class= "woobizzheader-large-bghelp woobizzheader-general-txthelp"></div>
 <div class="woobizzheader-large-wrapper " >	
 	
