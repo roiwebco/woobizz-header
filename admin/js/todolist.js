@@ -68,7 +68,4 @@ wp.customize( 'woobizzheader_large_bgimage', function( value ) {
 	value.bind( function( newval ) {
 		jQuery( '.woobizzheader-large-wrapper' ).css( 'background-image', 'url(' +newval+ ')' );
 	});
-});	
-
-
-
+});

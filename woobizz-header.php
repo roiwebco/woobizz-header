@@ -5,7 +5,7 @@
 * Description: WooCommerce Storefront Header Customiser
 * Author: WOOBIZZ
 * Author URI: https://woobizz.com
-* Version: 1.0.3
+* Version: 1.0.4
 * Text Domain: woobizz-header
 * Domain Path: /lang/
 */
@@ -36,7 +36,17 @@ foreach ( glob( plugin_dir_path( __FILE__ ) . "/admin/options/*.php" ) as $file 
     include_once $file;
 }
 
-function my_customize_preview_js() {
-		wp_enqueue_script( 'customizer-preview', plugin_dir_url( __FILE__ ) . 'admin/js/customize-ls-preview.js', array( 'customize-preview' ), '20170422', true );
+function woobizzheader_large_preview_js() {
+		wp_enqueue_script( 'customizer-large-preview', plugin_dir_url( __FILE__ ) . 'admin/js/customize-ls-preview.js', array( 'customize-preview' ), '10170422', true );
 	}
-add_action( 'customize_preview_init', 'my_customize_preview_js' );
+add_action( 'customize_preview_init', 'woobizzheader_large_preview_js' );
+
+function woobizzheader_medium_preview_js() {
+		wp_enqueue_script( 'customizer-medium-preview', plugin_dir_url( __FILE__ ) . 'admin/js/customize-ms-preview.js', array( 'customize-preview' ), '20170422', true );
+	}
+add_action( 'customize_preview_init', 'woobizzheader_medium_preview_js' );
+
+function woobizzheader_small_preview_js() {
+		wp_enqueue_script( 'customizer-small-preview', plugin_dir_url( __FILE__ ) . 'admin/js/customize-ss-preview.js', array( 'customize-preview' ), '30170422', true );
+	}
+add_action( 'customize_preview_init', 'woobizzheader_small_preview_js' );

@@ -67,11 +67,7 @@ $woobizzheader_small_bginvert= get_theme_mod("woobizzheader_small_bginvert");
 $woobizzheader_small_brandposition= get_theme_mod("woobizzheader_small_brandposition");
 $woobizzheader_small_brandwidth= get_theme_mod("woobizzheader_small_brandwidth");
 $woobizzheader_small_brandcontentheight= get_theme_mod("woobizzheader_small_brandcontentheight");
-
-$woobizzheader_small_brandhelp=$woobizzheader_small_brandposition." | ".
-$woobizzheader_small_brandwidth."%"." | SS | BRAND";
-
-
+$woobizzheader_small_brandhelp=" SS | BRAND ";
 $woobizzheader_small_brandalign= get_theme_mod("woobizzheader_small_brandalign");
 if($woobizzheader_small_brandalign=="option-1"){$woobizzheader_small_brandalignitems="center";$woobizzheader_small_brandjustifycontent="flex-start";}
  elseif($woobizzheader_small_brandalign=="option-2"){$woobizzheader_small_brandalignitems="center";$woobizzheader_small_brandjustifycontent="center";}
@@ -79,6 +75,12 @@ if($woobizzheader_small_brandalign=="option-1"){$woobizzheader_small_brandaligni
 $woobizzheader_small_branddisplay= get_theme_mod("woobizzheader_small_branddisplay");
 if($woobizzheader_small_branddisplay==0){$woobizzheader_small_branddisplay="none";}
 elseif($woobizzheader_small_branddisplay==1){$woobizzheader_small_branddisplay="flex";}
+$woobizzheader_small_brandtitledisplay= get_theme_mod("woobizzheader_small_brandtitledisplay");
+if($woobizzheader_small_brandtitledisplay==0){$woobizzheader_small_brandtitledisplay="none";}
+elseif($woobizzheader_small_brandtitledisplay==1){$woobizzheader_small_brandtitledisplay="flex";}
+$woobizzheader_small_branddescriptiondisplay= get_theme_mod("woobizzheader_small_branddescriptiondisplay");
+if($woobizzheader_small_branddescriptiondisplay==0){$woobizzheader_small_branddescriptiondisplay="none";}
+elseif($woobizzheader_small_branddescriptiondisplay==1){$woobizzheader_small_branddescriptiondisplay="flex";}
 $woobizzheader_small_brandtitle= get_theme_mod("woobizzheader_small_brandtitle");
 $woobizzheader_small_brandtitlesize= get_theme_mod("woobizzheader_small_brandtitlesize");
 $woobizzheader_small_brandtitlecolor= get_theme_mod("woobizzheader_small_brandtitlecolor");
@@ -91,15 +93,14 @@ if ($woobizzheader_small_brandimagealign=="option-1"){$woobizzheader_small_brand
  elseif($woobizzheader_small_brandimagealign=="option-3"){$woobizzheader_small_brandimagealign="row-reverse";}
  elseif($woobizzheader_small_brandimagealign=="option-4"){$woobizzheader_small_brandimagealign="column-reverse";}
 $woobizzheader_small_brandtxtalign= get_theme_mod("woobizzheader_small_brandtxtalign");
-if ($woobizzheader_small_brandtxtalign=="option-1"){$woobizzheader_small_brandtxtalign="left";}
+if ($woobizzheader_small_brandtxtalign=="option-1"){$woobizzheader_small_brandtxtalign="flex-start";}
  elseif($woobizzheader_small_brandtxtalign=="option-2"){$woobizzheader_small_brandtxtalign="center";}
- elseif($woobizzheader_small_brandtxtalign=="option-3"){$woobizzheader_small_brandtxtalign="right";}
- 
+ elseif($woobizzheader_small_brandtxtalign=="option-3"){$woobizzheader_small_brandtxtalign="flex-end";}
+$woobizzheader_small_brandtxtlineheight= get_theme_mod("woobizzheader_small_brandtxtlineheight");
 $woobizzheader_small_brandtxtmargintop= get_theme_mod("woobizzheader_small_brandtxtmargintop");
 $woobizzheader_small_brandtxtmarginbottom= get_theme_mod("woobizzheader_small_brandtxtmarginbottom");
 $woobizzheader_small_brandtxtmarginright= get_theme_mod("woobizzheader_small_brandtxtmarginright");
 $woobizzheader_small_brandtxtmarginleft= get_theme_mod("woobizzheader_small_brandtxtmarginleft");
-
 $woobizzheader_small_brandgrayscale= get_theme_mod("woobizzheader_small_brandgrayscale");
 $woobizzheader_small_brandsepia= get_theme_mod("woobizzheader_small_brandsepia");
 $woobizzheader_small_brandblur= get_theme_mod("woobizzheader_small_brandblur");
@@ -116,8 +117,7 @@ $woobizzheader_small_menu1position= get_theme_mod("woobizzheader_small_menu1posi
 $woobizzheader_small_menu1width= get_theme_mod("woobizzheader_small_menu1width");
 $woobizzheader_small_menu1align= get_theme_mod("woobizzheader_small_menu1align");
 $woobizzheader_small_menu1display= get_theme_mod("woobizzheader_small_menu1display");
-$woobizzheader_small_menu1help=$woobizzheader_small_menu1position." | ".
-$woobizzheader_small_menu1width."%"." | SS | MENU1";
+$woobizzheader_small_menu1help=" SS | MENU1 ";
 if ($woobizzheader_small_menu1align=="option-1"){$woobizzheader_small_menu1alignitems="center";$woobizzheader_small_menu1justifycontent="flex-start";}
  elseif($woobizzheader_small_menu1align=="option-2"){$woobizzheader_small_menu1alignitems="center";$woobizzheader_small_menu1justifycontent="center";}
  elseif($woobizzheader_small_menu1align=="option-3"){$woobizzheader_small_menu1alignitems="center";$woobizzheader_small_menu1justifycontent="flex-end";}
@@ -130,8 +130,7 @@ $woobizzheader_small_menu2position= get_theme_mod("woobizzheader_small_menu2posi
 $woobizzheader_small_menu2width= get_theme_mod("woobizzheader_small_menu2width");
 $woobizzheader_small_menu2align= get_theme_mod("woobizzheader_small_menu2align");
 $woobizzheader_small_menu2display= get_theme_mod("woobizzheader_small_menu2display");
-$woobizzheader_small_menu2help=$woobizzheader_small_menu2position." | ".
-$woobizzheader_small_menu2width."%"." | SS | MENU2";
+$woobizzheader_small_menu2help=" SS | MENU2 ";
 if ($woobizzheader_small_menu2align=="option-1"){$woobizzheader_small_menu2alignitems="center";$woobizzheader_small_menu2justifycontent="flex-start";}
  elseif($woobizzheader_small_menu2align=="option-2"){$woobizzheader_small_menu2alignitems="center";$woobizzheader_small_menu2justifycontent="center";}
  elseif($woobizzheader_small_menu2align=="option-3"){$woobizzheader_small_menu2alignitems="center";$woobizzheader_small_menu2justifycontent="flex-end";}
@@ -144,8 +143,7 @@ $woobizzheader_small_menu3position= get_theme_mod("woobizzheader_small_menu3posi
 $woobizzheader_small_menu3width= get_theme_mod("woobizzheader_small_menu3width");
 $woobizzheader_small_menu3align= get_theme_mod("woobizzheader_small_menu3align");
 $woobizzheader_small_menu3display= get_theme_mod("woobizzheader_small_menu3display");
-$woobizzheader_small_menu3help=$woobizzheader_small_menu3position." | ".
-$woobizzheader_small_menu3width."%"." | SS | MENU3";
+$woobizzheader_small_menu3help=" SS | MENU3 ";
 if ($woobizzheader_small_menu3align=="option-1"){$woobizzheader_small_menu3alignitems="center";$woobizzheader_small_menu3justifycontent="flex-start";}
  elseif($woobizzheader_small_menu3align=="option-2"){$woobizzheader_small_menu3alignitems="center";$woobizzheader_small_menu3justifycontent="center";}
  elseif($woobizzheader_small_menu3align=="option-3"){$woobizzheader_small_menu3alignitems="center";$woobizzheader_small_menu3justifycontent="flex-end";}
@@ -156,8 +154,7 @@ elseif($woobizzheader_small_menu3display==1){$woobizzheader_small_menu3display="
 //--------------------------------------------------------------------------------------
 $woobizzheader_small_cartposition= get_theme_mod("woobizzheader_small_cartposition");
 $woobizzheader_small_cartwidth= get_theme_mod("woobizzheader_small_cartwidth");
-$woobizzheader_small_carthelp=$woobizzheader_small_cartposition." | ".
-$woobizzheader_small_cartwidth."%"." | SS | CART";
+$woobizzheader_small_carthelp=" SS | CART ";
 $woobizzheader_small_cartalign= get_theme_mod("woobizzheader_small_cartalign");
 if($woobizzheader_small_cartalign=="option-1"){$woobizzheader_small_cartalignitems="center";$woobizzheader_small_cartjustifycontent="flex-start";}
  elseif($woobizzheader_small_cartalign=="option-2"){$woobizzheader_small_cartalignitems="center";$woobizzheader_small_cartjustifycontent="center";}
@@ -176,10 +173,13 @@ if ($woobizzheader_small_cartimagealign=="option-1"){$woobizzheader_small_cartim
  elseif($woobizzheader_small_cartimagealign=="option-2"){$woobizzheader_small_cartimagealign="column";}
  elseif($woobizzheader_small_cartimagealign=="option-3"){$woobizzheader_small_cartimagealign="row-reverse";}
  elseif($woobizzheader_small_cartimagealign=="option-4"){$woobizzheader_small_cartimagealign="column-reverse";}
-$woobizzheader_small_carttxtalign= get_theme_mod("woobizzheader_small_carttxtalign");
-if ($woobizzheader_small_carttxtalign=="option-1"){$woobizzheader_small_carttxtalign="left";}
+
+
+ $woobizzheader_small_carttxtalign= get_theme_mod("woobizzheader_small_carttxtalign");
+if ($woobizzheader_small_carttxtalign=="option-1"){$woobizzheader_small_carttxtalign="flex-start";}
  elseif($woobizzheader_small_carttxtalign=="option-2"){$woobizzheader_small_carttxtalign="center";}
- elseif($woobizzheader_small_carttxtalign=="option-3"){$woobizzheader_small_carttxtalign="right";}
+ elseif($woobizzheader_small_carttxtalign=="option-3"){$woobizzheader_small_carttxtalign="flex-end";}
+
 $woobizzheader_small_cartitems= get_theme_mod("woobizzheader_small_cartitems");	
 $woobizzheader_small_cartimagedisplay= get_theme_mod("woobizzheader_small_cartimagedisplay");
 if($woobizzheader_small_cartimagedisplay==0){$woobizzheader_small_cartimagedisplay="flex";}
@@ -204,11 +204,14 @@ $woobizzheader_small_cartinvert= get_theme_mod("woobizzheader_small_cartinvert")
 // SEARCH
 //--------------------------------------------------------------------------------------
 $woobizzheader_small_searchposition= get_theme_mod("woobizzheader_small_searchposition");
-$woobizzheader_small_searchwidth= get_theme_mod("woobizzheader_small_searchwidth");
+
+$woobizzheader_small_searchcontentwidth= get_theme_mod("woobizzheader_small_searchcontentwidth");
+$woobizzheader_small_searchitemwidth= get_theme_mod("woobizzheader_small_searchitemwidth");
+$woobizzheader_small_searchitemmaxwidth= get_theme_mod("woobizzheader_small_searchitemmaxwidth");
+
 $woobizzheader_small_searchalign= get_theme_mod("woobizzheader_small_searchalign");
 $woobizzheader_small_searchdisplay= get_theme_mod("woobizzheader_small_searchdisplay");
-$woobizzheader_small_searchhelp=$woobizzheader_small_searchposition." | ".
-$woobizzheader_small_searchwidth."%"." | SS | SEARCH";
+$woobizzheader_small_searchhelp=" LS | SEARCH ";
 if ($woobizzheader_small_searchalign=="option-1"){$woobizzheader_small_searchalignitems="center";$woobizzheader_small_searchjustifycontent="flex-start";}
  elseif($woobizzheader_small_searchalign=="option-2"){$woobizzheader_small_searchalignitems="center";$woobizzheader_small_searchjustifycontent="center";}
  elseif($woobizzheader_small_searchalign=="option-3"){$woobizzheader_small_searchalignitems="center";$woobizzheader_small_searchjustifycontent="flex-end";}
@@ -219,8 +222,8 @@ elseif($woobizzheader_small_searchdisplay==1){$woobizzheader_small_searchdisplay
 //--------------------------------------------------------------------------------------
 $woobizzheader_small_box1position= get_theme_mod("woobizzheader_small_box1position");
 $woobizzheader_small_box1width= get_theme_mod("woobizzheader_small_box1width");
-$woobizzheader_small_box1help=$woobizzheader_small_box1position." | ".
-$woobizzheader_small_box1width."%"." | SS | BOX1";
+$woobizzheader_small_box1contentheight= get_theme_mod("woobizzheader_small_box1contentheight");
+$woobizzheader_small_box1help=" SS | BOX1 ";
 $woobizzheader_small_box1align= get_theme_mod("woobizzheader_small_box1align");
 if($woobizzheader_small_box1align=="option-1"){$woobizzheader_small_box1alignitems="center";$woobizzheader_small_box1justifycontent="flex-start";}
  elseif($woobizzheader_small_box1align=="option-2"){$woobizzheader_small_box1alignitems="center";$woobizzheader_small_box1justifycontent="center";}
@@ -228,10 +231,17 @@ if($woobizzheader_small_box1align=="option-1"){$woobizzheader_small_box1alignite
 $woobizzheader_small_box1display= get_theme_mod("woobizzheader_small_box1display");
 if($woobizzheader_small_box1display==0){$woobizzheader_small_box1display="none";}
 elseif($woobizzheader_small_box1display==1){$woobizzheader_small_box1display="flex";}
+$woobizzheader_small_box1titledisplay= get_theme_mod("woobizzheader_small_box1titledisplay");
+if($woobizzheader_small_box1titledisplay==0){$woobizzheader_small_box1titledisplay="none";}
+elseif($woobizzheader_small_box1titledisplay==1){$woobizzheader_small_box1titledisplay="flex";}
+$woobizzheader_small_box1descriptiondisplay= get_theme_mod("woobizzheader_small_box1descriptiondisplay");
+if($woobizzheader_small_box1descriptiondisplay==0){$woobizzheader_small_box1descriptiondisplay="none";}
+elseif($woobizzheader_small_box1descriptiondisplay==1){$woobizzheader_small_box1descriptiondisplay="flex";}
 $woobizzheader_small_box1title= get_theme_mod("woobizzheader_small_box1title");
 $woobizzheader_small_box1titlesize= get_theme_mod("woobizzheader_small_box1titlesize");
 $woobizzheader_small_box1titlecolor= get_theme_mod("woobizzheader_small_box1titlecolor");
 $woobizzheader_small_box1description= get_theme_mod("woobizzheader_small_box1description");
+$woobizzheader_small_box1link= get_theme_mod("woobizzheader_small_box1link");
 $woobizzheader_small_box1descriptionsize= get_theme_mod("woobizzheader_small_box1descriptionsize");
 $woobizzheader_small_box1descriptioncolor= get_theme_mod("woobizzheader_small_box1descriptioncolor");
 $woobizzheader_small_box1imagealign= get_theme_mod("woobizzheader_small_box1imagealign");
@@ -240,9 +250,14 @@ if ($woobizzheader_small_box1imagealign=="option-1"){$woobizzheader_small_box1im
  elseif($woobizzheader_small_box1imagealign=="option-3"){$woobizzheader_small_box1imagealign="row-reverse";}
  elseif($woobizzheader_small_box1imagealign=="option-4"){$woobizzheader_small_box1imagealign="column-reverse";}
 $woobizzheader_small_box1txtalign= get_theme_mod("woobizzheader_small_box1txtalign");
-if ($woobizzheader_small_box1txtalign=="option-1"){$woobizzheader_small_box1txtalign="left";}
+if ($woobizzheader_small_box1txtalign=="option-1"){$woobizzheader_small_box1txtalign="flex-start";}
  elseif($woobizzheader_small_box1txtalign=="option-2"){$woobizzheader_small_box1txtalign="center";}
- elseif($woobizzheader_small_box1txtalign=="option-3"){$woobizzheader_small_box1txtalign="right";}
+ elseif($woobizzheader_small_box1txtalign=="option-3"){$woobizzheader_small_box1txtalign="flex-end";}
+$woobizzheader_small_box1txtlineheight= get_theme_mod("woobizzheader_small_box1txtlineheight");
+$woobizzheader_small_box1txtmargintop= get_theme_mod("woobizzheader_small_box1txtmargintop");
+$woobizzheader_small_box1txtmarginbottom= get_theme_mod("woobizzheader_small_box1txtmarginbottom");
+$woobizzheader_small_box1txtmarginright= get_theme_mod("woobizzheader_small_box1txtmarginright");
+$woobizzheader_small_box1txtmarginleft= get_theme_mod("woobizzheader_small_box1txtmarginleft");
 $woobizzheader_small_box1grayscale= get_theme_mod("woobizzheader_small_box1grayscale");
 $woobizzheader_small_box1sepia= get_theme_mod("woobizzheader_small_box1sepia");
 $woobizzheader_small_box1blur= get_theme_mod("woobizzheader_small_box1blur");
@@ -251,14 +266,15 @@ $woobizzheader_small_box1huerotate= get_theme_mod("woobizzheader_small_box1huero
 $woobizzheader_small_box1saturate= get_theme_mod("woobizzheader_small_box1saturate");
 $woobizzheader_small_box1opacity= get_theme_mod("woobizzheader_small_box1opacity");
 $woobizzheader_small_box1contrast= get_theme_mod("woobizzheader_small_box1contrast");
-$woobizzheader_small_box1invert= get_theme_mod("woobizzheader_small_box1invert");  
- //--------------------------------------------------------------------------------------
-//BOX2
+$woobizzheader_small_box1invert= get_theme_mod("woobizzheader_small_box1invert"); 
+
+//--------------------------------------------------------------------------------------
+//BOX1
 //--------------------------------------------------------------------------------------
 $woobizzheader_small_box2position= get_theme_mod("woobizzheader_small_box2position");
 $woobizzheader_small_box2width= get_theme_mod("woobizzheader_small_box2width");
-$woobizzheader_small_box2help=$woobizzheader_small_box2position." | ".
-$woobizzheader_small_box2width."%"." | SS | BOX2";
+$woobizzheader_small_box2contentheight= get_theme_mod("woobizzheader_small_box2contentheight");
+$woobizzheader_small_box2help=" SS | BOX2 ";
 $woobizzheader_small_box2align= get_theme_mod("woobizzheader_small_box2align");
 if($woobizzheader_small_box2align=="option-1"){$woobizzheader_small_box2alignitems="center";$woobizzheader_small_box2justifycontent="flex-start";}
  elseif($woobizzheader_small_box2align=="option-2"){$woobizzheader_small_box2alignitems="center";$woobizzheader_small_box2justifycontent="center";}
@@ -266,6 +282,12 @@ if($woobizzheader_small_box2align=="option-1"){$woobizzheader_small_box2alignite
 $woobizzheader_small_box2display= get_theme_mod("woobizzheader_small_box2display");
 if($woobizzheader_small_box2display==0){$woobizzheader_small_box2display="none";}
 elseif($woobizzheader_small_box2display==1){$woobizzheader_small_box2display="flex";}
+$woobizzheader_small_box2titledisplay= get_theme_mod("woobizzheader_small_box2titledisplay");
+if($woobizzheader_small_box2titledisplay==0){$woobizzheader_small_box2titledisplay="none";}
+elseif($woobizzheader_small_box2titledisplay==1){$woobizzheader_small_box2titledisplay="flex";}
+$woobizzheader_small_box2descriptiondisplay= get_theme_mod("woobizzheader_small_box2descriptiondisplay");
+if($woobizzheader_small_box2descriptiondisplay==0){$woobizzheader_small_box2descriptiondisplay="none";}
+elseif($woobizzheader_small_box2descriptiondisplay==1){$woobizzheader_small_box2descriptiondisplay="flex";}
 $woobizzheader_small_box2title= get_theme_mod("woobizzheader_small_box2title");
 $woobizzheader_small_box2titlesize= get_theme_mod("woobizzheader_small_box2titlesize");
 $woobizzheader_small_box2titlecolor= get_theme_mod("woobizzheader_small_box2titlecolor");
@@ -278,10 +300,14 @@ if ($woobizzheader_small_box2imagealign=="option-1"){$woobizzheader_small_box2im
  elseif($woobizzheader_small_box2imagealign=="option-3"){$woobizzheader_small_box2imagealign="row-reverse";}
  elseif($woobizzheader_small_box2imagealign=="option-4"){$woobizzheader_small_box2imagealign="column-reverse";}
 $woobizzheader_small_box2txtalign= get_theme_mod("woobizzheader_small_box2txtalign");
-if ($woobizzheader_small_box2txtalign=="option-1"){$woobizzheader_small_box2txtalign="left";}
+if ($woobizzheader_small_box2txtalign=="option-1"){$woobizzheader_small_box2txtalign="flex-start";}
  elseif($woobizzheader_small_box2txtalign=="option-2"){$woobizzheader_small_box2txtalign="center";}
- elseif($woobizzheader_small_box2txtalign=="option-3"){$woobizzheader_small_box2txtalign="right";}
- else{$woobizzheader_small_box2txtalign="left";}
+ elseif($woobizzheader_small_box2txtalign=="option-3"){$woobizzheader_small_box2txtalign="flex-end";}
+$woobizzheader_small_box2txtlineheight= get_theme_mod("woobizzheader_small_box2txtlineheight");
+$woobizzheader_small_box2txtmargintop= get_theme_mod("woobizzheader_small_box2txtmargintop");
+$woobizzheader_small_box2txtmarginbottom= get_theme_mod("woobizzheader_small_box2txtmarginbottom");
+$woobizzheader_small_box2txtmarginright= get_theme_mod("woobizzheader_small_box2txtmarginright");
+$woobizzheader_small_box2txtmarginleft= get_theme_mod("woobizzheader_small_box2txtmarginleft");
 $woobizzheader_small_box2grayscale= get_theme_mod("woobizzheader_small_box2grayscale");
 $woobizzheader_small_box2sepia= get_theme_mod("woobizzheader_small_box2sepia");
 $woobizzheader_small_box2blur= get_theme_mod("woobizzheader_small_box2blur");
@@ -290,7 +316,7 @@ $woobizzheader_small_box2huerotate= get_theme_mod("woobizzheader_small_box2huero
 $woobizzheader_small_box2saturate= get_theme_mod("woobizzheader_small_box2saturate");
 $woobizzheader_small_box2opacity= get_theme_mod("woobizzheader_small_box2opacity");
 $woobizzheader_small_box2contrast= get_theme_mod("woobizzheader_small_box2contrast");
-$woobizzheader_small_box2invert= get_theme_mod("woobizzheader_small_box2invert");  
+$woobizzheader_small_box2invert= get_theme_mod("woobizzheader_small_box2invert"); 
 //--------------------------------------------------------------------------------------
 // WIDGET1
 //--------------------------------------------------------------------------------------
@@ -298,8 +324,7 @@ $woobizzheader_small_widget1position= get_theme_mod("woobizzheader_small_widget1
 $woobizzheader_small_widget1width= get_theme_mod("woobizzheader_small_widget1width");
 $woobizzheader_small_widget1align= get_theme_mod("woobizzheader_small_widget1align");
 $woobizzheader_small_widget1display= get_theme_mod("woobizzheader_small_widget1display");
-$woobizzheader_small_widget1help=$woobizzheader_small_widget1position." | ".
-$woobizzheader_small_widget1width."%"." | SS | WIDGET1";
+$woobizzheader_small_widget1help=" SS | WIDGET1 ";
 if ($woobizzheader_small_widget1align=="option-1"){$woobizzheader_small_widget1alignitems="center";$woobizzheader_small_widget1justifycontent="flex-start";}
  elseif($woobizzheader_small_widget1align=="option-2"){$woobizzheader_small_widget1alignitems="center";$woobizzheader_small_widget1justifycontent="center";}
  elseif($woobizzheader_small_widget1align=="option-3"){$woobizzheader_small_widget1alignitems="center";$woobizzheader_small_widget1justifycontent="flex-end";}
@@ -312,19 +337,22 @@ $woobizzheader_small_widget2position= get_theme_mod("woobizzheader_small_widget2
 $woobizzheader_small_widget2width= get_theme_mod("woobizzheader_small_widget2width");
 $woobizzheader_small_widget2align= get_theme_mod("woobizzheader_small_widget2align");
 $woobizzheader_small_widget2display= get_theme_mod("woobizzheader_small_widget2display");
-$woobizzheader_small_widget2help=$woobizzheader_small_widget2position." | ".
-$woobizzheader_small_widget2width."%"." | SS | WIDGET2";
+$woobizzheader_small_widget2help=" SS | WIDGET2 ";
 if ($woobizzheader_small_widget2align=="option-1"){$woobizzheader_small_widget2alignitems="center";$woobizzheader_small_widget2justifycontent="flex-start";}
  elseif($woobizzheader_small_widget2align=="option-2"){$woobizzheader_small_widget2alignitems="center";$woobizzheader_small_widget2justifycontent="center";}
  elseif($woobizzheader_small_widget2align=="option-3"){$woobizzheader_small_widget2alignitems="center";$woobizzheader_small_widget2justifycontent="flex-end";}
 if($woobizzheader_small_widget2display==0){$woobizzheader_small_widget2display="none";}
 elseif($woobizzheader_small_widget2display==1){$woobizzheader_small_widget2display="flex";}
 //--------------------------------------------------------------------------------------
-//CSS
+//SS
 //--------------------------------------------------------------------------------------
 echo"
  <style>
 @media screen and (max-width:".$woobizzheader_general_ssmaxwidth."px){
+	
+	#mega-menu-wrap-woobizz-menu-1 {width: 100%;}
+	#mega-menu-wrap-woobizz-menu-2 {width: 100%;}
+	#mega-menu-wrap-woobizz-menu-3 {width: 100%;}
 	
 	.woobizzheader-medium-wrapper{display:none!important;}
 	.woobizzheader-large-wrapper{display:none!important;}
@@ -333,7 +361,7 @@ echo"
 	.woobizzheader-large-bghelp.woobizzheader-general-txthelp{display: none!important;}
 
 	.woobizzheader-small-bghelp:after {
-		content: '0 | 100% | SS | BG ';		
+		content: ' SS | BG ';		
 	}
 	.woobizzheader-small-box{
 		min-height: ".$woobizzheader_small_bgheight."px;		
@@ -383,36 +411,36 @@ echo"
 		max-width: 100%;
 	}
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ BRAND CSS */
+	/* WOOBIZZ BRAND SS */
 	/*---------------------------------------------------------------*/
-	
-	.woobizzheader-small-brandbox {
+	.woobizzheader-small-brand {
 		display:".$woobizzheader_small_branddisplay."!important;
 		order:".$woobizzheader_small_brandposition.";
 		width:".$woobizzheader_small_brandwidth."%;
 		align-items:".$woobizzheader_small_brandalignitems."!important;
 		justify-content:".$woobizzheader_small_brandjustifycontent."!important;
-		text-align: ".$woobizzheader_small_brandtxtalign."!important;
-		flex-direction:".$woobizzheader_small_brandimagealign."!important;
-
 	}	
 	.woobizzheader-small-brandhelp:after {
-		content:'$woobizzheader_small_brandhelp';	
-		
+		content:'$woobizzheader_small_brandhelp';		
 	}
 	h3#woobizzheader-small-brandtitle {
+		display:".$woobizzheader_small_brandtitledisplay."!important;
 		color: ".$woobizzheader_small_brandtitlecolor.";
 		font-size:".$woobizzheader_small_brandtitlesize."px;
 		font-weight: 400;
-		font-family: inherit;		
+		font-family: inherit;	
+		justify-content: ".$woobizzheader_small_brandtxtalign."!important;			
 	}
 	p#woobizzheader-small-branddescription {
+		display:".$woobizzheader_small_branddescriptiondisplay."!important;
 		color: ".$woobizzheader_small_branddescriptioncolor.";
 		font-size:".$woobizzheader_small_branddescriptionsize."px;
+		margin: 0;
+		justify-content: ".$woobizzheader_small_brandtxtalign."!important;	
 	}
 	.woobizzheader-small-branditems p {
-		margin: 0;
-		text-align: ".$woobizzheader_small_brandtxtalign."!important;
+		display:flex;
+		justify-content: ".$woobizzheader_small_brandtxtalign."!important;	
 	}
 	.woobizzheader-small-branditems {
 		display: flex;
@@ -426,34 +454,32 @@ echo"
 		-moz-filter: grayscale(".$woobizzheader_small_brandgrayscale."%) sepia(".$woobizzheader_small_brandsepia."%) blur(".$woobizzheader_small_brandblur."px) brightness(".$woobizzheader_small_brandbrightness."%) hue-rotate(".$woobizzheader_small_brandhuerotate."deg) saturate(".$woobizzheader_small_brandsaturate."%) opacity(".$woobizzheader_small_brandopacity."%) contrast(".$woobizzheader_small_brandcontrast."%) invert(".$woobizzheader_small_brandinvert."%);
 	}	
 	.woobizzheader-small-branditem2 {
-		text-align: ".$woobizzheader_small_brandtxtalign."!important;
 		margin-top: ".$woobizzheader_small_brandtxtmargintop."px;
 		margin-bottom: ".$woobizzheader_small_brandtxtmarginbottom."px;
 		margin-right: ".$woobizzheader_small_brandtxtmarginright."px;
 		margin-left: ".$woobizzheader_small_brandtxtmarginleft."px;
+		line-height:".$woobizzheader_small_brandtxtlineheight."px;
 	}
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ MENU 1 CSS */
+	/* WOOBIZZ MENU 1 SS */
 	/*---------------------------------------------------------------*/
 	.woobizzheader-small-menu1{
 		display:".$woobizzheader_small_menu1display."!important;
-		order:".$woobizzheader_small_menu1position."!important;
-		width:".$woobizzheader_small_menu1width."%!important;
+		order:".$woobizzheader_small_menu1position.";
+		width:".$woobizzheader_small_menu1width."%;
 		align-items:".$woobizzheader_small_menu1alignitems."!important;
 		justify-content:".$woobizzheader_small_menu1justifycontent."!important;
-
 	}
 	.woobizzheader-small-menu1help:after {
-		content:'$woobizzheader_small_menu1help';	
-		
+		content:'$woobizzheader_small_menu1help';		
 	}	
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ MENU 2 CSS */
+	/* WOOBIZZ MENU 2 SS */
 	/*---------------------------------------------------------------*/
 	.woobizzheader-small-menu2{
 		display:".$woobizzheader_small_menu2display."!important;
-		order:".$woobizzheader_small_menu2position."!important;
-		width:".$woobizzheader_small_menu2width."%!important;
+		order:".$woobizzheader_small_menu2position.";
+		width:".$woobizzheader_small_menu2width."%;
 		align-items:".$woobizzheader_small_menu2alignitems."!important;
 		justify-content:".$woobizzheader_small_menu2justifycontent."!important;
 	}
@@ -461,23 +487,20 @@ echo"
 		content:'$woobizzheader_small_menu2help';			
 	}
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ MENU 3 CSS */
+	/* WOOBIZZ MENU 3 SS */
 	/*---------------------------------------------------------------*/
 	.woobizzheader-small-menu3{
 		display:".$woobizzheader_small_menu3display."!important;
-		order:".$woobizzheader_small_menu3position."!important;
-		width:".$woobizzheader_small_menu3width."%!important;
+		order:".$woobizzheader_small_menu3position.";
+		width:".$woobizzheader_small_menu3width."%;
 		align-items:".$woobizzheader_small_menu3alignitems."!important;
 		justify-content:".$woobizzheader_small_menu3justifycontent."!important;
 	}
 	.woobizzheader-small-menu3help:after {
 		content:'$woobizzheader_small_menu3help';		
 	}
-	#mega-menu-wrap-woobizz-menu-3 {
-    width: 100%;
-	}	
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ CART CSS */
+	/* WOOBIZZ CART SS */
 	/*---------------------------------------------------------------*/
 	.woobizzheader-small-cartitems{
 		display: ".$woobizzheader_small_cartdisplay."!important;
@@ -492,8 +515,8 @@ echo"
 	}
 	.woobizzheader-small-cart {
 		display:".$woobizzheader_small_cartdisplay."!important;
-		order:".$woobizzheader_small_cartposition."!important;
-		width:".$woobizzheader_small_cartwidth."%!important;
+		order:".$woobizzheader_small_cartposition.";
+		width:".$woobizzheader_small_cartwidth."%;
 		align-items:".$woobizzheader_small_cartalignitems."!important;
 		justify-content:".$woobizzheader_small_cartjustifycontent."!important;		
 	}
@@ -503,14 +526,17 @@ echo"
 	
 	h3#woobizzheader-small-carttitle {
 		color: ".$woobizzheader_small_carttitlecolor."!important;
-		font-size:".$woobizzheader_small_carttitlesize."px!important;
 		text-align: ".$woobizzheader_small_carttxtalign."!important;
 		font-weight: 400;
 		font-family: inherit;		
 	}
+	span.woocommerce-Price-amount.amount{
+	font-size:".$woobizzheader_small_carttitlesize."px;	
+	}
+
 	a.woobizzheader-small-cartlink {
 		color: ".$woobizzheader_small_cartdescriptioncolor."!important;
-		font-size:".$woobizzheader_small_cartdescriptionsize."px!important;
+		font-size:".$woobizzheader_small_cartdescriptionsize."px;
 		text-align: ".$woobizzheader_small_carttxtalign."!important;
 		display: ".$woobizzheader_small_carttxtdisplay."!important;
 
@@ -527,12 +553,12 @@ echo"
 	}
 
 	.woobizzheader-small-cartitem2 {
-		text-align: ".$woobizzheader_small_carttxtalign."!important;
-		margin: 10px 10px;
+		display:flex;
+		align-items: ".$woobizzheader_small_carttxtalign."!important;	
 	}
 	.site-header-cart .cart-contents .amount {
 		color: ".$woobizzheader_small_carttitlecolor."!important;
-		font-size:".$woobizzheader_small_carttitlesize."px!important;
+		font-size:".$woobizzheader_small_carttitlesize."px;
 		text-align: ".$woobizzheader_small_carttxtalign."!important;
 		display: ".$woobizzheader_small_cartpricedisplay."!important;
 		margin-right:0;
@@ -553,73 +579,22 @@ echo"
 		margin-top: -66px;
 		position: absolute;
 	}
-	.site-header-cart .cart-contents .count {
-		display: none;
-	}
-	.woobizzheader-small-cartitem2{
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-		margin: 10px 10px;
-		
-	}	
-	.woobizzheader-small-cartitem2 p {
-		margin:0;
-	}
-	.site-header-cart .cart-contents::before {
-		display: none!important;
-	}
-	.site-header-cart .cart-contents {
-		padding: 0;
-	}
-	a.cart-contents {
-		display: grid!important;
-		text-align: left;
-	}
-	.woocommerce-active .site-header .site-header-cart {
-		width: auto;
-	}
-	.widget.woocommerce.widget_shopping_cart {
-		display: none;
-	}
-	a.cart-contents {
-		display: grid!important;
-		text-align: left;
-	}
-	.woocommerce-active .site-header .site-header-cart {
-		width: auto;
-	}
-	.woobizzheader-item-cart p, h3 {
-		margin:0!important;
-	}
-	.woobizzheader-small-cartitems p {
-		margin: 0;
-	}
-	.woobizzheader-small-cartitems {
-		display: flex;
-		align-items: center;
-		height: auto;
-	}	
-	.noselect {
-	-webkit-touch-callout: none; /* iOS Safari */
-		-webkit-user-select: none; /* Safari */
-		-khtml-user-select: none; /* Konqueror HTML */
-		-moz-user-select: none; /* Firefox */
-			-ms-user-select: none; /* Internet Explorer/Edge */
-				user-select: none; /* Non-prefixed version, currently
-									supported by Chrome and Opera */
-	}
 	/*---------------------------------------------------------------*/
-	/* SEARCH CSS */
+	/* SEARCH LS */
 	/*---------------------------------------------------------------*/
 	.woobizzheader-small-search {
 		display:".$woobizzheader_small_searchdisplay."!important;
-		order:".$woobizzheader_small_searchposition."!important;
-		width:".$woobizzheader_small_searchwidth."%!important;
+		order:".$woobizzheader_small_searchposition.";
+		width:".$woobizzheader_small_searchcontentwidth."%;
 		align-items:".$woobizzheader_small_searchalignitems."!important;
 		justify-content:".$woobizzheader_small_searchjustifycontent."!important;
 		text-align: center;
 	}
+    input#woocommerce-product-search-field-2{
+		width: ".$woobizzheader_small_searchitemwidth."vw;
+		max-width :".$woobizzheader_small_searchitemmaxwidth."px;
+	}	
+
 	.site-search {
     	display:".$woobizzheader_small_searchdisplay."!important;
 	}
@@ -642,35 +617,36 @@ echo"
 	}
 	
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ BOX2 CSS */
+	/* BOX1
 	/*---------------------------------------------------------------*/
-	.woobizzheader-small-box1items{
-		display: ".$woobizzheader_small_box1display."!important;
-	}
 	.woobizzheader-small-box1 {
 		display:".$woobizzheader_small_box1display."!important;
-		order:".$woobizzheader_small_box1position."!important;
-		width:".$woobizzheader_small_box1width."%!important;
+		order:".$woobizzheader_small_box1position.";
+		width:".$woobizzheader_small_box1width."%;
 		align-items:".$woobizzheader_small_box1alignitems."!important;
 		justify-content:".$woobizzheader_small_box1justifycontent."!important;
-		
-	}
+	}	
 	.woobizzheader-small-box1help:after {
 		content:'$woobizzheader_small_box1help';		
 	}
 	h3#woobizzheader-small-box1title {
-		color: ".$woobizzheader_small_box1titlecolor."!important;
-		font-size:".$woobizzheader_small_box1titlesize."px!important;
+		display:".$woobizzheader_small_box1titledisplay."!important;
+		color: ".$woobizzheader_small_box1titlecolor.";
+		font-size:".$woobizzheader_small_box1titlesize."px;
 		font-weight: 400;
-		font-family: inherit;		
+		font-family: inherit;	
+		justify-content: ".$woobizzheader_small_box1txtalign."!important;			
 	}
-	p#woobizzheader-small-box1description- {
-		color: ".$woobizzheader_small_box1descriptioncolor."!important;
-		font-size:".$woobizzheader_small_box1descriptionsize."px!important;
+	p#woobizzheader-small-box1description {
+		display:".$woobizzheader_small_box1descriptiondisplay."!important;
+		color: ".$woobizzheader_small_box1descriptioncolor.";
+		font-size:".$woobizzheader_small_box1descriptionsize."px;
+		margin: 0;
+		justify-content: ".$woobizzheader_small_box1txtalign."!important;	
 	}
 	.woobizzheader-small-box1items p {
-		margin: 0;
-		text-align: ".$woobizzheader_small_box1txtalign."!important;
+		display:flex;
+		justify-content: ".$woobizzheader_small_box1txtalign."!important;	
 	}
 	.woobizzheader-small-box1items {
 		display: flex;
@@ -678,45 +654,50 @@ echo"
 		height: auto;
 		flex-direction:".$woobizzheader_small_box1imagealign."!important;
 	}
-	.woobizzheader-small-box1item1 img{
+	.woobizzheader-small-box1item1 img {
 		filter: grayscale(".$woobizzheader_small_box1grayscale."%) sepia(".$woobizzheader_small_box1sepia."%) blur(".$woobizzheader_small_box1blur."px) brightness(".$woobizzheader_small_box1brightness."%) hue-rotate(".$woobizzheader_small_box1huerotate."deg) saturate(".$woobizzheader_small_box1saturate."%) opacity(".$woobizzheader_small_box1opacity."%) contrast(".$woobizzheader_small_box1contrast."%) invert(".$woobizzheader_small_box1invert."%);
 		-webkit-filter: grayscale(".$woobizzheader_small_box1grayscale."%) sepia(".$woobizzheader_small_box1sepia."%) blur(".$woobizzheader_small_box1blur."px) brightness(".$woobizzheader_small_box1brightness."%) hue-rotate(".$woobizzheader_small_box1huerotate."deg) saturate(".$woobizzheader_small_box1saturate."%) opacity(".$woobizzheader_small_box1opacity."%) contrast(".$woobizzheader_small_box1contrast."%) invert(".$woobizzheader_small_box1invert."%);
 		-moz-filter: grayscale(".$woobizzheader_small_box1grayscale."%) sepia(".$woobizzheader_small_box1sepia."%) blur(".$woobizzheader_small_box1blur."px) brightness(".$woobizzheader_small_box1brightness."%) hue-rotate(".$woobizzheader_small_box1huerotate."deg) saturate(".$woobizzheader_small_box1saturate."%) opacity(".$woobizzheader_small_box1opacity."%) contrast(".$woobizzheader_small_box1contrast."%) invert(".$woobizzheader_small_box1invert."%);
 	}	
-	.woobizzheader-small-box1item1 {
-		text-align: ".$woobizzheader_small_box1txtalign."!important;
-		margin: 10px 10px;
+	.woobizzheader-small-box1item2 {
+		margin-top: ".$woobizzheader_small_box1txtmargintop."px;
+		margin-bottom: ".$woobizzheader_small_box1txtmarginbottom."px;
+		margin-right: ".$woobizzheader_small_box1txtmarginright."px;
+		margin-left: ".$woobizzheader_small_box1txtmarginleft."px;
+		line-height:".$woobizzheader_small_box1txtlineheight."px;
 	}
+	
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ BOX2 CSS */
+	/* BOX2
 	/*---------------------------------------------------------------*/
-	.woobizzheader-small-box2items{
-		display: ".$woobizzheader_small_box2display."!important;
-	}
 	.woobizzheader-small-box2 {
 		display:".$woobizzheader_small_box2display."!important;
-		order:".$woobizzheader_small_box2position."!important;
-		width:".$woobizzheader_small_box2width."%!important;
+		order:".$woobizzheader_small_box2position.";
+		width:".$woobizzheader_small_box2width."%;
 		align-items:".$woobizzheader_small_box2alignitems."!important;
 		justify-content:".$woobizzheader_small_box2justifycontent."!important;
-		
-	}
-	.woobizzheader-small-box2help:after{
+	}	
+	.woobizzheader-small-box2help:after {
 		content:'$woobizzheader_small_box2help';		
 	}
 	h3#woobizzheader-small-box2title {
-		color: ".$woobizzheader_small_box2titlecolor."!important;
-		font-size:".$woobizzheader_small_box2titlesize."px!important;
+		display:".$woobizzheader_small_box2titledisplay."!important;
+		color: ".$woobizzheader_small_box2titlecolor.";
+		font-size:".$woobizzheader_small_box2titlesize."px;
 		font-weight: 400;
-		font-family: inherit;		
+		font-family: inherit;	
+		justify-content: ".$woobizzheader_small_box2txtalign."!important;			
 	}
-	p#woobizzheader-small-box2description- {
-		color: ".$woobizzheader_small_box2descriptioncolor."!important;
-		font-size:".$woobizzheader_small_box2descriptionsize."px!important;
+	p#woobizzheader-small-box2description {
+		display:".$woobizzheader_small_box2descriptiondisplay."!important;
+		color: ".$woobizzheader_small_box2descriptioncolor.";
+		font-size:".$woobizzheader_small_box2descriptionsize."px;
+		margin: 0;
+		justify-content: ".$woobizzheader_small_box2txtalign."!important;	
 	}
 	.woobizzheader-small-box2items p {
-		margin: 0;
-		text-align: ".$woobizzheader_small_box2txtalign."!important;
+		display:flex;
+		justify-content: ".$woobizzheader_small_box2txtalign."!important;	
 	}
 	.woobizzheader-small-box2items {
 		display: flex;
@@ -724,22 +705,26 @@ echo"
 		height: auto;
 		flex-direction:".$woobizzheader_small_box2imagealign."!important;
 	}
-	.woobizzheader-small-box2item1 img{
+	.woobizzheader-small-box2item1 img {
 		filter: grayscale(".$woobizzheader_small_box2grayscale."%) sepia(".$woobizzheader_small_box2sepia."%) blur(".$woobizzheader_small_box2blur."px) brightness(".$woobizzheader_small_box2brightness."%) hue-rotate(".$woobizzheader_small_box2huerotate."deg) saturate(".$woobizzheader_small_box2saturate."%) opacity(".$woobizzheader_small_box2opacity."%) contrast(".$woobizzheader_small_box2contrast."%) invert(".$woobizzheader_small_box2invert."%);
 		-webkit-filter: grayscale(".$woobizzheader_small_box2grayscale."%) sepia(".$woobizzheader_small_box2sepia."%) blur(".$woobizzheader_small_box2blur."px) brightness(".$woobizzheader_small_box2brightness."%) hue-rotate(".$woobizzheader_small_box2huerotate."deg) saturate(".$woobizzheader_small_box2saturate."%) opacity(".$woobizzheader_small_box2opacity."%) contrast(".$woobizzheader_small_box2contrast."%) invert(".$woobizzheader_small_box2invert."%);
 		-moz-filter: grayscale(".$woobizzheader_small_box2grayscale."%) sepia(".$woobizzheader_small_box2sepia."%) blur(".$woobizzheader_small_box2blur."px) brightness(".$woobizzheader_small_box2brightness."%) hue-rotate(".$woobizzheader_small_box2huerotate."deg) saturate(".$woobizzheader_small_box2saturate."%) opacity(".$woobizzheader_small_box2opacity."%) contrast(".$woobizzheader_small_box2contrast."%) invert(".$woobizzheader_small_box2invert."%);
 	}	
 	.woobizzheader-small-box2item2 {
-		text-align: ".$woobizzheader_small_box2txtalign."!important;
-		margin: 10px 10px;
+		margin-top: ".$woobizzheader_small_box2txtmargintop."px;
+		margin-bottom: ".$woobizzheader_small_box2txtmarginbottom."px;
+		margin-right: ".$woobizzheader_small_box2txtmarginright."px;
+		margin-left: ".$woobizzheader_small_box2txtmarginleft."px;
+		line-height:".$woobizzheader_small_box2txtlineheight."px;
 	}
+	
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ WIDGET 1 CSS */
+	/* WOOBIZZ WIDGET 1 SS */
 	/*---------------------------------------------------------------*/
 	.woobizzheader-small-widget1{
 		display:".$woobizzheader_small_widget1display."!important;
-		order:".$woobizzheader_small_widget1position."!important;
-		width:".$woobizzheader_small_widget1width."%!important;
+		order:".$woobizzheader_small_widget1position.";
+		width:".$woobizzheader_small_widget1width."%;
 		align-items:".$woobizzheader_small_widget1alignitems."!important;
 		justify-content:".$woobizzheader_small_widget1justifycontent."!important;
 
@@ -749,12 +734,12 @@ echo"
 	}
 	
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ WIDGET 2 CSS */
+	/* WOOBIZZ WIDGET 2 SS */
 	/*---------------------------------------------------------------*/
 	.woobizzheader-small-widget2{
 		display:".$woobizzheader_small_widget2display."!important;
-		order:".$woobizzheader_small_widget2position."!important;
-		width:".$woobizzheader_small_widget2width."%!important;
+		order:".$woobizzheader_small_widget2position.";
+		width:".$woobizzheader_small_widget2width."%;
 		align-items:".$woobizzheader_small_widget2alignitems."!important;
 		justify-content:".$woobizzheader_small_widget2justifycontent."!important;
 
@@ -794,6 +779,7 @@ $woobizzheader_small_box1titlecolor= get_theme_mod("woobizzheader_small_box1titl
 $woobizzheader_small_box1description= get_theme_mod("woobizzheader_small_box1description");
 $woobizzheader_small_box1descriptionsize= get_theme_mod("woobizzheader_small_box1descriptionsize");
 $woobizzheader_small_box1descriptioncolor= get_theme_mod("woobizzheader_small_box1descriptioncolor");
+$woobizzheader_small_box1link= get_theme_mod("woobizzheader_small_box1link");
 
 $woobizzheader_small_box2logo= get_theme_mod('woobizzheader_small_box2logo');
 $woobizzheader_small_box2title= get_theme_mod("woobizzheader_small_box2title");
@@ -802,11 +788,13 @@ $woobizzheader_small_box2titlecolor= get_theme_mod("woobizzheader_small_box2titl
 $woobizzheader_small_box2description= get_theme_mod("woobizzheader_small_box2description");
 $woobizzheader_small_box2descriptionsize= get_theme_mod("woobizzheader_small_box2descriptionsize");
 $woobizzheader_small_box2descriptioncolor= get_theme_mod("woobizzheader_small_box2descriptioncolor");
+$woobizzheader_small_box2link= get_theme_mod("woobizzheader_small_box2link");
 ?>
+
 <div class= "woobizzheader-small-bghelp woobizzheader-general-txthelp"></div>
 <div class="woobizzheader-small-wrapper " >	
 	
-	<div class="woobizzheader-small-box woobizzheader-small-brandbox woobizzheader-general-box ">
+	<div class="woobizzheader-small-box woobizzheader-small-brand woobizzheader-general-box ">
 	
 	 	<div class= "woobizzheader-small-brandhelp woobizzheader-general-txthelp"></div>
 		<div class="woobizzheader-small-branditems ">					
@@ -821,6 +809,7 @@ $woobizzheader_small_box2descriptioncolor= get_theme_mod("woobizzheader_small_bo
 				</div>											
 		</div>	
 	</div>
+
 	<div class="woobizzheader-small-box woobizzheader-small-menu1 woobizzheader-general-box">
 
 		<div class= "woobizzheader-small-menu1help woobizzheader-general-txthelp"></div>
@@ -843,7 +832,9 @@ $woobizzheader_small_box2descriptioncolor= get_theme_mod("woobizzheader_small_bo
 	<div class="woobizzheader-small-box woobizzheader-small-cart woobizzheader-general-box">
 			<div class= "woobizzheader-small-carthelp woobizzheader-general-txthelp"></div>		
 			<div class="woobizzheader-small-cartitems">	
-				<a href="http://127.0.0.1/dev-plugins/carrito/">
+
+				<a href="<?php echo esc_url( wc_get_cart_url() ); ?>">
+
 				<div class="woobizzheader-small-cartitem1">
 					<img src="<?php  echo $woobizzheader_small_cartlogo; ?>" />	
 				</div>
@@ -862,7 +853,7 @@ $woobizzheader_small_box2descriptioncolor= get_theme_mod("woobizzheader_small_bo
 						storefront_header_cart();
 					}					  
 					 ?>
-						<a class="woobizzheader-small-cartlink" href="http://127.0.0.1/dev-plugins/carrito/">
+						<a class="woobizzheader-small-cartlink" href="<?php echo esc_url( wc_get_cart_url() ); ?>">
 						<?php  echo $woobizzheader_small_cartdescription; ?>
 						</a>
 				</div>
@@ -882,30 +873,32 @@ $woobizzheader_small_box2descriptioncolor= get_theme_mod("woobizzheader_small_bo
 				?>
 			</div>
 	</div>
-	<div class="woobizzheader-small-box woobizzheader-small-box1 woobizzheader-general-box">
-		<div class= "woobizzheader-small-box1help woobizzheader-general-txthelp"></div>
+	<div class="woobizzheader-small-box woobizzheader-small-box1 woobizzheader-general-box ">
+	
+	 	<div class= "woobizzheader-small-box1help woobizzheader-general-txthelp"></div>
 		<div class="woobizzheader-small-box1items ">					
 				<div class="woobizzheader-small-box1item1">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="woobizzheader-small-box1logo" rel="home">
+				<a href="<?php echo $woobizzheader_small_box1link; ?>">
 					<img src="<?php  echo $woobizzheader_small_box1logo; ?>" />						
 				</div>							
 				<div class="woobizzheader-small-box1item2">
 					<h3 id="woobizzheader-small-box1title"><?php  echo $woobizzheader_small_box1title; ?></h3>
-					<p id="woobizzheader-small-box1description-"><?php  echo $woobizzheader_small_box1description; ?></p>	
+					<p id="woobizzheader-small-box1description"><?php  echo $woobizzheader_small_box1description; ?></p>	
 				</a>						
 				</div>											
 		</div>	
 	</div>
-	<div class="woobizzheader-small-box woobizzheader-small-box2 woobizzheader-general-box">
-		<div class= "woobizzheader-small-box2help woobizzheader-general-txthelp"></div>
+	<div class="woobizzheader-small-box woobizzheader-small-box2 woobizzheader-general-box ">
+	
+	 	<div class= "woobizzheader-small-box2help woobizzheader-general-txthelp"></div>
 		<div class="woobizzheader-small-box2items ">					
 				<div class="woobizzheader-small-box2item1">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="woobizzheader-small-box2logo" rel="home">
+				<a href="<?php echo $woobizzheader_small_box2link; ?>">
 					<img src="<?php  echo $woobizzheader_small_box2logo; ?>" />						
 				</div>							
 				<div class="woobizzheader-small-box2item2">
 					<h3 id="woobizzheader-small-box2title"><?php  echo $woobizzheader_small_box2title; ?></h3>
-					<p id="woobizzheader-small-box2description-"><?php  echo $woobizzheader_small_box2description; ?></p>	
+					<p id="woobizzheader-small-box2description"><?php  echo $woobizzheader_small_box2description; ?></p>	
 				</a>						
 				</div>											
 		</div>	

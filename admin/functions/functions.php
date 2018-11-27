@@ -12,8 +12,8 @@ function woobizzheader_remove_storefront_content(){
     remove_action( "storefront_header", "woobizz_storefront_header_content",		    70);
     remove_action( "storefront_header", "woobizz_storefront_header_lang",		        80);
     remove_action( "storefront_header", "storefront_product_search",		            40);
-    //remove_action( "storefront_header", "storefront_primary_navigation_wrapper",        42);
-    //remove_action( "storefront_header", "storefront_primary_navigation_wrapper_close",  68);
+    remove_action( "storefront_header", "storefront_primary_navigation_wrapper",        42);
+    remove_action( "storefront_header", "storefront_primary_navigation_wrapper_close",  68);
     remove_action( "storefront_header", "storefront_header_cart",                       60);
 	//remove_action( "woocommerce_after_single_product_summary", "storefront_single_product_pagination",30);
 
@@ -423,6 +423,12 @@ $woobizzheader_medium_maxwidth= get_theme_mod('woobizzheader_medium_maxwidth');
                 width: 82%!important;
                 
             }
+            .customize-control-kirki-slider .wrapper{
+                padding:0!important;
+            }
+            .customize-control-kirki-slider .wrapper .slider-reset {
+                top: -20px!important;
+            } 
 
         </style>
 <?php

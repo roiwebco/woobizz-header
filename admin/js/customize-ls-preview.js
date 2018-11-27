@@ -1,3 +1,4 @@
+
 //-------------------------------------------------------------	
 //BACKGROUND
 //-------------------------------------------------------------
@@ -20,7 +21,7 @@ wp.customize( 'woobizzheader_large_bgpadding', function( value ) {
 		jQuery( '.woobizzheader-large-wrapper').css( 'padding', newval+'px');
 	});
 });	
-//Background margin
+//Background margin'transport'   => 'postMessage',
 wp.customize( 'woobizzheader_large_bgmargin', function( value ) {
 	value.bind( function( newval ) {
 		jQuery( '.woobizzheader-large-wrapper').css( 'margin', newval+'px');
@@ -33,14 +34,14 @@ wp.customize( 'woobizzheader_large_bgmargin', function( value ) {
 //brand position
 wp.customize( 'woobizzheader_large_brandposition', function( value ) {
 	value.bind( function( newval ) {
-		jQuery( '.woobizzheader-large-brandbox').css( 'display', 'flex');
-		jQuery( '.woobizzheader-large-brandbox').css( 'order', +newval);
+		jQuery( '.woobizzheader-large-brand').css( 'display', 'flex');
+		jQuery( '.woobizzheader-large-brand').css( 'order', +newval);
 	});
 });
 //brand width
 wp.customize( 'woobizzheader_large_brandwidth', function( value ) {
 	value.bind( function( newval ) {
-		jQuery( '.woobizzheader-large-brandbox').css( 'width', newval+'%');
+		jQuery( '.woobizzheader-large-brand').css( 'width', newval+'%');
 	});
 });
 //brand title
@@ -235,12 +236,27 @@ wp.customize( 'woobizzheader_large_searchposition', function( value ) {
 		jQuery( '.woobizzheader-large-search').css( 'order', +newval);
 	});
 });
-//search width
-wp.customize( 'woobizzheader_large_searchwidth', function( value ) {
+//search content width
+wp.customize( 'woobizzheader_large_searchcontentwidth', function( value ) {
 	value.bind( function( newval ) {
 		jQuery( '.woobizzheader-large-search').css( 'width', newval+'%');
 	});
 });
+
+//search item width 
+wp.customize( 'woobizzheader_large_searchitemwidth', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( 'input#woocommerce-product-search-field-0').css( 'width', newval+'vw');
+	});
+});
+
+//search item max-width 
+wp.customize( 'woobizzheader_large_searchitemmaxwidth', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( 'input#woocommerce-product-search-field-0').css( 'max-width', newval+'px');
+	});
+});
+
 
 //-------------------------------------------------------------	
 //BOX1
@@ -258,20 +274,34 @@ wp.customize( 'woobizzheader_large_box1width', function( value ) {
 		jQuery( '.woobizzheader-large-box1').css( 'width', newval+'%');
 	});
 });
-
+//box1 title
+wp.customize( 'woobizzheader_large_box1title', function( value ) {	
+	value.bind( function( newval ) {	
+	jQuery( '#woobizzheader-large-box1title' ).text( newval );
+	} );
+} );
 //box1 title size
 wp.customize( 'woobizzheader_large_box1titlesize', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'span.woocommerce-Price-amount').css( 'font-size', newval+'px');
+	jQuery( 'h3#woobizzheader-large-box1title').css( 'font-size', newval+'px');
+	} );
+} );
+//box1 title color
+wp.customize( 'woobizzheader_large_box1titlecolor', function( value ) {
 	
+	value.bind( function( newval ) {
+	
+	jQuery( 'h3#woobizzheader-large-box1title').css( 'color', newval);
 	} );
 } );
 //box1 description
 wp.customize( 'woobizzheader_large_box1description', function( value ) {
+	
 	value.bind( function( newval ) {
-	jQuery( 'a.woobizzheader-large-box1link' ).text( newval );
+	
+	jQuery( '#woobizzheader-large-box1description' ).text( newval );
 	} );
 } );
 
@@ -280,10 +310,60 @@ wp.customize( 'woobizzheader_large_box1descriptionsize', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'a.woobizzheader-large-box1link').css( 'font-size', newval+'px');
-	
+	jQuery( 'p#woobizzheader-large-box1description').css( 'font-size', newval+'px');
 	} );
 } );
+
+//box1 description color
+wp.customize( 'woobizzheader_large_box1descriptioncolor', function( value ) {
+	
+	value.bind( function( newval ) {
+	
+	jQuery( 'p#woobizzheader-large-box1description').css( 'color', newval);
+	} );
+} );
+
+//box1 texts line height
+wp.customize( 'woobizzheader_large_box1txtlineheight', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-box1item2').css( 'line-height', newval+'px');
+	});
+});	
+
+//box1 texts margin top
+wp.customize( 'woobizzheader_large_box1txtmargintop', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-box1item2').css( 'margin-top', newval+'px');
+	});
+});
+
+//box1 texts margin bottom
+wp.customize( 'woobizzheader_large_box1txtmarginbottom', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-box1item2').css( 'margin-bottom', newval+'px');
+	});
+});
+
+//box1 texts margin right
+wp.customize( 'woobizzheader_large_box1txtmarginright', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-box1item2').css( 'margin-right', newval+'px');
+	});
+});	
+
+//box1 texts margin left
+wp.customize( 'woobizzheader_large_box1txtmarginleft', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-box1item2').css( 'margin-left', newval+'px');
+	});
+});	
+
+//box1 image
+wp.customize( 'woobizzheader_large_box1logo', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-box1item1' ).css( 'background-image', 'url(' +newval+ ')' );
+	});
+});	
 
 //-------------------------------------------------------------	
 //BOX2
@@ -301,20 +381,34 @@ wp.customize( 'woobizzheader_large_box2width', function( value ) {
 		jQuery( '.woobizzheader-large-box2').css( 'width', newval+'%');
 	});
 });
-
+//box2 title
+wp.customize( 'woobizzheader_large_box2title', function( value ) {	
+	value.bind( function( newval ) {	
+	jQuery( '#woobizzheader-large-box2title' ).text( newval );
+	} );
+} );
 //box2 title size
 wp.customize( 'woobizzheader_large_box2titlesize', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'span.woocommerce-Price-amount').css( 'font-size', newval+'px');
+	jQuery( 'h3#woobizzheader-large-box2title').css( 'font-size', newval+'px');
+	} );
+} );
+//box2 title color
+wp.customize( 'woobizzheader_large_box2titlecolor', function( value ) {
 	
+	value.bind( function( newval ) {
+	
+	jQuery( 'h3#woobizzheader-large-box2title').css( 'color', newval);
 	} );
 } );
 //box2 description
 wp.customize( 'woobizzheader_large_box2description', function( value ) {
+	
 	value.bind( function( newval ) {
-	jQuery( 'a.woobizzheader-large-box2link' ).text( newval );
+	
+	jQuery( '#woobizzheader-large-box2description' ).text( newval );
 	} );
 } );
 
@@ -323,11 +417,60 @@ wp.customize( 'woobizzheader_large_box2descriptionsize', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'a.woobizzheader-large-box2link').css( 'font-size', newval+'px');
-	
+	jQuery( 'p#woobizzheader-large-box2description').css( 'font-size', newval+'px');
 	} );
 } );
 
+//box2 description color
+wp.customize( 'woobizzheader_large_box2descriptioncolor', function( value ) {
+	
+	value.bind( function( newval ) {
+	
+	jQuery( 'p#woobizzheader-large-box2description').css( 'color', newval);
+	} );
+} );
+
+//box2 texts line height
+wp.customize( 'woobizzheader_large_box2txtlineheight', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-box2item2').css( 'line-height', newval+'px');
+	});
+});	
+
+//box2 texts margin top
+wp.customize( 'woobizzheader_large_box2txtmargintop', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-box2item2').css( 'margin-top', newval+'px');
+	});
+});
+
+//box2 texts margin bottom
+wp.customize( 'woobizzheader_large_box2txtmarginbottom', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-box2item2').css( 'margin-bottom', newval+'px');
+	});
+});
+
+//box2 texts margin right
+wp.customize( 'woobizzheader_large_box2txtmarginright', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-box2item2').css( 'margin-right', newval+'px');
+	});
+});	
+
+//box2 texts margin left
+wp.customize( 'woobizzheader_large_box2txtmarginleft', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-box2item2').css( 'margin-left', newval+'px');
+	});
+});	
+
+//box2 image
+wp.customize( 'woobizzheader_large_box2logo', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-large-box2item1' ).css( 'background-image', 'url(' +newval+ ')' );
+	});
+});	
 //-------------------------------------------------------------	
 //WIDGET1
 //-------------------------------------------------------------	
