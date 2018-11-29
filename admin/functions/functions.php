@@ -52,7 +52,7 @@ add_action( 'init', 'woobizzheader_register_my_menu' );
 function woobizzheader_custom_widget1() {
 	$args = array(
 				'id'            => 'woobizzheadercustomwidget1',
-				'name'          => __( 'Woobizz Header Custom Widget 1', 'storefront' ),
+				'name'          => __( 'Woobizz Header Widget1', 'storefront' ),
 				'description'   => 'Add your content here',
 				'before_title'  => '<h2 class="widgettitle">',
 				'before_title'   => '</h2>',
@@ -70,7 +70,7 @@ add_action( 'widgets_init', 'woobizzheader_custom_widget1',4);
 function woobizzheader_custom_widget2() {
 	$args = array(
 				'id'            => 'woobizzheadercustomwidget2',
-				'name'          => __( 'Woobizz Header Custom Widget 2', 'storefront' ),
+				'name'          => __( 'Woobizz Header Widget2', 'storefront' ),
 				'description'   => 'Add your content here',
 				'before_title'  => '<h2 class="widgettitle">',
 				'before_title'   => '</h2>',
