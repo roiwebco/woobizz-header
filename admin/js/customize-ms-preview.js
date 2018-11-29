@@ -55,7 +55,7 @@ wp.customize( 'woobizzheader_medium_brandtitlesize', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-medium-brandtitle').css( 'font-size', newval+'px');
+	jQuery( 'p#woobizzheader-medium-brandtitle').css( 'font-size', newval+'px');
 	} );
 } );
 //brand title color
@@ -63,7 +63,7 @@ wp.customize( 'woobizzheader_medium_brandtitlecolor', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-medium-brandtitle').css( 'color', newval);
+	jQuery( 'p#woobizzheader-medium-brandtitle').css( 'color', newval);
 	} );
 } );
 //brand description
@@ -284,7 +284,7 @@ wp.customize( 'woobizzheader_medium_box1titlesize', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-medium-box1title').css( 'font-size', newval+'px');
+	jQuery( 'p#woobizzheader-medium-box1title').css( 'font-size', newval+'px');
 	} );
 } );
 //box1 title color
@@ -292,7 +292,7 @@ wp.customize( 'woobizzheader_medium_box1titlecolor', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-medium-box1title').css( 'color', newval);
+	jQuery( 'p#woobizzheader-medium-box1title').css( 'color', newval);
 	} );
 } );
 //box1 description
@@ -391,7 +391,7 @@ wp.customize( 'woobizzheader_medium_box2titlesize', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-medium-box2title').css( 'font-size', newval+'px');
+	jQuery( 'p#woobizzheader-medium-box2title').css( 'font-size', newval+'px');
 	} );
 } );
 //box2 title color
@@ -399,7 +399,7 @@ wp.customize( 'woobizzheader_medium_box2titlecolor', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-medium-box2title').css( 'color', newval);
+	jQuery( 'p#woobizzheader-medium-box2title').css( 'color', newval);
 	} );
 } );
 //box2 description

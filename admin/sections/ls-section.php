@@ -407,7 +407,7 @@ echo"
 		max-width: 100%;
 	}
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ BRAND LS */
+	/* BRAND
 	/*---------------------------------------------------------------*/
 	.woobizzheader-large-brand {
 		display:".$woobizzheader_large_branddisplay."!important;
@@ -419,20 +419,21 @@ echo"
 	.woobizzheader-large-brandhelp:after {
 		content:'$woobizzheader_large_brandhelp';		
 	}
-	h3#woobizzheader-large-brandtitle {
+	p#woobizzheader-large-brandtitle {
 		display:".$woobizzheader_large_brandtitledisplay."!important;
 		color: ".$woobizzheader_large_brandtitlecolor.";
 		font-size:".$woobizzheader_large_brandtitlesize."px;
 		font-weight: 400;
 		font-family: inherit;	
-		justify-content: ".$woobizzheader_large_brandtxtalign."!important;			
+		justify-content: ".$woobizzheader_large_brandtxtalign."!important;	
+		margin: 0;		
 	}
 	p#woobizzheader-large-branddescription {
 		display:".$woobizzheader_large_branddescriptiondisplay."!important;
 		color: ".$woobizzheader_large_branddescriptioncolor.";
 		font-size:".$woobizzheader_large_branddescriptionsize."px;
-		margin: 0;
 		justify-content: ".$woobizzheader_large_brandtxtalign."!important;	
+		margin: 0;
 	}
 	.woobizzheader-large-branditems p {
 		display:flex;
@@ -457,7 +458,7 @@ echo"
 		line-height:".$woobizzheader_large_brandtxtlineheight."px;
 	}
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ MENU 1 LS */
+	/* MENU1
 	/*---------------------------------------------------------------*/
 	.woobizzheader-large-menu1{
 		display:".$woobizzheader_large_menu1display."!important;
@@ -470,7 +471,7 @@ echo"
 		content:'$woobizzheader_large_menu1help';		
 	}	
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ MENU 2 LS */
+	/* MENU2
 	/*---------------------------------------------------------------*/
 	.woobizzheader-large-menu2{
 		display:".$woobizzheader_large_menu2display."!important;
@@ -483,7 +484,7 @@ echo"
 		content:'$woobizzheader_large_menu2help';			
 	}
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ MENU 3 LS */
+	/* MENU3
 	/*---------------------------------------------------------------*/
 	.woobizzheader-large-menu3{
 		display:".$woobizzheader_large_menu3display."!important;
@@ -496,7 +497,7 @@ echo"
 		content:'$woobizzheader_large_menu3help';		
 	}
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ CART LS */
+	/* CART
 	/*---------------------------------------------------------------*/
 	.woobizzheader-large-cartitems{
 		display: ".$woobizzheader_large_cartdisplay."!important;
@@ -550,7 +551,9 @@ echo"
 
 	.woobizzheader-large-cartitem2 {
 		display:flex;
-		align-items: ".$woobizzheader_large_carttxtalign."!important;	
+		align-items: ".$woobizzheader_large_carttxtalign."!important;
+		flex-direction: column;	
+		margin: 10px 10px;
 	}
 	.site-header-cart .cart-contents .amount {
 		color: ".$woobizzheader_large_carttitlecolor."!important;
@@ -576,7 +579,7 @@ echo"
 		position: absolute;
 	}
 	/*---------------------------------------------------------------*/
-	/* SEARCH LS */
+	/* SEARCH
 	/*---------------------------------------------------------------*/
 	.woobizzheader-large-search {
 		display:".$woobizzheader_large_searchdisplay."!important;
@@ -625,13 +628,14 @@ echo"
 	.woobizzheader-large-box1help:after {
 		content:'$woobizzheader_large_box1help';		
 	}
-	h3#woobizzheader-large-box1title {
+	p#woobizzheader-large-box1title {
 		display:".$woobizzheader_large_box1titledisplay."!important;
 		color: ".$woobizzheader_large_box1titlecolor.";
 		font-size:".$woobizzheader_large_box1titlesize."px;
 		font-weight: 400;
 		font-family: inherit;	
-		justify-content: ".$woobizzheader_large_box1txtalign."!important;			
+		justify-content: ".$woobizzheader_large_box1txtalign."!important;	
+		margin:0;		
 	}
 	p#woobizzheader-large-box1description {
 		display:".$woobizzheader_large_box1descriptiondisplay."!important;
@@ -676,13 +680,15 @@ echo"
 	.woobizzheader-large-box2help:after {
 		content:'$woobizzheader_large_box2help';		
 	}
-	h3#woobizzheader-large-box2title {
+	p#woobizzheader-large-box2title {
 		display:".$woobizzheader_large_box2titledisplay."!important;
 		color: ".$woobizzheader_large_box2titlecolor.";
 		font-size:".$woobizzheader_large_box2titlesize."px;
 		font-weight: 400;
 		font-family: inherit;	
-		justify-content: ".$woobizzheader_large_box2txtalign."!important;			
+		justify-content: ".$woobizzheader_large_box2txtalign."!important;
+		margin:0;		
+			
 	}
 	p#woobizzheader-large-box2description {
 		display:".$woobizzheader_large_box2descriptiondisplay."!important;
@@ -715,7 +721,7 @@ echo"
 	}
 	
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ WIDGET 1 LS */
+	/* WIDGET1
 	/*---------------------------------------------------------------*/
 	.woobizzheader-large-widget1{
 		display:".$woobizzheader_large_widget1display."!important;
@@ -730,7 +736,7 @@ echo"
 	}
 	
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ WIDGET 2 LS */
+	/* WIDGET2
 	/*---------------------------------------------------------------*/
 	.woobizzheader-large-widget2{
 		display:".$woobizzheader_large_widget2display."!important;
@@ -799,7 +805,7 @@ $woobizzheader_large_box2link= get_theme_mod("woobizzheader_large_box2link");
 					<img src="<?php  echo $woobizzheader_large_brandlogo; ?>" />						
 				</div>							
 				<div class="woobizzheader-large-branditem2">
-					<h3 id="woobizzheader-large-brandtitle"><?php  echo $woobizzheader_large_brandtitle; ?></h3>
+					<p id="woobizzheader-large-brandtitle"><?php  echo $woobizzheader_large_brandtitle; ?></p>
 					<p id="woobizzheader-large-branddescription"><?php  echo $woobizzheader_large_branddescription; ?></p>	
 				</a>						
 				</div>											
@@ -878,7 +884,7 @@ $woobizzheader_large_box2link= get_theme_mod("woobizzheader_large_box2link");
 					<img src="<?php  echo $woobizzheader_large_box1logo; ?>" />						
 				</div>							
 				<div class="woobizzheader-large-box1item2">
-					<h3 id="woobizzheader-large-box1title"><?php  echo $woobizzheader_large_box1title; ?></h3>
+					<p id="woobizzheader-large-box1title"><?php  echo $woobizzheader_large_box1title; ?></p>
 					<p id="woobizzheader-large-box1description"><?php  echo $woobizzheader_large_box1description; ?></p>	
 				</a>						
 				</div>											
@@ -893,7 +899,7 @@ $woobizzheader_large_box2link= get_theme_mod("woobizzheader_large_box2link");
 					<img src="<?php  echo $woobizzheader_large_box2logo; ?>" />						
 				</div>							
 				<div class="woobizzheader-large-box2item2">
-					<h3 id="woobizzheader-large-box2title"><?php  echo $woobizzheader_large_box2title; ?></h3>
+					<p id="woobizzheader-large-box2title"><?php  echo $woobizzheader_large_box2title; ?></p>
 					<p id="woobizzheader-large-box2description"><?php  echo $woobizzheader_large_box2description; ?></p>	
 				</a>						
 				</div>											

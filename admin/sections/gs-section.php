@@ -43,11 +43,23 @@ echo"
 	color:initial;
 	font-size:small;
 }
+.site-header .textwidget p {
+    padding: 0!important;
+    margin: 0!important;
+}
+span.woocommerce-Price-amount.amount {
+    font-size: initial;
+}
 header#masthead {
     margin-bottom: 0px;
 }
 .woobizzheader-general-txthelp:after{
 	margin-left:33px;
+}
+.storefront-breadcrumb {
+    padding: 5px 50px;
+    margin: 0;
+    border-bottom: 1px solid #d8d8d8;
 }
 .woobizzheader-general-box form {
 	margin-bottom: 0!important;

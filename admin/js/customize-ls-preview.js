@@ -47,7 +47,7 @@ wp.customize( 'woobizzheader_large_brandwidth', function( value ) {
 //brand title
 wp.customize( 'woobizzheader_large_brandtitle', function( value ) {	
 	value.bind( function( newval ) {	
-	jQuery( '#woobizzheader-large-brandtitle' ).text( newval );
+	jQuery( 'p#woobizzheader-large-brandtitle' ).text( newval );
 	} );
 } );
 //brand title size
@@ -55,7 +55,7 @@ wp.customize( 'woobizzheader_large_brandtitlesize', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-large-brandtitle').css( 'font-size', newval+'px');
+	jQuery( 'p#woobizzheader-large-brandtitle').css( 'font-size', newval+'px');
 	} );
 } );
 //brand title color
@@ -63,7 +63,7 @@ wp.customize( 'woobizzheader_large_brandtitlecolor', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-large-brandtitle').css( 'color', newval);
+	jQuery( 'p#woobizzheader-large-brandtitle').css( 'color', newval);
 	} );
 } );
 //brand description
@@ -285,7 +285,7 @@ wp.customize( 'woobizzheader_large_box1titlesize', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-large-box1title').css( 'font-size', newval+'px');
+	jQuery( 'p#woobizzheader-large-box1title').css( 'font-size', newval+'px');
 	} );
 } );
 //box1 title color
@@ -293,7 +293,7 @@ wp.customize( 'woobizzheader_large_box1titlecolor', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-large-box1title').css( 'color', newval);
+	jQuery( 'p#woobizzheader-large-box1title').css( 'color', newval);
 	} );
 } );
 //box1 description
@@ -392,7 +392,7 @@ wp.customize( 'woobizzheader_large_box2titlesize', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-large-box2title').css( 'font-size', newval+'px');
+	jQuery( 'p#woobizzheader-large-box2title').css( 'font-size', newval+'px');
 	} );
 } );
 //box2 title color
@@ -400,7 +400,7 @@ wp.customize( 'woobizzheader_large_box2titlecolor', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-large-box2title').css( 'color', newval);
+	jQuery( 'p#woobizzheader-large-box2title').css( 'color', newval);
 	} );
 } );
 //box2 description

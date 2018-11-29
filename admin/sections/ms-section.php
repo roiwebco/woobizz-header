@@ -158,8 +158,8 @@ $woobizzheader_medium_cartwidth= get_theme_mod("woobizzheader_medium_cartwidth")
 $woobizzheader_medium_carthelp=" MS | CART ";
 $woobizzheader_medium_cartalign= get_theme_mod("woobizzheader_medium_cartalign");
 if($woobizzheader_medium_cartalign=="option-1"){$woobizzheader_medium_cartalignitems="center";$woobizzheader_medium_cartjustifycontent="flex-start";}
- elseif($woobizzheader_medium_cartalign=="option-2"){$woobizzheader_medium_cartalignitems="center";$woobizzheader_medium_cartjustifycontent="center";}
- elseif($woobizzheader_medium_cartalign=="option-3"){$woobizzheader_medium_cartalignitems="center";$woobizzheader_medium_cartjustifycontent="flex-end";}
+elseif($woobizzheader_medium_cartalign=="option-2"){$woobizzheader_medium_cartalignitems="center";$woobizzheader_medium_cartjustifycontent="center";}
+elseif($woobizzheader_medium_cartalign=="option-3"){$woobizzheader_medium_cartalignitems="center";$woobizzheader_medium_cartjustifycontent="flex-end";}
 $woobizzheader_medium_cartdisplay= get_theme_mod("woobizzheader_medium_cartdisplay");
 if($woobizzheader_medium_cartdisplay==0){$woobizzheader_medium_cartdisplay="none";}
 elseif($woobizzheader_medium_cartdisplay==1){$woobizzheader_medium_cartdisplay="flex";}
@@ -171,16 +171,13 @@ $woobizzheader_medium_cartdescriptionsize= get_theme_mod("woobizzheader_medium_c
 $woobizzheader_medium_cartdescriptioncolor= get_theme_mod("woobizzheader_medium_cartdescriptioncolor");
 $woobizzheader_medium_cartimagealign= get_theme_mod("woobizzheader_medium_cartimagealign");
 if ($woobizzheader_medium_cartimagealign=="option-1"){$woobizzheader_medium_cartimagealign="row";}
- elseif($woobizzheader_medium_cartimagealign=="option-2"){$woobizzheader_medium_cartimagealign="column";}
- elseif($woobizzheader_medium_cartimagealign=="option-3"){$woobizzheader_medium_cartimagealign="row-reverse";}
- elseif($woobizzheader_medium_cartimagealign=="option-4"){$woobizzheader_medium_cartimagealign="column-reverse";}
-
-
- $woobizzheader_medium_carttxtalign= get_theme_mod("woobizzheader_medium_carttxtalign");
+elseif($woobizzheader_medium_cartimagealign=="option-2"){$woobizzheader_medium_cartimagealign="column";}
+elseif($woobizzheader_medium_cartimagealign=="option-3"){$woobizzheader_medium_cartimagealign="row-reverse";}
+elseif($woobizzheader_medium_cartimagealign=="option-4"){$woobizzheader_medium_cartimagealign="column-reverse";}
+$woobizzheader_medium_carttxtalign= get_theme_mod("woobizzheader_medium_carttxtalign");
 if ($woobizzheader_medium_carttxtalign=="option-1"){$woobizzheader_medium_carttxtalign="flex-start";}
- elseif($woobizzheader_medium_carttxtalign=="option-2"){$woobizzheader_medium_carttxtalign="center";}
- elseif($woobizzheader_medium_carttxtalign=="option-3"){$woobizzheader_medium_carttxtalign="flex-end";}
-
+elseif($woobizzheader_medium_carttxtalign=="option-2"){$woobizzheader_medium_carttxtalign="center";}
+elseif($woobizzheader_medium_carttxtalign=="option-3"){$woobizzheader_medium_carttxtalign="flex-end";}
 $woobizzheader_medium_cartitems= get_theme_mod("woobizzheader_medium_cartitems");	
 $woobizzheader_medium_cartimagedisplay= get_theme_mod("woobizzheader_medium_cartimagedisplay");
 if($woobizzheader_medium_cartimagedisplay==0){$woobizzheader_medium_cartimagedisplay="flex";}
@@ -191,7 +188,6 @@ elseif($woobizzheader_medium_cartpricedisplay==1){$woobizzheader_medium_cartpric
 $woobizzheader_medium_carttxtdisplay= get_theme_mod("woobizzheader_medium_carttxtdisplay");
 if($woobizzheader_medium_carttxtdisplay==0){$woobizzheader_medium_carttxtdisplay="flex";}
 elseif($woobizzheader_medium_carttxtdisplay==1){$woobizzheader_medium_carttxtdisplay="none";}
-
 $woobizzheader_medium_cartgrayscale= get_theme_mod("woobizzheader_medium_cartgrayscale");
 $woobizzheader_medium_cartsepia= get_theme_mod("woobizzheader_medium_cartsepia");
 $woobizzheader_medium_cartblur= get_theme_mod("woobizzheader_medium_cartblur");
@@ -212,7 +208,7 @@ $woobizzheader_medium_searchitemmaxwidth= get_theme_mod("woobizzheader_medium_se
 
 $woobizzheader_medium_searchalign= get_theme_mod("woobizzheader_medium_searchalign");
 $woobizzheader_medium_searchdisplay= get_theme_mod("woobizzheader_medium_searchdisplay");
-$woobizzheader_medium_searchhelp=" LS | SEARCH ";
+$woobizzheader_medium_searchhelp=" MS | SEARCH ";
 if ($woobizzheader_medium_searchalign=="option-1"){$woobizzheader_medium_searchalignitems="center";$woobizzheader_medium_searchjustifycontent="flex-start";}
  elseif($woobizzheader_medium_searchalign=="option-2"){$woobizzheader_medium_searchalignitems="center";$woobizzheader_medium_searchjustifycontent="center";}
  elseif($woobizzheader_medium_searchalign=="option-3"){$woobizzheader_medium_searchalignitems="center";$woobizzheader_medium_searchjustifycontent="flex-end";}
@@ -408,7 +404,7 @@ echo"
 		max-width: 100%;
 	}
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ BRAND MS */
+	/* BRAND
 	/*---------------------------------------------------------------*/
 	.woobizzheader-medium-brand {
 		display:".$woobizzheader_medium_branddisplay."!important;
@@ -420,13 +416,14 @@ echo"
 	.woobizzheader-medium-brandhelp:after {
 		content:'$woobizzheader_medium_brandhelp';		
 	}
-	h3#woobizzheader-medium-brandtitle {
+	p#woobizzheader-medium-brandtitle {
 		display:".$woobizzheader_medium_brandtitledisplay."!important;
 		color: ".$woobizzheader_medium_brandtitlecolor.";
 		font-size:".$woobizzheader_medium_brandtitlesize."px;
 		font-weight: 400;
 		font-family: inherit;	
-		justify-content: ".$woobizzheader_medium_brandtxtalign."!important;			
+		justify-content: ".$woobizzheader_medium_brandtxtalign."!important;
+		margin: 0;			
 	}
 	p#woobizzheader-medium-branddescription {
 		display:".$woobizzheader_medium_branddescriptiondisplay."!important;
@@ -458,7 +455,7 @@ echo"
 		line-height:".$woobizzheader_medium_brandtxtlineheight."px;
 	}
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ MENU 1 MS */
+	/* MENU1
 	/*---------------------------------------------------------------*/
 	.woobizzheader-medium-menu1{
 		display:".$woobizzheader_medium_menu1display."!important;
@@ -471,7 +468,7 @@ echo"
 		content:'$woobizzheader_medium_menu1help';		
 	}	
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ MENU 2 MS */
+	/* MENU2
 	/*---------------------------------------------------------------*/
 	.woobizzheader-medium-menu2{
 		display:".$woobizzheader_medium_menu2display."!important;
@@ -484,7 +481,7 @@ echo"
 		content:'$woobizzheader_medium_menu2help';			
 	}
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ MENU 3 MS */
+	/* MENU3
 	/*---------------------------------------------------------------*/
 	.woobizzheader-medium-menu3{
 		display:".$woobizzheader_medium_menu3display."!important;
@@ -497,7 +494,7 @@ echo"
 		content:'$woobizzheader_medium_menu3help';		
 	}
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ CART MS */
+	/* CART
 	/*---------------------------------------------------------------*/
 	.woobizzheader-medium-cartitems{
 		display: ".$woobizzheader_medium_cartdisplay."!important;
@@ -551,7 +548,9 @@ echo"
 
 	.woobizzheader-medium-cartitem2 {
 		display:flex;
-		align-items: ".$woobizzheader_medium_carttxtalign."!important;	
+		align-items: ".$woobizzheader_medium_carttxtalign."!important;
+		flex-direction: column;	
+		margin: 10px 10px;
 	}
 	.site-header-cart .cart-contents .amount {
 		color: ".$woobizzheader_medium_carttitlecolor."!important;
@@ -566,7 +565,7 @@ echo"
 		width: 30px;
 		height: 30px;
 		text-align: center;
-		font-size: medium;
+		font-size: large;
 		display: flex;
 		justify-content: center;
 		align-self: center;
@@ -626,13 +625,14 @@ echo"
 	.woobizzheader-medium-box1help:after {
 		content:'$woobizzheader_medium_box1help';		
 	}
-	h3#woobizzheader-medium-box1title {
+	p#woobizzheader-medium-box1title {
 		display:".$woobizzheader_medium_box1titledisplay."!important;
 		color: ".$woobizzheader_medium_box1titlecolor.";
 		font-size:".$woobizzheader_medium_box1titlesize."px;
 		font-weight: 400;
 		font-family: inherit;	
-		justify-content: ".$woobizzheader_medium_box1txtalign."!important;			
+		justify-content: ".$woobizzheader_medium_box1txtalign."!important;	
+		margin:0;		
 	}
 	p#woobizzheader-medium-box1description {
 		display:".$woobizzheader_medium_box1descriptiondisplay."!important;
@@ -677,13 +677,15 @@ echo"
 	.woobizzheader-medium-box2help:after {
 		content:'$woobizzheader_medium_box2help';		
 	}
-	h3#woobizzheader-medium-box2title {
+	p#woobizzheader-medium-box2title {
 		display:".$woobizzheader_medium_box2titledisplay."!important;
 		color: ".$woobizzheader_medium_box2titlecolor.";
 		font-size:".$woobizzheader_medium_box2titlesize."px;
 		font-weight: 400;
 		font-family: inherit;	
-		justify-content: ".$woobizzheader_medium_box2txtalign."!important;			
+		justify-content: ".$woobizzheader_medium_box2txtalign."!important;
+		margin:0;		
+			
 	}
 	p#woobizzheader-medium-box2description {
 		display:".$woobizzheader_medium_box2descriptiondisplay."!important;
@@ -716,7 +718,7 @@ echo"
 	}
 	
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ WIDGET 1 MS */
+	/* WIDGET1
 	/*---------------------------------------------------------------*/
 	.woobizzheader-medium-widget1{
 		display:".$woobizzheader_medium_widget1display."!important;
@@ -731,7 +733,7 @@ echo"
 	}
 	
 	/*---------------------------------------------------------------*/
-	/* WOOBIZZ WIDGET 2 MS */
+	/* WIDGET2
 	/*---------------------------------------------------------------*/
 	.woobizzheader-medium-widget2{
 		display:".$woobizzheader_medium_widget2display."!important;
@@ -800,7 +802,7 @@ $woobizzheader_medium_box2link= get_theme_mod("woobizzheader_medium_box2link");
 					<img src="<?php  echo $woobizzheader_medium_brandlogo; ?>" />						
 				</div>							
 				<div class="woobizzheader-medium-branditem2">
-					<h3 id="woobizzheader-medium-brandtitle"><?php  echo $woobizzheader_medium_brandtitle; ?></h3>
+					<p id="woobizzheader-medium-brandtitle"><?php  echo $woobizzheader_medium_brandtitle; ?></p>
 					<p id="woobizzheader-medium-branddescription"><?php  echo $woobizzheader_medium_branddescription; ?></p>	
 				</a>						
 				</div>											
@@ -879,7 +881,7 @@ $woobizzheader_medium_box2link= get_theme_mod("woobizzheader_medium_box2link");
 					<img src="<?php  echo $woobizzheader_medium_box1logo; ?>" />						
 				</div>							
 				<div class="woobizzheader-medium-box1item2">
-					<h3 id="woobizzheader-medium-box1title"><?php  echo $woobizzheader_medium_box1title; ?></h3>
+					<p id="woobizzheader-medium-box1title"><?php  echo $woobizzheader_medium_box1title; ?></p>
 					<p id="woobizzheader-medium-box1description"><?php  echo $woobizzheader_medium_box1description; ?></p>	
 				</a>						
 				</div>											
@@ -894,7 +896,7 @@ $woobizzheader_medium_box2link= get_theme_mod("woobizzheader_medium_box2link");
 					<img src="<?php  echo $woobizzheader_medium_box2logo; ?>" />						
 				</div>							
 				<div class="woobizzheader-medium-box2item2">
-					<h3 id="woobizzheader-medium-box2title"><?php  echo $woobizzheader_medium_box2title; ?></h3>
+					<p id="woobizzheader-medium-box2title"><?php  echo $woobizzheader_medium_box2title; ?></p>
 					<p id="woobizzheader-medium-box2description"><?php  echo $woobizzheader_medium_box2description; ?></p>	
 				</a>						
 				</div>											

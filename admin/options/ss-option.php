@@ -32,51 +32,51 @@ Kirki::add_field( $woobizzheader, array(
 //SUBMENUS 
 //--------------------------------------------------------------
 Kirki::add_section( $woobizzheader_small_bg, array(
-    'title' => 'MS Header Size',
+    'title' => 'SS Header Size',
     'section' => $woobizzheader_small_screen,	
 ));
 Kirki::add_section( $woobizzheader_small_bg, array(
-    'title' => 'MS Header BG',
+    'title' => 'SS Header BG',
     'section' => $woobizzheader_small_screen,    
 ));
 Kirki::add_section( $woobizzheader_small_brand, array(
-    'title' => 'MS Header Brand',
+    'title' => 'SS Header Brand',
     'section' => $woobizzheader_small_screen,    
 ));
 Kirki::add_section( $woobizzheader_small_menu1, array(
-    'title' => 'MS Header Menu1',
+    'title' => 'SS Header Menu1',
     'section' => $woobizzheader_small_screen,    
 ));
 Kirki::add_section( $woobizzheader_small_menu2, array(
-    'title' => 'MS Header Menu2',
+    'title' => 'SS Header Menu2',
     'section' => $woobizzheader_small_screen,    
 ));
 Kirki::add_section( $woobizzheader_small_menu3, array(
-    'title' => 'MS Header Menu3',
+    'title' => 'SS Header Menu3',
     'section' => $woobizzheader_small_screen,    
 ));
 Kirki::add_section( $woobizzheader_small_cart, array(
-    'title' => 'MS Header Cart',
+    'title' => 'SS Header Cart',
     'section' => $woobizzheader_small_screen,    
 ));
 Kirki::add_section( $woobizzheader_small_search, array(
-    'title' => 'MS Header Search',
+    'title' => 'SS Header Search',
     'section' => $woobizzheader_small_screen,    
 ));
 Kirki::add_section( $woobizzheader_small_box1, array(
-    'title' => 'MS Header Box1',
+    'title' => 'SS Header Box1',
     'section' => $woobizzheader_small_screen,    
 ));
 Kirki::add_section( $woobizzheader_small_box2, array(
-    'title' => 'MS Header Box2',
+    'title' => 'SS Header Box2',
     'section' => $woobizzheader_small_screen,    
 ));
 Kirki::add_section( $woobizzheader_small_widget1, array(
-    'title' => 'MS Header Widget1',
+    'title' => 'SS Header Widget1',
     'section' => $woobizzheader_small_screen,    
 ));
 Kirki::add_section( $woobizzheader_small_widget2, array(
-    'title' => 'MS Header Widget2',
+    'title' => 'SS Header Widget2',
     'section' => $woobizzheader_small_screen,    
 ));
 //--------------------------------------------------------
@@ -760,7 +760,7 @@ Kirki::add_field( $woobizzheader, array(
         ),
 ) );
 Kirki::add_section( 'testmenu', array(
-    'title' => 'MS Header Widget2',
+    'title' => 'SS Header Widget2',
     'section' => $woobizzheader_small_menu1,  
 ));
 Kirki::add_field( $woobizzheader, array(
@@ -786,11 +786,11 @@ Kirki::add_field( $woobizzheader, array(
 		'suffix'   => '',
 	),
 ) );
-//menu1 width
+//menu1 content width
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'slider',
-	'settings'    => 'woobizzheader_small_menu1width',
-	'label'       => esc_attr__( 'Brand width', 'textdomain' ),
+	'settings'    => 'woobizzheader_small_menu1contentwidth',
+	'label'       => esc_attr__( 'Menu1 content width', 'textdomain' ),
 	'section'     => $woobizzheader_small_menu1,
 	'default'     => 50,
 	'transport'   => 'postMessage',
@@ -801,6 +801,39 @@ Kirki::add_field( $woobizzheader, array(
 		'suffix'   => '%',
 	),
 ) );
+//menu1 item width
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'slider',
+	'settings'    => 'woobizzheader_small_menu1itemwidth',
+	'label'       => esc_attr__( 'Menu1 item width', 'textdomain' ),
+	'section'     => $woobizzheader_small_menu1,
+	'default'     => 50,
+	'transport'   => 'postMessage',
+	'choices'     => array(
+		'min'  => '0',
+		'max'  => '100',
+		'step' => '1',
+		'suffix'   => 'vw',
+	),
+) );
+//menu1 item max-width
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'slider',
+	'settings'    => 'woobizzheader_small_menu1itemmaxwidth',
+	'label'       => esc_attr__( 'Menu1 item max-width', 'textdomain' ),
+	'section'     => $woobizzheader_small_menu1,
+	'default'     => 50,
+	'transport'   => 'postMessage',
+	'choices'     => array(
+		'min'  => '0',
+		'max'  => '3000',
+		'step' => '1',
+		'suffix'   => 'px',
+	),
+) );
+
+
+
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'radio-buttonset',
 	'settings'    => 'woobizzheader_small_menu1align',
@@ -854,10 +887,11 @@ Kirki::add_field( $woobizzheader, array(
 		'step' => '1',
 	),
 ) );
+//menu2 content width
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'slider',
-	'settings'    => 'woobizzheader_small_menu2width',
-	'label'       => esc_attr__( 'Menu2 width (%)', 'textdomain' ),
+	'settings'    => 'woobizzheader_small_menu2contentwidth',
+	'label'       => esc_attr__( 'menu2 content width', 'textdomain' ),
 	'section'     => $woobizzheader_small_menu2,
 	'default'     => 50,
 	'transport'   => 'postMessage',
@@ -865,8 +899,40 @@ Kirki::add_field( $woobizzheader, array(
 		'min'  => '0',
 		'max'  => '100',
 		'step' => '1',
+		'suffix'   => '%',
 	),
 ) );
+//menu2 item width
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'slider',
+	'settings'    => 'woobizzheader_small_menu2itemwidth',
+	'label'       => esc_attr__( 'menu2 item width', 'textdomain' ),
+	'section'     => $woobizzheader_small_menu2,
+	'default'     => 50,
+	'transport'   => 'postMessage',
+	'choices'     => array(
+		'min'  => '0',
+		'max'  => '100',
+		'step' => '1',
+		'suffix'   => 'vw',
+	),
+) );
+//menu2 item max-width
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'slider',
+	'settings'    => 'woobizzheader_small_menu2itemmaxwidth',
+	'label'       => esc_attr__( 'menu2 item max-width', 'textdomain' ),
+	'section'     => $woobizzheader_small_menu2,
+	'default'     => 50,
+	'transport'   => 'postMessage',
+	'choices'     => array(
+		'min'  => '0',
+		'max'  => '3000',
+		'step' => '1',
+		'suffix'   => 'px',
+	),
+) );
+
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'radio-buttonset',
 	'settings'    => 'woobizzheader_small_menu2align',
@@ -920,10 +986,11 @@ Kirki::add_field( $woobizzheader, array(
 		'step' => '1',
 	),
 ) );
+//menu3 content width
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'slider',
-	'settings'    => 'woobizzheader_small_menu3width',
-	'label'       => esc_attr__( 'Menu3 width', 'textdomain' ),
+	'settings'    => 'woobizzheader_small_menu3contentwidth',
+	'label'       => esc_attr__( 'menu3 content width', 'textdomain' ),
 	'section'     => $woobizzheader_small_menu3,
 	'default'     => 50,
 	'transport'   => 'postMessage',
@@ -931,6 +998,37 @@ Kirki::add_field( $woobizzheader, array(
 		'min'  => '0',
 		'max'  => '100',
 		'step' => '1',
+		'suffix'   => '%',
+	),
+) );
+//menu3 item width
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'slider',
+	'settings'    => 'woobizzheader_small_menu3itemwidth',
+	'label'       => esc_attr__( 'menu3 item width', 'textdomain' ),
+	'section'     => $woobizzheader_small_menu3,
+	'default'     => 50,
+	'transport'   => 'postMessage',
+	'choices'     => array(
+		'min'  => '0',
+		'max'  => '100',
+		'step' => '1',
+		'suffix'   => 'vw',
+	),
+) );
+//menu3 item max-width
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'slider',
+	'settings'    => 'woobizzheader_small_menu3itemmaxwidth',
+	'label'       => esc_attr__( 'menu3 item max-width', 'textdomain' ),
+	'section'     => $woobizzheader_small_menu3,
+	'default'     => 50,
+	'transport'   => 'postMessage',
+	'choices'     => array(
+		'min'  => '0',
+		'max'  => '3000',
+		'step' => '1',
+		'suffix'   => 'px',
 	),
 ) );
 Kirki::add_field( $woobizzheader, array(

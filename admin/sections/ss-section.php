@@ -31,6 +31,7 @@ $woobizzheader_small_paddingleftsize;
 //-----------------------------------------------------------------------------------------
 $woobizzheader_small_bgcolor= get_theme_mod('woobizzheader_small_bgcolor');
 $woobizzheader_small_bgimage= get_theme_mod('woobizzheader_small_bgimage');
+
 $woobizzheader_small_bgfullgradient1= get_theme_mod('woobizzheader_small_bgfullgradient1');
 $woobizzheader_small_bgfullgradient2= get_theme_mod('woobizzheader_small_bgfullgradient2');
 $woobizzheader_small_bgattachment= get_theme_mod('woobizzheader_small_bgattachment');
@@ -114,7 +115,11 @@ $woobizzheader_small_brandinvert= get_theme_mod("woobizzheader_small_brandinvert
 // MENU 1
 //--------------------------------------------------------------------------------------
 $woobizzheader_small_menu1position= get_theme_mod("woobizzheader_small_menu1position");
-$woobizzheader_small_menu1width= get_theme_mod("woobizzheader_small_menu1width");
+
+$woobizzheader_small_menu1contentwidth= get_theme_mod("woobizzheader_small_menu1contentwidth");
+$woobizzheader_small_menu1itemwidth= get_theme_mod("woobizzheader_small_menu1itemwidth");
+$woobizzheader_small_menu1itemmaxwidth= get_theme_mod("woobizzheader_small_menu1itemmaxwidth");
+
 $woobizzheader_small_menu1align= get_theme_mod("woobizzheader_small_menu1align");
 $woobizzheader_small_menu1display= get_theme_mod("woobizzheader_small_menu1display");
 $woobizzheader_small_menu1help=" SS | MENU1 ";
@@ -127,7 +132,11 @@ elseif($woobizzheader_small_menu1display==1){$woobizzheader_small_menu1display="
 // MENU 2
 //--------------------------------------------------------------------------------------
 $woobizzheader_small_menu2position= get_theme_mod("woobizzheader_small_menu2position");
-$woobizzheader_small_menu2width= get_theme_mod("woobizzheader_small_menu2width");
+
+$woobizzheader_small_menu2contentwidth= get_theme_mod("woobizzheader_small_menu2contentwidth");
+$woobizzheader_small_menu2itemwidth= get_theme_mod("woobizzheader_small_menu2itemwidth");
+$woobizzheader_small_menu2itemmaxwidth= get_theme_mod("woobizzheader_small_menu2itemmaxwidth");
+
 $woobizzheader_small_menu2align= get_theme_mod("woobizzheader_small_menu2align");
 $woobizzheader_small_menu2display= get_theme_mod("woobizzheader_small_menu2display");
 $woobizzheader_small_menu2help=" SS | MENU2 ";
@@ -140,7 +149,11 @@ elseif($woobizzheader_small_menu2display==1){$woobizzheader_small_menu2display="
 // MENU 3
 //--------------------------------------------------------------------------------------
 $woobizzheader_small_menu3position= get_theme_mod("woobizzheader_small_menu3position");
-$woobizzheader_small_menu3width= get_theme_mod("woobizzheader_small_menu3width");
+
+$woobizzheader_small_menu3contentwidth= get_theme_mod("woobizzheader_small_menu3contentwidth");
+$woobizzheader_small_menu3itemwidth= get_theme_mod("woobizzheader_small_menu3itemwidth");
+$woobizzheader_small_menu3itemmaxwidth= get_theme_mod("woobizzheader_small_menu3itemmaxwidth");
+
 $woobizzheader_small_menu3align= get_theme_mod("woobizzheader_small_menu3align");
 $woobizzheader_small_menu3display= get_theme_mod("woobizzheader_small_menu3display");
 $woobizzheader_small_menu3help=" SS | MENU3 ";
@@ -157,8 +170,8 @@ $woobizzheader_small_cartwidth= get_theme_mod("woobizzheader_small_cartwidth");
 $woobizzheader_small_carthelp=" SS | CART ";
 $woobizzheader_small_cartalign= get_theme_mod("woobizzheader_small_cartalign");
 if($woobizzheader_small_cartalign=="option-1"){$woobizzheader_small_cartalignitems="center";$woobizzheader_small_cartjustifycontent="flex-start";}
- elseif($woobizzheader_small_cartalign=="option-2"){$woobizzheader_small_cartalignitems="center";$woobizzheader_small_cartjustifycontent="center";}
- elseif($woobizzheader_small_cartalign=="option-3"){$woobizzheader_small_cartalignitems="center";$woobizzheader_small_cartjustifycontent="flex-end";}
+elseif($woobizzheader_small_cartalign=="option-2"){$woobizzheader_small_cartalignitems="center";$woobizzheader_small_cartjustifycontent="center";}
+elseif($woobizzheader_small_cartalign=="option-3"){$woobizzheader_small_cartalignitems="center";$woobizzheader_small_cartjustifycontent="flex-end";}
 $woobizzheader_small_cartdisplay= get_theme_mod("woobizzheader_small_cartdisplay");
 if($woobizzheader_small_cartdisplay==0){$woobizzheader_small_cartdisplay="none";}
 elseif($woobizzheader_small_cartdisplay==1){$woobizzheader_small_cartdisplay="flex";}
@@ -170,16 +183,13 @@ $woobizzheader_small_cartdescriptionsize= get_theme_mod("woobizzheader_small_car
 $woobizzheader_small_cartdescriptioncolor= get_theme_mod("woobizzheader_small_cartdescriptioncolor");
 $woobizzheader_small_cartimagealign= get_theme_mod("woobizzheader_small_cartimagealign");
 if ($woobizzheader_small_cartimagealign=="option-1"){$woobizzheader_small_cartimagealign="row";}
- elseif($woobizzheader_small_cartimagealign=="option-2"){$woobizzheader_small_cartimagealign="column";}
- elseif($woobizzheader_small_cartimagealign=="option-3"){$woobizzheader_small_cartimagealign="row-reverse";}
- elseif($woobizzheader_small_cartimagealign=="option-4"){$woobizzheader_small_cartimagealign="column-reverse";}
-
-
- $woobizzheader_small_carttxtalign= get_theme_mod("woobizzheader_small_carttxtalign");
+elseif($woobizzheader_small_cartimagealign=="option-2"){$woobizzheader_small_cartimagealign="column";}
+elseif($woobizzheader_small_cartimagealign=="option-3"){$woobizzheader_small_cartimagealign="row-reverse";}
+elseif($woobizzheader_small_cartimagealign=="option-4"){$woobizzheader_small_cartimagealign="column-reverse";}
+$woobizzheader_small_carttxtalign= get_theme_mod("woobizzheader_small_carttxtalign");
 if ($woobizzheader_small_carttxtalign=="option-1"){$woobizzheader_small_carttxtalign="flex-start";}
- elseif($woobizzheader_small_carttxtalign=="option-2"){$woobizzheader_small_carttxtalign="center";}
- elseif($woobizzheader_small_carttxtalign=="option-3"){$woobizzheader_small_carttxtalign="flex-end";}
-
+elseif($woobizzheader_small_carttxtalign=="option-2"){$woobizzheader_small_carttxtalign="center";}
+elseif($woobizzheader_small_carttxtalign=="option-3"){$woobizzheader_small_carttxtalign="flex-end";}
 $woobizzheader_small_cartitems= get_theme_mod("woobizzheader_small_cartitems");	
 $woobizzheader_small_cartimagedisplay= get_theme_mod("woobizzheader_small_cartimagedisplay");
 if($woobizzheader_small_cartimagedisplay==0){$woobizzheader_small_cartimagedisplay="flex";}
@@ -190,7 +200,6 @@ elseif($woobizzheader_small_cartpricedisplay==1){$woobizzheader_small_cartpriced
 $woobizzheader_small_carttxtdisplay= get_theme_mod("woobizzheader_small_carttxtdisplay");
 if($woobizzheader_small_carttxtdisplay==0){$woobizzheader_small_carttxtdisplay="flex";}
 elseif($woobizzheader_small_carttxtdisplay==1){$woobizzheader_small_carttxtdisplay="none";}
-
 $woobizzheader_small_cartgrayscale= get_theme_mod("woobizzheader_small_cartgrayscale");
 $woobizzheader_small_cartsepia= get_theme_mod("woobizzheader_small_cartsepia");
 $woobizzheader_small_cartblur= get_theme_mod("woobizzheader_small_cartblur");
@@ -211,7 +220,7 @@ $woobizzheader_small_searchitemmaxwidth= get_theme_mod("woobizzheader_small_sear
 
 $woobizzheader_small_searchalign= get_theme_mod("woobizzheader_small_searchalign");
 $woobizzheader_small_searchdisplay= get_theme_mod("woobizzheader_small_searchdisplay");
-$woobizzheader_small_searchhelp=" LS | SEARCH ";
+$woobizzheader_small_searchhelp=" SS | SEARCH ";
 if ($woobizzheader_small_searchalign=="option-1"){$woobizzheader_small_searchalignitems="center";$woobizzheader_small_searchjustifycontent="flex-start";}
  elseif($woobizzheader_small_searchalign=="option-2"){$woobizzheader_small_searchalignitems="center";$woobizzheader_small_searchjustifycontent="center";}
  elseif($woobizzheader_small_searchalign=="option-3"){$woobizzheader_small_searchalignitems="center";$woobizzheader_small_searchjustifycontent="flex-end";}
@@ -350,10 +359,6 @@ echo"
  <style>
 @media screen and (max-width:".$woobizzheader_general_ssmaxwidth."px){
 	
-	#mega-menu-wrap-woobizz-menu-1 {width: 100%;}
-	#mega-menu-wrap-woobizz-menu-2 {width: 100%;}
-	#mega-menu-wrap-woobizz-menu-3 {width: 100%;}
-	
 	.woobizzheader-medium-wrapper{display:none!important;}
 	.woobizzheader-large-wrapper{display:none!important;}
 
@@ -423,12 +428,13 @@ echo"
 	.woobizzheader-small-brandhelp:after {
 		content:'$woobizzheader_small_brandhelp';		
 	}
-	h3#woobizzheader-small-brandtitle {
+	p#woobizzheader-small-brandtitle {
 		display:".$woobizzheader_small_brandtitledisplay."!important;
 		color: ".$woobizzheader_small_brandtitlecolor.";
 		font-size:".$woobizzheader_small_brandtitlesize."px;
 		font-weight: 400;
-		font-family: inherit;	
+		font-family: inherit;
+		margin: 0;		
 		justify-content: ".$woobizzheader_small_brandtxtalign."!important;			
 	}
 	p#woobizzheader-small-branddescription {
@@ -466,9 +472,13 @@ echo"
 	.woobizzheader-small-menu1{
 		display:".$woobizzheader_small_menu1display."!important;
 		order:".$woobizzheader_small_menu1position.";
-		width:".$woobizzheader_small_menu1width."%;
+		width:".$woobizzheader_small_menu1contentwidth."%;
 		align-items:".$woobizzheader_small_menu1alignitems."!important;
 		justify-content:".$woobizzheader_small_menu1justifycontent."!important;
+	}
+	#mega-menu-wrap-woobizz-menu-1{
+		width: ".$woobizzheader_small_menu1itemwidth."vw;
+		max-width:".$woobizzheader_small_menu1itemmaxwidth."px;
 	}
 	.woobizzheader-small-menu1help:after {
 		content:'$woobizzheader_small_menu1help';		
@@ -479,9 +489,13 @@ echo"
 	.woobizzheader-small-menu2{
 		display:".$woobizzheader_small_menu2display."!important;
 		order:".$woobizzheader_small_menu2position.";
-		width:".$woobizzheader_small_menu2width."%;
+		width:".$woobizzheader_small_menu2contentwidth."%;
 		align-items:".$woobizzheader_small_menu2alignitems."!important;
 		justify-content:".$woobizzheader_small_menu2justifycontent."!important;
+	}
+	#mega-menu-wrap-woobizz-menu-2{
+		width: ".$woobizzheader_small_menu2itemwidth."vw;
+		max-width:".$woobizzheader_small_menu2itemmaxwidth."px;
 	}
 	.woobizzheader-small-menu2help:after {
 		content:'$woobizzheader_small_menu2help';			
@@ -492,12 +506,16 @@ echo"
 	.woobizzheader-small-menu3{
 		display:".$woobizzheader_small_menu3display."!important;
 		order:".$woobizzheader_small_menu3position.";
-		width:".$woobizzheader_small_menu3width."%;
+		width:".$woobizzheader_small_menu3contentwidth."%;
 		align-items:".$woobizzheader_small_menu3alignitems."!important;
 		justify-content:".$woobizzheader_small_menu3justifycontent."!important;
 	}
+	#mega-menu-wrap-woobizz-menu-3{
+		width: ".$woobizzheader_small_menu3itemwidth."vw;
+		max-width:".$woobizzheader_small_menu3itemmaxwidth."px;
+	}
 	.woobizzheader-small-menu3help:after {
-		content:'$woobizzheader_small_menu3help';		
+		content:'$woobizzheader_small_menu3help';			
 	}
 	/*---------------------------------------------------------------*/
 	/* WOOBIZZ CART SS */
@@ -554,7 +572,9 @@ echo"
 
 	.woobizzheader-small-cartitem2 {
 		display:flex;
-		align-items: ".$woobizzheader_small_carttxtalign."!important;	
+		align-items: ".$woobizzheader_small_carttxtalign."!important;
+		flex-direction: column;	
+		margin: 10px 10px;	
 	}
 	.site-header-cart .cart-contents .amount {
 		color: ".$woobizzheader_small_carttitlecolor."!important;
@@ -569,7 +589,7 @@ echo"
 		width: 30px;
 		height: 30px;
 		text-align: center;
-		font-size: small;
+		font-size: large;
 		display: flex;
 		justify-content: center;
 		align-self: center;
@@ -580,7 +600,7 @@ echo"
 		position: absolute;
 	}
 	/*---------------------------------------------------------------*/
-	/* SEARCH LS */
+	/* SEARCH SS */
 	/*---------------------------------------------------------------*/
 	.woobizzheader-small-search {
 		display:".$woobizzheader_small_searchdisplay."!important;
@@ -629,13 +649,14 @@ echo"
 	.woobizzheader-small-box1help:after {
 		content:'$woobizzheader_small_box1help';		
 	}
-	h3#woobizzheader-small-box1title {
+	p#woobizzheader-small-box1title {
 		display:".$woobizzheader_small_box1titledisplay."!important;
 		color: ".$woobizzheader_small_box1titlecolor.";
 		font-size:".$woobizzheader_small_box1titlesize."px;
 		font-weight: 400;
 		font-family: inherit;	
-		justify-content: ".$woobizzheader_small_box1txtalign."!important;			
+		justify-content: ".$woobizzheader_small_box1txtalign."!important;	
+		margin:0;		
 	}
 	p#woobizzheader-small-box1description {
 		display:".$woobizzheader_small_box1descriptiondisplay."!important;
@@ -680,13 +701,15 @@ echo"
 	.woobizzheader-small-box2help:after {
 		content:'$woobizzheader_small_box2help';		
 	}
-	h3#woobizzheader-small-box2title {
+	p#woobizzheader-small-box2title {
 		display:".$woobizzheader_small_box2titledisplay."!important;
 		color: ".$woobizzheader_small_box2titlecolor.";
 		font-size:".$woobizzheader_small_box2titlesize."px;
 		font-weight: 400;
 		font-family: inherit;	
-		justify-content: ".$woobizzheader_small_box2txtalign."!important;			
+		justify-content: ".$woobizzheader_small_box2txtalign."!important;
+		margin:0;		
+			
 	}
 	p#woobizzheader-small-box2description {
 		display:".$woobizzheader_small_box2descriptiondisplay."!important;
@@ -803,7 +826,7 @@ $woobizzheader_small_box2link= get_theme_mod("woobizzheader_small_box2link");
 					<img src="<?php  echo $woobizzheader_small_brandlogo; ?>" />						
 				</div>							
 				<div class="woobizzheader-small-branditem2">
-					<h3 id="woobizzheader-small-brandtitle"><?php  echo $woobizzheader_small_brandtitle; ?></h3>
+					<p id="woobizzheader-small-brandtitle"><?php  echo $woobizzheader_small_brandtitle; ?></p>
 					<p id="woobizzheader-small-branddescription"><?php  echo $woobizzheader_small_branddescription; ?></p>	
 				</a>						
 				</div>											
@@ -882,7 +905,7 @@ $woobizzheader_small_box2link= get_theme_mod("woobizzheader_small_box2link");
 					<img src="<?php  echo $woobizzheader_small_box1logo; ?>" />						
 				</div>							
 				<div class="woobizzheader-small-box1item2">
-					<h3 id="woobizzheader-small-box1title"><?php  echo $woobizzheader_small_box1title; ?></h3>
+					<p id="woobizzheader-small-box1title"><?php  echo $woobizzheader_small_box1title; ?></p>
 					<p id="woobizzheader-small-box1description"><?php  echo $woobizzheader_small_box1description; ?></p>	
 				</a>						
 				</div>											
@@ -897,7 +920,7 @@ $woobizzheader_small_box2link= get_theme_mod("woobizzheader_small_box2link");
 					<img src="<?php  echo $woobizzheader_small_box2logo; ?>" />						
 				</div>							
 				<div class="woobizzheader-small-box2item2">
-					<h3 id="woobizzheader-small-box2title"><?php  echo $woobizzheader_small_box2title; ?></h3>
+					<p id="woobizzheader-small-box2title"><?php  echo $woobizzheader_small_box2title; ?></p>
 					<p id="woobizzheader-small-box2description"><?php  echo $woobizzheader_small_box2description; ?></p>	
 				</a>						
 				</div>											

@@ -55,7 +55,7 @@ wp.customize( 'woobizzheader_small_brandtitlesize', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-small-brandtitle').css( 'font-size', newval+'px');
+	jQuery( 'p#woobizzheader-small-brandtitle').css( 'font-size', newval+'px');
 	} );
 } );
 //brand title color
@@ -63,7 +63,7 @@ wp.customize( 'woobizzheader_small_brandtitlecolor', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-small-brandtitle').css( 'color', newval);
+	jQuery( 'p#woobizzheader-small-brandtitle').css( 'color', newval);
 	} );
 } );
 //brand description
@@ -144,10 +144,27 @@ wp.customize( 'woobizzheader_small_menu1position', function( value ) {
 		jQuery( '.woobizzheader-small-menu1').css( 'order', +newval);
 	});
 });
-//menu1 width
-wp.customize( 'woobizzheader_small_menu1width', function( value ) {
+//menu1 content width
+wp.customize( 'woobizzheader_small_menu1contentwidth', function( value ) {
 	value.bind( function( newval ) {
 		jQuery( '.woobizzheader-small-menu1').css( 'width', newval+'%');
+	});
+});
+
+//menu1 item width 
+wp.customize( 'woobizzheader_small_menu1itemwidth', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( 'div#mega-menu-wrap-woobizz-menu-1').css( 'width', newval+'vw');
+		
+
+		
+	});
+});
+
+//menu1 item max-width 
+wp.customize( 'woobizzheader_small_menu1itemmaxwidth', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( 'div#mega-menu-wrap-woobizz-menu-2').css( 'max-width', newval+'px');
 	});
 });
 
@@ -161,10 +178,23 @@ wp.customize( 'woobizzheader_small_menu2position', function( value ) {
 		jQuery( '.woobizzheader-small-menu2').css( 'order', +newval);
 	});
 });
-//menu2 width
-wp.customize( 'woobizzheader_small_menu2width', function( value ) {
+//menu2 content width
+wp.customize( 'woobizzheader_small_menu2contentwidth', function( value ) {
 	value.bind( function( newval ) {
 		jQuery( '.woobizzheader-small-menu2').css( 'width', newval+'%');
+	});
+});
+
+//menu2 item width 
+wp.customize( 'woobizzheader_small_menu2itemwidth', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( 'div#mega-menu-wrap-woobizz-menu-2').css( 'width', newval+'vw');
+	});
+});
+//menu2 item max-width 
+wp.customize( 'woobizzheader_small_menu2itemmaxwidth', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( 'div#mega-menu-wrap-woobizz-menu-2').css( 'max-width', newval+'px');
 	});
 });
 //-------------------------------------------------------------	
@@ -177,10 +207,24 @@ wp.customize( 'woobizzheader_small_menu3position', function( value ) {
 		jQuery( '.woobizzheader-small-menu3').css( 'order', +newval);
 	});
 });
-//menu3 width
-wp.customize( 'woobizzheader_small_menu3width', function( value ) {
+//menu3 content width
+wp.customize( 'woobizzheader_small_menu3contentwidth', function( value ) {
 	value.bind( function( newval ) {
 		jQuery( '.woobizzheader-small-menu3').css( 'width', newval+'%');
+	});
+});
+
+//menu3 item width 
+wp.customize( 'woobizzheader_small_menu3itemwidth', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( 'div#mega-menu-wrap-woobizz-menu-3').css( 'width', newval+'vw');
+	});
+});
+
+//menu3 item max-width 
+wp.customize( 'woobizzheader_small_menu3itemmaxwidth', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( 'div#mega-menu-wrap-woobizz-menu-3').css( 'max-width', newval+'px');
 	});
 });
 
@@ -285,7 +329,7 @@ wp.customize( 'woobizzheader_small_box1titlesize', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-small-box1title').css( 'font-size', newval+'px');
+	jQuery( 'p#woobizzheader-small-box1title').css( 'font-size', newval+'px');
 	} );
 } );
 //box1 title color
@@ -293,7 +337,7 @@ wp.customize( 'woobizzheader_small_box1titlecolor', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-small-box1title').css( 'color', newval);
+	jQuery( 'p#woobizzheader-small-box1title').css( 'color', newval);
 	} );
 } );
 //box1 description
@@ -392,7 +436,7 @@ wp.customize( 'woobizzheader_small_box2titlesize', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-small-box2title').css( 'font-size', newval+'px');
+	jQuery( 'p#woobizzheader-small-box2title').css( 'font-size', newval+'px');
 	} );
 } );
 //box2 title color
@@ -400,7 +444,7 @@ wp.customize( 'woobizzheader_small_box2titlecolor', function( value ) {
 	
 	value.bind( function( newval ) {
 	
-	jQuery( 'h3#woobizzheader-small-box2title').css( 'color', newval);
+	jQuery( 'p#woobizzheader-small-box2title').css( 'color', newval);
 	} );
 } );
 //box2 description
