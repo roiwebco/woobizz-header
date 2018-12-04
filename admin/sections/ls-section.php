@@ -87,6 +87,7 @@ $woobizzheader_large_brandtitlecolor= get_theme_mod("woobizzheader_large_brandti
 $woobizzheader_large_branddescription= get_theme_mod("woobizzheader_large_branddescription");
 $woobizzheader_large_branddescriptionsize= get_theme_mod("woobizzheader_large_branddescriptionsize");
 $woobizzheader_large_branddescriptioncolor= get_theme_mod("woobizzheader_large_branddescriptioncolor");
+$woobizzheader_large_brandborderradius= get_theme_mod("woobizzheader_large_brandborderradius");
 $woobizzheader_large_brandimagealign= get_theme_mod("woobizzheader_large_brandimagealign");
 if ($woobizzheader_large_brandimagealign=="option-1"){$woobizzheader_large_brandimagealign="row";}
  elseif($woobizzheader_large_brandimagealign=="option-2"){$woobizzheader_large_brandimagealign="column";}
@@ -446,6 +447,7 @@ echo"
 		flex-direction:".$woobizzheader_large_brandimagealign."!important;
 	}
 	.woobizzheader-large-branditem1 img {
+		border-radius:".$woobizzheader_large_brandborderradius."%;
 		filter: grayscale(".$woobizzheader_large_brandgrayscale."%) sepia(".$woobizzheader_large_brandsepia."%) blur(".$woobizzheader_large_brandblur."px) brightness(".$woobizzheader_large_brandbrightness."%) hue-rotate(".$woobizzheader_large_brandhuerotate."deg) saturate(".$woobizzheader_large_brandsaturate."%) opacity(".$woobizzheader_large_brandopacity."%) contrast(".$woobizzheader_large_brandcontrast."%) invert(".$woobizzheader_large_brandinvert."%);
 		-webkit-filter: grayscale(".$woobizzheader_large_brandgrayscale."%) sepia(".$woobizzheader_large_brandsepia."%) blur(".$woobizzheader_large_brandblur."px) brightness(".$woobizzheader_large_brandbrightness."%) hue-rotate(".$woobizzheader_large_brandhuerotate."deg) saturate(".$woobizzheader_large_brandsaturate."%) opacity(".$woobizzheader_large_brandopacity."%) contrast(".$woobizzheader_large_brandcontrast."%) invert(".$woobizzheader_large_brandinvert."%);
 		-moz-filter: grayscale(".$woobizzheader_large_brandgrayscale."%) sepia(".$woobizzheader_large_brandsepia."%) blur(".$woobizzheader_large_brandblur."px) brightness(".$woobizzheader_large_brandbrightness."%) hue-rotate(".$woobizzheader_large_brandhuerotate."deg) saturate(".$woobizzheader_large_brandsaturate."%) opacity(".$woobizzheader_large_brandopacity."%) contrast(".$woobizzheader_large_brandcontrast."%) invert(".$woobizzheader_large_brandinvert."%);

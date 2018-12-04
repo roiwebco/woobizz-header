@@ -600,6 +600,20 @@ Kirki::add_field( $woobizzheader, array(
 	
 ) );
 Kirki::add_field( $woobizzheader, array(
+	'type'        => 'slider',
+	'settings'    => 'woobizzheader_small_brandborderradius',
+	'label'       => esc_attr__( 'Brand image border radius', 'textdomain' ),
+	'section'     => $woobizzheader_small_brand,
+	'default'     => 0,
+	'transport'   => 'postMessage',
+	'choices'     => array(
+		'min'  => '0',
+		'max'  => '100',
+		'step' => '1',
+		'suffix'   => '%',
+	),
+) );
+Kirki::add_field( $woobizzheader, array(
 	'type'        => 'radio-buttonset',
 	'settings'    => 'woobizzheader_small_brandimagealign',
 	'label'       => __( 'Brand image align', 'textdomain' ),

@@ -599,6 +599,23 @@ Kirki::add_field( $woobizzheader, array(
 	'default'     => '',
 	
 ) );
+
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'slider',
+	'settings'    => 'woobizzheader_large_brandborderradius',
+	'label'       => esc_attr__( 'Brand image border radius', 'textdomain' ),
+	'section'     => $woobizzheader_large_brand,
+	'default'     => 0,
+	'transport'   => 'postMessage',
+	'choices'     => array(
+		'min'  => '0',
+		'max'  => '100',
+		'step' => '1',
+		'suffix'   => '%',
+	),
+) );
+
+
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'radio-buttonset',
 	'settings'    => 'woobizzheader_large_brandimagealign',
