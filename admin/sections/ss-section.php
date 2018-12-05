@@ -118,7 +118,14 @@ $woobizzheader_small_brandinvert= get_theme_mod("woobizzheader_small_brandinvert
 $woobizzheader_small_menu1position= get_theme_mod("woobizzheader_small_menu1position");
 
 $woobizzheader_small_menu1contentwidth= get_theme_mod("woobizzheader_small_menu1contentwidth");
+
 $woobizzheader_small_menu1itemwidth= get_theme_mod("woobizzheader_small_menu1itemwidth");
+
+if($woobizzheader_small_menu1itemwidth==0){
+	$woobizzheader_small_menu1itemwidth="auto";
+} else {
+	$woobizzheader_small_menu1itemwidth=$woobizzheader_small_menu1itemwidth;
+}
 $woobizzheader_small_menu1itemmaxwidth= get_theme_mod("woobizzheader_small_menu1itemmaxwidth");
 
 $woobizzheader_small_menu1align= get_theme_mod("woobizzheader_small_menu1align");
@@ -136,6 +143,12 @@ $woobizzheader_small_menu2position= get_theme_mod("woobizzheader_small_menu2posi
 
 $woobizzheader_small_menu2contentwidth= get_theme_mod("woobizzheader_small_menu2contentwidth");
 $woobizzheader_small_menu2itemwidth= get_theme_mod("woobizzheader_small_menu2itemwidth");
+if($woobizzheader_small_menu2itemwidth==0){
+	$woobizzheader_small_menu2itemwidth="auto";
+} else {
+	$woobizzheader_small_menu2itemwidth=$woobizzheader_small_menu2itemwidth;
+}
+
 $woobizzheader_small_menu2itemmaxwidth= get_theme_mod("woobizzheader_small_menu2itemmaxwidth");
 
 $woobizzheader_small_menu2align= get_theme_mod("woobizzheader_small_menu2align");
@@ -154,6 +167,11 @@ $woobizzheader_small_menu3position= get_theme_mod("woobizzheader_small_menu3posi
 $woobizzheader_small_menu3contentwidth= get_theme_mod("woobizzheader_small_menu3contentwidth");
 $woobizzheader_small_menu3itemwidth= get_theme_mod("woobizzheader_small_menu3itemwidth");
 $woobizzheader_small_menu3itemmaxwidth= get_theme_mod("woobizzheader_small_menu3itemmaxwidth");
+if($woobizzheader_small_menu3itemwidth==0){
+	$woobizzheader_small_menu3itemwidth="auto";
+} else {
+	$woobizzheader_small_menu3itemwidth=$woobizzheader_small_menu3itemwidth;
+}
 
 $woobizzheader_small_menu3align= get_theme_mod("woobizzheader_small_menu3align");
 $woobizzheader_small_menu3display= get_theme_mod("woobizzheader_small_menu3display");
