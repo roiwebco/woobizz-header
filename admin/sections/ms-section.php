@@ -354,6 +354,9 @@ echo"
 	.woobizzheader-small-bghelp.woobizzheader-general-txthelp{display: none!important;}
 	.woobizzheader-large-bghelp.woobizzheader-general-txthelp{display: none!important;}
 
+	.woobizzheader_small_sidenav1display{display:none!important;}
+	.woobizzheader_small_sidenav2display{display:none!important;}
+
 	.woobizzheader-medium-bghelp:after {
 		content: ' MS | BG ';		
 	}
