@@ -372,6 +372,22 @@ if ($woobizzheader_small_widget2align=="option-1"){$woobizzheader_small_widget2a
 if($woobizzheader_small_widget2display==0){$woobizzheader_small_widget2display="none";}
 elseif($woobizzheader_small_widget2display==1){$woobizzheader_small_widget2display="flex";}
 //--------------------------------------------------------------------------------------
+// SIDENAV1
+//--------------------------------------------------------------------------------------
+$woobizzheader_small_sidenav1position= get_theme_mod("woobizzheader_small_sidenav1position");
+$woobizzheader_small_sidenav1width= get_theme_mod("woobizzheader_small_sidenav1width");
+$woobizzheader_small_sidenav1align= get_theme_mod("woobizzheader_small_sidenav1align");
+$woobizzheader_small_sidenav1display= get_theme_mod("woobizzheader_small_sidenav1display");
+
+$woobizzheader_small_sidenav1help=" SS | SIDENAV1 ";
+if ($woobizzheader_small_sidenav1align=="option-1"){$woobizzheader_small_sidenav1alignitems="center";$woobizzheader_small_sidenav1justifycontent="flex-start";}
+ elseif($woobizzheader_small_sidenav1align=="option-2"){$woobizzheader_small_sidenav1alignitems="center";$woobizzheader_small_sidenav1justifycontent="center";}
+ elseif($woobizzheader_small_sidenav1align=="option-3"){$woobizzheader_small_sidenav1alignitems="center";$woobizzheader_small_sidenav1justifycontent="flex-end";}
+if($woobizzheader_small_sidenav1display==0){$woobizzheader_small_sidenav1display="none";}
+elseif($woobizzheader_small_sidenav1display==1){$woobizzheader_small_sidenav1display="flex";}
+$woobizzheader_small_sidenav1logo= get_theme_mod('woobizzheader_small_sidenav1logo');
+
+//--------------------------------------------------------------------------------------
 //SS
 //--------------------------------------------------------------------------------------
 echo"
@@ -790,6 +806,84 @@ echo"
 	.woobizzheader-small-widget2help:after {
 		content:'$woobizzheader_small_widget2help';
 	}
+
+	/*---------------------------------------------------------------*/
+	/* WOOBIZZ SIDENAV1
+	/*---------------------------------------------------------------*/
+	.woobizzheader-small-sidenav1{
+		display:".$woobizzheader_small_sidenav1display."!important;
+		order:".$woobizzheader_small_sidenav1position.";
+		width:".$woobizzheader_small_sidenav1width."%;
+		align-items:".$woobizzheader_small_sidenav1alignitems."!important;
+		justify-content:".$woobizzheader_small_sidenav1justifycontent."!important;
+
+	}
+	.woobizzheader-small-sidenav1help:after {
+		content:'$woobizzheader_small_sidenav1help';
+	}
+	/*---------------------------------------------------------------*/
+	/* WOOBIZZ SIDENAV2
+	/*---------------------------------------------------------------*/
+	.woobizzheader-small-sidenav2{
+		display:".$woobizzheader_small_sidenav2display."!important;
+		order:".$woobizzheader_small_sidenav2position.";
+		width:".$woobizzheader_small_sidenav2width."%;
+		align-items:".$woobizzheader_small_sidenav2alignitems."!important;
+		justify-content:".$woobizzheader_small_sidenav2justifycontent."!important;
+
+	}
+	.woobizzheader-small-sidenav2help:after {
+		content:'$woobizzheader_small_sidenav2help';
+	}
+	/*---------------------------------------------------------------*/
+	/* TEST PUSH MENU SS
+	/*---------------------------------------------------------------*/
+	img.wbzh-sidenav1pointer {
+		cursor: pointer!important;
+	}
+	.sidenav {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: white;
+		overflow-x: hidden;
+		transition: 0.5s;
+		padding-top: 60px;
+	}
+
+	.sidenav a {
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: initial;
+		color: #818181;
+		display: block;
+		transition: 0.3s;
+	}
+
+	.sidenav a:hover {
+		color: #f1f1f1;
+	}
+
+	.sidenav .closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+	}
+
+	#page {
+		transition: margin-left .5s;
+		
+	}
+
+	@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+	}
 	
 }	
  </style>
@@ -832,6 +926,10 @@ $woobizzheader_small_box2description= get_theme_mod("woobizzheader_small_box2des
 $woobizzheader_small_box2descriptionsize= get_theme_mod("woobizzheader_small_box2descriptionsize");
 $woobizzheader_small_box2descriptioncolor= get_theme_mod("woobizzheader_small_box2descriptioncolor");
 $woobizzheader_small_box2link= get_theme_mod("woobizzheader_small_box2link");
+
+$woobizzheader_small_sidenav1logo= get_theme_mod('woobizzheader_small_sidenav1logo');
+$woobizzheader_small_sidenav2logo= get_theme_mod('woobizzheader_small_sidenav2logo');
+
 ?>
 
 <div class= "woobizzheader-small-bghelp woobizzheader-general-txthelp"></div>
@@ -949,15 +1047,42 @@ $woobizzheader_small_box2link= get_theme_mod("woobizzheader_small_box2link");
 	<div class="woobizzheader-small-box woobizzheader-small-widget1 woobizzheader-general-box">
 		<div class= "woobizzheader-small-widget1help woobizzheader-general-txthelp"></div>
 		<?php
-			dynamic_sidebar( 'Woobizz Header Custom Widget 1' );			
+			dynamic_sidebar( 'Woobizz Header Widget1' );			
 		?>	
 	</div>
 	<div class="woobizzheader-small-box woobizzheader-small-widget2 woobizzheader-general-box">
 		<div class= "woobizzheader-small-widget2help woobizzheader-general-txthelp"></div>
 		<?php
-			dynamic_sidebar( 'Woobizz Header Custom Widget 2' );			
+			dynamic_sidebar( 'Woobizz Header Widget2' );			
 		?>	
-	</div>		
+	</div>
+
+	<div class="woobizzheader-small-box woobizzheader-small-sidenav1 woobizzheader-general-box">
+		<div class= "woobizzheader-small-sidenav1help woobizzheader-general-txthelp"></div>
+						
+			<img class="wbzh-sidenav1pointer" src="<?php  echo $woobizzheader_small_sidenav1logo; ?>" onclick="openNav()" />		
+		
+						
+		</div>							
+	</div>
+	
+	<div id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<?php dynamic_sidebar( 'Woobizz Header Widget1' );?>	
+	</div>
+
+	<script>
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "300px";
+		document.getElementById("body").style.marginLeft = "300px";
+	}
+
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+		document.getElementById("body").style.marginLeft= "0";
+	}
+	</script>
+
 </div>
 <?php
 }

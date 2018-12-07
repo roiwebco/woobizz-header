@@ -14,6 +14,8 @@ $woobizzheader_small_box1='woobizzheader_small_box1';
 $woobizzheader_small_box2='woobizzheader_small_box2';
 $woobizzheader_small_widget1='woobizzheader_small_widget1';
 $woobizzheader_small_widget2='woobizzheader_small_widget2';
+$woobizzheader_small_sidenav1='woobizzheader_small_sidenav1';
+$woobizzheader_small_sidenav2='woobizzheader_small_sidenav2';
 //--------------------------------------------------------------
 //MENU
 //--------------------------------------------------------------
@@ -77,6 +79,15 @@ Kirki::add_section( $woobizzheader_small_widget1, array(
 ));
 Kirki::add_section( $woobizzheader_small_widget2, array(
     'title' => 'SS Header Widget2',
+    'section' => $woobizzheader_small_screen,    
+));
+
+Kirki::add_section( $woobizzheader_small_sidenav1, array(
+    'title' => 'SS Header SideNav1',
+    'section' => $woobizzheader_small_screen,    
+));
+Kirki::add_section( $woobizzheader_small_sidenav2, array(
+    'title' => 'SS Header SideNav2',
     'section' => $woobizzheader_small_screen,    
 ));
 //--------------------------------------------------------
@@ -773,10 +784,6 @@ Kirki::add_field( $woobizzheader, array(
             ),
         ),
 ) );
-Kirki::add_section( 'testmenu', array(
-    'title' => 'SS Header Widget2',
-    'section' => $woobizzheader_small_menu1,  
-));
 Kirki::add_field( $woobizzheader, array(
 	'type'        => 'toggle',
 	'settings'    => 'woobizzheader_small_menu1display',
@@ -2400,3 +2407,79 @@ Kirki::add_field( $woobizzheader, array(
 		'option-3' => esc_attr__( 'right', 'textdomain' ),			
 	),
 ) );
+//--------------------------------------------------------
+// SIDENAV1 FIELDS
+//--------------------------------------------------------
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'custom',
+	'settings'    => 'small_sidenav1_edit',
+	'label'       => __( '', 'textdomain' ),
+	'section'     => $woobizzheader_small_sidenav1,
+	'default'     => '',
+	'priority'    => 10,
+	//'transport'   => 'postMessage',
+	'partial_refresh' => array(
+            	'small_sidenav1_edit' => array(
+                'selector' => '.woobizzheader-small-sidenav1help',
+                'render_callback' => '__return_false',
+            ),
+        ),
+) );
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'toggle',
+	'settings'    => 'woobizzheader_small_sidenav1display',
+	'label'       => esc_attr__( 'Display SideNav1?', 'textdomain' ),
+	'section'     => $woobizzheader_small_sidenav1,
+	'default'     => '1',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'slider',
+	'settings'    => 'woobizzheader_small_sidenav1position',
+	'label'       => esc_attr__( 'SideNav1 position', 'textdomain' ),
+	'section'     => $woobizzheader_small_sidenav1,
+	'default'     => 90,
+	'transport'   => 'postMessage',
+	'choices'     => array(
+		'min'  => '1',
+		'max'  => '110',
+		'step' => '1',
+	),
+) );
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'slider',
+	'settings'    => 'woobizzheader_small_sidenav1width',
+	'label'       => esc_attr__( 'SideNav1 width', 'textdomain' ),
+	'section'     => $woobizzheader_small_sidenav1,
+	'default'     => 50,
+	'transport'   => 'postMessage',
+	'choices'     => array(
+		'min'  => '0',
+		'max'  => '100',
+		'step' => '1',
+	),
+) );
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'radio-buttonset',
+	'settings'    => 'woobizzheader_small_sidenav1align',
+	'label'       => __( 'SideNav1 align', 'textdomain' ),
+	'section'     => $woobizzheader_small_sidenav1,
+	'default'     => 'option-1',
+	'priority'    => 10,
+	'multiple'    => 1,
+	'choices'     => array(
+		'option-1' => esc_attr__( 'left', 'textdomain' ),
+		'option-2' => esc_attr__( 'center', 'textdomain' ),
+		'option-3' => esc_attr__( 'right', 'textdomain' ),			
+	),
+) );
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'image',
+	'settings'    => 'woobizzheader_small_sidenav1logo',
+	'label'       => esc_attr__( 'SideNav1 image', 'textdomain' ),
+	'section'     => $woobizzheader_small_sidenav1,
+	'default'     => '',
+	
+) );
+

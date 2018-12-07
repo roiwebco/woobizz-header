@@ -273,7 +273,7 @@ function mytheme_customize_register( $wp_customize ) {
   $wp_customize->remove_section( 'custom_css');
 
 }
-add_action( 'customize_register', 'mytheme_customize_register',50 );
+//add_action( 'customize_register', 'mytheme_customize_register',50 );
 
 function wpdocs_remove_nav_menus_panel( $components ) {
     $i = array_search( 'nav_menus', $components );

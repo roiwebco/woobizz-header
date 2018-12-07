@@ -751,7 +751,7 @@ echo"
 	.woobizzheader-large-widget2help:after {
 		content:'$woobizzheader_large_widget2help';
 	}
-	
+		
 }	
  </style>
 ";
@@ -910,15 +910,16 @@ $woobizzheader_large_box2link= get_theme_mod("woobizzheader_large_box2link");
 	<div class="woobizzheader-large-box woobizzheader-large-widget1 woobizzheader-general-box">
 		<div class= "woobizzheader-large-widget1help woobizzheader-general-txthelp"></div>
 		<?php
-			dynamic_sidebar( 'Woobizz Header Custom Widget 1' );			
+			dynamic_sidebar( 'Woobizz Header Widget1' );			
 		?>	
 	</div>
 	<div class="woobizzheader-large-box woobizzheader-large-widget2 woobizzheader-general-box">
 		<div class= "woobizzheader-large-widget2help woobizzheader-general-txthelp"></div>
 		<?php
-			dynamic_sidebar( 'Woobizz Header Custom Widget 2' );			
+			dynamic_sidebar( 'Woobizz Header Widget2' );			
 		?>	
-	</div>		
+	</div>
+
 </div>
 <?php
 }

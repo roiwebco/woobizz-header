@@ -105,7 +105,9 @@ header#masthead {
 .customize-partial-edit-shortcut-small_box1_edit,
 .customize-partial-edit-shortcut-small_box2_edit,
 .customize-partial-edit-shortcut-small_widget1_edit,
-.customize-partial-edit-shortcut-small_widget2_edit
+.customize-partial-edit-shortcut-small_widget2_edit,
+.customize-partial-edit-shortcut-small_sidenav1_edit,
+.customize-partial-edit-shortcut-small_sidenav2_edit
 {
 	top: 0!important;
 	left: 35px!important;
