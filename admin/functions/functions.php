@@ -81,6 +81,23 @@ function woobizzheader_custom_widget2() {
 }
 add_action( 'widgets_init', 'woobizzheader_custom_widget2',4);
 //-------------------------------------------------------------------------
+//WOOBIZZ CUSTOM SIDENAV1
+//-------------------------------------------------------------------------
+
+function woobizzheader_custom_sidenav1() {
+	$args = array(
+				'id'            => 'woobizzheadercustomsidenav1',
+				'name'          => __( 'Woobizz Header Sidenav1', 'storefront' ),
+				'description'   => 'Add your content here',
+				'before_title'  => '<h2 class="widgettitle">',
+				'before_title'   => '</h2>',
+				'before_widget' => '<li id="%1$s" class="widget %2$s">',
+				'before_widget'  => '</li>',
+	);
+	register_sidebar( $args );	
+}
+add_action( 'widgets_init', 'woobizzheader_custom_sidenav1',4);
+//-------------------------------------------------------------------------
 //WOOBIZZ UPDATE AJAX CART SMALL SCREEN
 //-------------------------------------------------------------------------
 

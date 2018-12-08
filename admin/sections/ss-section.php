@@ -870,7 +870,6 @@ echo"
 		display: flex;
 		background: #505050;
 		font-size: 34px;
-		align-items: right;
 		flex-direction: row-reverse;
 	}
 
@@ -878,12 +877,7 @@ echo"
 		transition: margin-left .5s;
 		
 	}
-
-	@media screen and (max-height: 450px) {
-	.sidenav {padding-top: 15px;}
-	.sidenav a {font-size: 18px;}
-	}
-	
+		
 }	
  </style>
 ";
@@ -1070,7 +1064,7 @@ $woobizzheader_small_sidenav2logo= get_theme_mod('woobizzheader_small_sidenav2lo
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>				
 		</div>
 		<div class="sidenavcontent">
-			<?php dynamic_sidebar( 'Woobizz Header Widget1' );?>
+			<?php dynamic_sidebar( 'Woobizz Header Sidenav1' );?>
 		</div>
 
 	<script>
