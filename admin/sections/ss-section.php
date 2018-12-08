@@ -377,12 +377,11 @@ elseif($woobizzheader_small_widget2display==1){$woobizzheader_small_widget2displ
 $woobizzheader_small_sidenav1position= get_theme_mod("woobizzheader_small_sidenav1position");
 $woobizzheader_small_sidenav1width= get_theme_mod("woobizzheader_small_sidenav1width");
 $woobizzheader_small_sidenav1align= get_theme_mod("woobizzheader_small_sidenav1align");
-$woobizzheader_small_sidenav1display= get_theme_mod("woobizzheader_small_sidenav1display");
-
 $woobizzheader_small_sidenav1help=" SS | SIDENAV1 ";
 if ($woobizzheader_small_sidenav1align=="option-1"){$woobizzheader_small_sidenav1alignitems="center";$woobizzheader_small_sidenav1justifycontent="flex-start";}
  elseif($woobizzheader_small_sidenav1align=="option-2"){$woobizzheader_small_sidenav1alignitems="center";$woobizzheader_small_sidenav1justifycontent="center";}
  elseif($woobizzheader_small_sidenav1align=="option-3"){$woobizzheader_small_sidenav1alignitems="center";$woobizzheader_small_sidenav1justifycontent="flex-end";}
+$woobizzheader_small_sidenav1display= get_theme_mod("woobizzheader_small_sidenav1display");
 if($woobizzheader_small_sidenav1display==0){$woobizzheader_small_sidenav1display="none";}
 elseif($woobizzheader_small_sidenav1display==1){$woobizzheader_small_sidenav1display="flex";}
 $woobizzheader_small_sidenav1logo= get_theme_mod('woobizzheader_small_sidenav1logo');

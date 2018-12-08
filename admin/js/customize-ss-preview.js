@@ -548,3 +548,20 @@ wp.customize( 'woobizzheader_small_widget2width', function( value ) {
 		jQuery( '.woobizzheader-small-widget2').css( 'width', newval+'%');
 	});
 });
+
+//-------------------------------------------------------------	
+//WIDGET1
+//-------------------------------------------------------------	
+//sidenav1 position
+wp.customize( 'woobizzheader_small_sidenav1position', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-small-sidenav1').css( 'display', 'flex');
+		jQuery( '.woobizzheader-small-sidenav1').css( 'order', +newval);
+	});
+});
+//sidenav1 width
+wp.customize( 'woobizzheader_small_sidenav1width', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-small-sidenav1').css( 'width', newval+'%');
+	});
+});
