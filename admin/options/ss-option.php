@@ -2483,3 +2483,79 @@ Kirki::add_field( $woobizzheader, array(
 	
 ) );
 
+//--------------------------------------------------------
+// SIDENAV2 FIELDS
+//--------------------------------------------------------
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'custom',
+	'settings'    => 'small_sidenav2_edit',
+	'label'       => __( '', 'textdomain' ),
+	'section'     => $woobizzheader_small_sidenav2,
+	'default'     => '',
+	'priority'    => 10,
+	//'transport'   => 'postMessage',
+	'partial_refresh' => array(
+            	'small_sidenav2_edit' => array(
+                'selector' => '.woobizzheader-small-sidenav2help',
+                'render_callback' => '__return_false',
+            ),
+        ),
+) );
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'toggle',
+	'settings'    => 'woobizzheader_small_sidenav2display',
+	'label'       => esc_attr__( 'Display SideNav2?', 'textdomain' ),
+	'section'     => $woobizzheader_small_sidenav2,
+	'default'     => '1',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'slider',
+	'settings'    => 'woobizzheader_small_sidenav2position',
+	'label'       => esc_attr__( 'SideNav2 position', 'textdomain' ),
+	'section'     => $woobizzheader_small_sidenav2,
+	'default'     => 90,
+	'transport'   => 'postMessage',
+	'choices'     => array(
+		'min'  => '1',
+		'max'  => '110',
+		'step' => '1',
+	),
+) );
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'slider',
+	'settings'    => 'woobizzheader_small_sidenav2width',
+	'label'       => esc_attr__( 'SideNav2 width', 'textdomain' ),
+	'section'     => $woobizzheader_small_sidenav2,
+	'default'     => 50,
+	'transport'   => 'postMessage',
+	'choices'     => array(
+		'min'  => '0',
+		'max'  => '100',
+		'step' => '1',
+	),
+) );
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'radio-buttonset',
+	'settings'    => 'woobizzheader_small_sidenav2align',
+	'label'       => __( 'SideNav2 align', 'textdomain' ),
+	'section'     => $woobizzheader_small_sidenav2,
+	'default'     => 'option-1',
+	'priority'    => 10,
+	'multiple'    => 1,
+	'choices'     => array(
+		'option-1' => esc_attr__( 'left', 'textdomain' ),
+		'option-2' => esc_attr__( 'center', 'textdomain' ),
+		'option-3' => esc_attr__( 'right', 'textdomain' ),			
+	),
+) );
+Kirki::add_field( $woobizzheader, array(
+	'type'        => 'image',
+	'settings'    => 'woobizzheader_small_sidenav2logo',
+	'label'       => esc_attr__( 'SideNav2 image', 'textdomain' ),
+	'section'     => $woobizzheader_small_sidenav2,
+	'default'     => '',
+	
+) );
+

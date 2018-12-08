@@ -357,7 +357,7 @@ echo"
 	.woobizzheader-medium-bghelp.woobizzheader-general-txthelp{display: none!important;}
 	.woobizzheader-small-bghelp.woobizzheader-general-txthelp{display: none!important;}
 
-	div#mySidenav{display:none!important;}
+	div#wbzhsn1-box{display: none!important;}
 
 	.woobizzheader-large-bghelp:after {
 		content: ' LS | BG ';		

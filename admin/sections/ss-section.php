@@ -385,7 +385,20 @@ $woobizzheader_small_sidenav1display= get_theme_mod("woobizzheader_small_sidenav
 if($woobizzheader_small_sidenav1display==0){$woobizzheader_small_sidenav1display="none";}
 elseif($woobizzheader_small_sidenav1display==1){$woobizzheader_small_sidenav1display="flex";}
 $woobizzheader_small_sidenav1logo= get_theme_mod('woobizzheader_small_sidenav1logo');
-
+//--------------------------------------------------------------------------------------
+// SIDENAV2
+//--------------------------------------------------------------------------------------
+$woobizzheader_small_sidenav2position= get_theme_mod("woobizzheader_small_sidenav2position");
+$woobizzheader_small_sidenav2width= get_theme_mod("woobizzheader_small_sidenav2width");
+$woobizzheader_small_sidenav2align= get_theme_mod("woobizzheader_small_sidenav2align");
+$woobizzheader_small_sidenav2help=" SS | SIDENAV2 ";
+if ($woobizzheader_small_sidenav2align=="option-1"){$woobizzheader_small_sidenav2alignitems="center";$woobizzheader_small_sidenav2justifycontent="flex-start";}
+ elseif($woobizzheader_small_sidenav2align=="option-2"){$woobizzheader_small_sidenav2alignitems="center";$woobizzheader_small_sidenav2justifycontent="center";}
+ elseif($woobizzheader_small_sidenav2align=="option-3"){$woobizzheader_small_sidenav2alignitems="center";$woobizzheader_small_sidenav2justifycontent="flex-end";}
+$woobizzheader_small_sidenav2display= get_theme_mod("woobizzheader_small_sidenav2display");
+if($woobizzheader_small_sidenav2display==0){$woobizzheader_small_sidenav2display="none";}
+elseif($woobizzheader_small_sidenav2display==1){$woobizzheader_small_sidenav2display="flex";}
+$woobizzheader_small_sidenav2logo= get_theme_mod('woobizzheader_small_sidenav2logo');
 //--------------------------------------------------------------------------------------
 //SS
 //--------------------------------------------------------------------------------------
@@ -820,6 +833,37 @@ echo"
 	.woobizzheader-small-sidenav1help:after {
 		content:'$woobizzheader_small_sidenav1help';
 	}
+	img.wbzhsn1-pointer {
+		cursor: pointer!important;
+	}
+	#wbzhsn1-box {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: white;
+		overflow-x: hidden;
+		transition: 0.5s;
+		
+	}
+	.wbzhsn1-closebox {
+		display: flex;
+		background: #505050;
+		font-size: 34px;
+		flex-direction: row-reverse;
+	}
+	.wbzhsn1-closebtn {
+		position: relative;
+		font-size: 36px;
+		color: white!important;
+		width: 100%;
+		display: flex;
+		flex-direction: row-reverse;
+		padding: 0px 10px;
+	}
+
 	/*---------------------------------------------------------------*/
 	/* WOOBIZZ SIDENAV2
 	/*---------------------------------------------------------------*/
@@ -834,29 +878,28 @@ echo"
 	.woobizzheader-small-sidenav2help:after {
 		content:'$woobizzheader_small_sidenav2help';
 	}
-	/*---------------------------------------------------------------*/
-	/* TEST PUSH MENU SS
-	/*---------------------------------------------------------------*/
-	img.wbzh-sidenav1pointer {
+	img.wbzhsn2-pointer {
 		cursor: pointer!important;
 	}
-	.sidenav {
+	#wbzhsn2-box {
 		height: 100%;
 		width: 0;
 		position: fixed;
 		z-index: 1;
 		top: 0;
-		left: 0;
+		right: 0;
 		background-color: white;
 		overflow-x: hidden;
 		transition: 0.5s;
 		
 	}
-	.sidenav a:hover {
-		color: #f1f1f1;
+	.wbzhsn2-closebox {
+		display: flex;
+		background: #505050;
+		font-size: 34px;
+		flex-direction: row-reverse;
 	}
-
-	.closebtn {
+	.wbzhsn2-closebtn {
 		position: relative;
 		font-size: 36px;
 		color: white!important;
@@ -865,19 +908,7 @@ echo"
 		flex-direction: row-reverse;
 		padding: 0px 10px;
 	}
-
-	.sidenavclose {
-		display: flex;
-		background: #505050;
-		font-size: 34px;
-		flex-direction: row-reverse;
-	}
-
-	#page {
-		transition: margin-left .5s;
-		
-	}
-		
+	
 }	
  </style>
 ";
@@ -1051,33 +1082,41 @@ $woobizzheader_small_sidenav2logo= get_theme_mod('woobizzheader_small_sidenav2lo
 	</div>
 
 	<div class="woobizzheader-small-box woobizzheader-small-sidenav1 woobizzheader-general-box">
-		<div class= "woobizzheader-small-sidenav1help woobizzheader-general-txthelp"></div>
-						
-			<img class="wbzh-sidenav1pointer" src="<?php  echo $woobizzheader_small_sidenav1logo; ?>" onclick="openNav()" />		
-		
-						
-		</div>							
+		<div class= "woobizzheader-small-sidenav1help woobizzheader-general-txthelp"></div>						
+		<img class="wbzhsn1-pointer" src="<?php  echo $woobizzheader_small_sidenav1logo; ?>" onclick="wbzhsn1Open()" />		
+									
 	</div>
 	
-	<div id="mySidenav" class="sidenav">
-		<div class="sidenavclose">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>				
+	<div id="wbzhsn1-box">
+		<div class="wbzhsn1-closebox">
+			<a href="javascript:void(0)" class="wbzhsn1-closebtn" onclick="wbzhsn1Close()">&times;</a>				
 		</div>
-		<div class="sidenavcontent">
+		<div class="wbzhsn1-sidenavcontent">
 			<?php dynamic_sidebar( 'Woobizz Header Sidenav1' );?>
 		</div>
+		<script>
+		function wbzhsn1Open(){document.getElementById("wbzhsn1-box").style.width = "250px";}
+		function wbzhsn1Close(){document.getElementById("wbzhsn1-box").style.width = "0";}
+		</script>
+	</div>
 
-	<script>
-	function openNav() {
-		document.getElementById("mySidenav").style.width = "250px";
-		
-	}
-
-	function closeNav() {
-		document.getElementById("mySidenav").style.width = "0";
-		
-	}
-	</script>
+	<div class="woobizzheader-small-box woobizzheader-small-sidenav2 woobizzheader-general-box">
+		<div class= "woobizzheader-small-sidenav2help woobizzheader-general-txthelp"></div>						
+		<img class="wbzhsn2-pointer" src="<?php  echo $woobizzheader_small_sidenav2logo; ?>" onclick="wbzhsn2Open()" />		
+								
+	</div>
+	
+	<div id="wbzhsn2-box">
+		<div class="wbzhsn2-closebox">
+			<a href="javascript:void(0)" class="wbzhsn2-closebtn" onclick="wbzhsn2Close()">&times;</a>				
+		</div>
+		<div class="wbzhsn2-sidenavcontent">
+			<?php dynamic_sidebar( 'Woobizz Header Sidenav2' );?>
+		</div>
+		<script>
+		function wbzhsn2Open(){document.getElementById("wbzhsn2-box").style.width = "250px";}
+		function wbzhsn2Close(){document.getElementById("wbzhsn2-box").style.width = "0";}
+		</script>
 	</div>
 
 </div>

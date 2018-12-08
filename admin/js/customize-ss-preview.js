@@ -550,7 +550,7 @@ wp.customize( 'woobizzheader_small_widget2width', function( value ) {
 });
 
 //-------------------------------------------------------------	
-//WIDGET1
+//SIDENAV1
 //-------------------------------------------------------------	
 //sidenav1 position
 wp.customize( 'woobizzheader_small_sidenav1position', function( value ) {
@@ -563,5 +563,22 @@ wp.customize( 'woobizzheader_small_sidenav1position', function( value ) {
 wp.customize( 'woobizzheader_small_sidenav1width', function( value ) {
 	value.bind( function( newval ) {
 		jQuery( '.woobizzheader-small-sidenav1').css( 'width', newval+'%');
+	});
+});
+
+//-------------------------------------------------------------	
+//SIDENAV2
+//-------------------------------------------------------------	
+//sidenav2 position
+wp.customize( 'woobizzheader_small_sidenav2position', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-small-sidenav2').css( 'display', 'flex');
+		jQuery( '.woobizzheader-small-sidenav2').css( 'order', +newval);
+	});
+});
+//sidenav2 width
+wp.customize( 'woobizzheader_small_sidenav2width', function( value ) {
+	value.bind( function( newval ) {
+		jQuery( '.woobizzheader-small-sidenav2').css( 'width', newval+'%');
 	});
 });
