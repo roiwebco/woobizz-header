@@ -1069,13 +1069,13 @@ $woobizzheader_small_sidenav2logo= get_theme_mod('woobizzheader_small_sidenav2lo
 
 	<script>
 	function openNav() {
-		document.getElementById("mySidenav").style.width = "300px";
-		document.getElementById("body").style.marginLeft = "300px";
+		document.getElementById("mySidenav").style.width = "250px";
+		
 	}
 
 	function closeNav() {
 		document.getElementById("mySidenav").style.width = "0";
-		document.getElementById("body").style.marginLeft= "0";
+		
 	}
 	</script>
 	</div>
