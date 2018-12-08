@@ -850,28 +850,28 @@ echo"
 		background-color: white;
 		overflow-x: hidden;
 		transition: 0.5s;
-		padding-top: 60px;
+		
 	}
-
-	.sidenav a {
-		padding: 8px 8px 8px 32px;
-		text-decoration: none;
-		font-size: initial;
-		color: #818181;
-		display: block;
-		transition: 0.3s;
-	}
-
 	.sidenav a:hover {
 		color: #f1f1f1;
 	}
 
-	.sidenav .closebtn {
-		position: absolute;
-		top: 0;
-		right: 25px;
+	.closebtn {
+		position: relative;
 		font-size: 36px;
-		margin-left: 50px;
+		color: white!important;
+		width: 100%;
+		display: flex;
+		flex-direction: row-reverse;
+		padding: 0px 10px;
+	}
+
+	.sidenavclose {
+		display: flex;
+		background: #505050;
+		font-size: 34px;
+		align-items: right;
+		flex-direction: row-reverse;
 	}
 
 	#page {
@@ -1066,9 +1066,12 @@ $woobizzheader_small_sidenav2logo= get_theme_mod('woobizzheader_small_sidenav2lo
 	</div>
 	
 	<div id="mySidenav" class="sidenav">
-	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<?php dynamic_sidebar( 'Woobizz Header Widget1' );?>	
-	</div>
+		<div class="sidenavclose">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>				
+		</div>
+		<div class="sidenavcontent">
+			<?php dynamic_sidebar( 'Woobizz Header Widget1' );?>
+		</div>
 
 	<script>
 	function openNav() {
@@ -1081,6 +1084,7 @@ $woobizzheader_small_sidenav2logo= get_theme_mod('woobizzheader_small_sidenav2lo
 		document.getElementById("body").style.marginLeft= "0";
 	}
 	</script>
+	</div>
 
 </div>
 <?php
