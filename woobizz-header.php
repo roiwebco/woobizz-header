@@ -5,7 +5,7 @@
 * Description: WooCommerce Storefront Header Customiser
 * Author: WOOBIZZ
 * Author URI: https://woobizz.com
-* Version: 1.0.4
+* Version: 1.0.5
 * Text Domain: woobizz-header
 * Domain Path: /lang/
 */

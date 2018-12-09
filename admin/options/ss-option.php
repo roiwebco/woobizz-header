@@ -2482,7 +2482,6 @@ Kirki::add_field( $woobizzheader, array(
 	'default'     => '',
 	
 ) );
-
 //--------------------------------------------------------
 // SIDENAV2 FIELDS
 //--------------------------------------------------------
@@ -2558,4 +2557,3 @@ Kirki::add_field( $woobizzheader, array(
 	'default'     => '',
 	
 ) );
-

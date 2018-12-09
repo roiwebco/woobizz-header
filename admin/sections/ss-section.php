@@ -845,7 +845,8 @@ echo"
 		left: 0;
 		background-color: white;
 		overflow-x: hidden;
-		transition: 0.5s;
+		 -webkit-transition:2OOms;
+		transition: 200ms;
 		
 	}
 	.wbzhsn1-closebox {
@@ -864,6 +865,9 @@ echo"
 		padding: 0px 10px;
 	}
 
+	/*---------------------------------------------------------------*/
+	/* WOOBIZZ SIDENAV2
+	/*---------------------------------------------------------------*/
 	/*---------------------------------------------------------------*/
 	/* WOOBIZZ SIDENAV2
 	/*---------------------------------------------------------------*/
@@ -890,7 +894,8 @@ echo"
 		right: 0;
 		background-color: white;
 		overflow-x: hidden;
-		transition: 0.5s;
+		 -webkit-transition:2OOms;
+		transition: 200ms;
 		
 	}
 	.wbzhsn2-closebox {
@@ -953,9 +958,7 @@ $woobizzheader_small_box2link= get_theme_mod("woobizzheader_small_box2link");
 
 $woobizzheader_small_sidenav1logo= get_theme_mod('woobizzheader_small_sidenav1logo');
 $woobizzheader_small_sidenav2logo= get_theme_mod('woobizzheader_small_sidenav2logo');
-
 ?>
-
 <div class= "woobizzheader-small-bghelp woobizzheader-general-txthelp"></div>
 <div class="woobizzheader-small-wrapper " >	
 	
